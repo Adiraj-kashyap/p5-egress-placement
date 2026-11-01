@@ -1,0 +1,53 @@
+Welcome to the CBC MILP Solver 
+Version: 2.10.3 
+Build Date: Dec 15 2019 
+
+command line - D:\Workspace\cloud_project\p5-egress-placement\.venv\Lib\site-packages\pulp\apis\../solverdir/cbc/win/i64/cbc.exe C:\Users\ASUS\AppData\Local\Temp\6b355e908977413a9372c755d9708d9c-pulp.mps -sec 600 -threads 1 -timeMode elapsed -solve -printingOptions all -solution C:\Users\ASUS\AppData\Local\Temp\6b355e908977413a9372c755d9708d9c-pulp.sol (default strategy 1)
+At line 2 NAME          MODEL
+At line 3 ROWS
+At line 4725 COLUMNS
+At line 93226 RHS
+At line 97947 BOUNDS
+At line 98428 ENDATA
+Problem MODEL has 4720 rows, 28560 columns and 61320 elements
+Coin0008I MODEL read with 0 errors
+seconds was changed from 1e+100 to 600
+threads was changed from 0 to 1
+Option for timeMode changed from cpu to elapsed
+Continuous objective value is 11888.7 - 3.56 seconds
+Cgl0005I 40 SOS with 480 members
+Cgl0004I processed model has 4720 rows, 28560 columns (480 integer (480 of which binary)) and 61320 elements
+Cbc0038I Initial state - 0 integers unsatisfied sum - 0
+Cbc0038I Solution found of 11888.7
+Cbc0038I Relaxing continuous gives 11888.7
+Cbc0038I Before mini branch and bound, 480 integers at bound fixed and 27885 continuous
+Cbc0038I Mini branch and bound did not improve solution (3.76 seconds)
+Cbc0038I After 3.77 seconds - Feasibility pump exiting with objective of 11888.7 - took 0.05 seconds
+Cbc0012I Integer solution of 11888.689 found by feasibility pump after 0 iterations and 0 nodes (3.78 seconds)
+Cbc0030I Thread 0 used 0 times,  waiting to start 0, 0 cpu time, 0 locks, 0 locked, 0 waiting for locks
+Cbc0030I Main thread 0 waiting for threads,  1 locks, 0 locked, 0 waiting for locks
+Cbc0001I Search completed - best objective 11888.68907, took 0 iterations and 0 nodes (3.81 seconds)
+Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
+Cuts at root node changed objective from 11888.7 to 11888.7
+Probing was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+Gomory was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+Knapsack was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+Clique was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+MixedIntegerRounding2 was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+FlowCover was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+TwoMirCuts was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+ZeroHalf was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+28080 bounds tightened after postprocessing
+
+
+Result - Optimal solution found
+
+Objective value:                11888.68907000
+Enumerated nodes:               0
+Total iterations:               0
+Time (CPU seconds):             3.90
+Time (Wallclock seconds):       3.90
+
+Option for printingOptions changed from normal to all
+Total time (CPU seconds):       4.03   (Wallclock seconds):       4.03
+

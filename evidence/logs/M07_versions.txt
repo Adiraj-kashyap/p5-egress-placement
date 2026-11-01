@@ -1,0 +1,8 @@
+# M07 tool versions, 2026-09-22 10:09 (S-011)
+kind: kind v0.33.0 go1.26.7 windows/amd64
+kubectl: gitVersion: v1.37.0
+kind sha256 4b22adaa135368c5a465d56bbd8e520cbea87272a06ca00b6078e7b81515c9fc (matches release .sha256sum)
+kubectl sha256 matches dl.k8s.io v1.37.0 .sha256
+docker server: 29.8.0
+docker client: 29.8.0
+install dir: C:\Users\ASUS\.local\bin

@@ -1,0 +1,1590 @@
+{
+  "exp_id": "ablation",
+  "created_utc": "2026-09-22T20:52:40Z",
+  "config_path": "experiments/configs/ablation.json",
+  "config_sha256": "f4439864366bcea316839e5d2ab454d652a94c78113ee1853dfd95ae6d118bf3",
+  "config": {
+    "exp_id": "ablation",
+    "snapshot_date": "2026-09-21",
+    "location_set": "core",
+    "instances": [
+      {
+        "topology": "topologies/t1_three_tier.json"
+      },
+      {
+        "topology": "topologies/t2_pipeline.json"
+      },
+      {
+        "topology": "topologies/t3_microservices.json"
+      }
+    ],
+    "draws": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "scales": [
+      1.0,
+      100.0
+    ],
+    "methods": [
+      "ilp_full",
+      "ilp_no_edge_egress",
+      "ilp_no_internet",
+      "ilp_undirected",
+      "ilp_single_provider",
+      "ilp_mccormick",
+      "b1",
+      "b1_storage",
+      "b2_best",
+      "sa",
+      "sa_random_init",
+      "sa_no_swap"
+    ],
+    "method_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "time_limits": {
+      "ilp_full": 600,
+      "ilp_no_edge_egress": 600,
+      "ilp_no_internet": 600,
+      "ilp_undirected": 600,
+      "ilp_single_provider": 600,
+      "ilp_mccormick": 600
+    },
+    "method_params": {},
+    "notes": {
+      "purpose": "M17 step 3: isolate the contribution of each ingredient (06 S12). Every variant changes only the objective or the feasible set used for CHOOSING; the runner always scores the returned assignment with the full, true evaluate().",
+      "scales": "s = 1 is the measured/stated traffic. The second point should be the crossover neighbourhood from M15, but M15 and M16 found NO crossover anywhere in [0.01, 100] on T1-T3, so there is no such neighbourhood; s = 100 is used instead as the egress-heaviest end of the frozen M15 range, where coupling has the best chance of mattering (D-072). The range itself is unchanged, so this is not a threshold change.",
+      "draws": "the same R = 30 draws as results/replicates (seed = 10,000 + draw_id, 05 S3), so every ablation is paired with the M16 rows draw by draw.",
+      "decomposition": "b1 -> b1_storage -> ilp_no_edge_egress -> ilp_full telescopes to C(B1) - C(ILP) per draw; asserted in tests/test_ablations.py (A1).",
+      "sa_variants": "sa_random_init drops the greedy start, sa_no_swap sets p_relocate = 1.0 so swap moves are never proposed (D-071). Both use the same 5 seeds as M16; the drawn value of a method is the median over its seeds (D-068).",
+      "ilp_mccormick": "included as the runtime-only ablation: the objective must be identical to ilp_full (asserted in tests)."
+    }
+  },
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "hours_per_month": 730,
+  "method_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "time_limits": {
+    "ilp_full": 600,
+    "ilp_no_edge_egress": 600,
+    "ilp_no_internet": 600,
+    "ilp_undirected": 600,
+    "ilp_single_provider": 600,
+    "ilp_mccormick": 600
+  },
+  "ilp_default_time_limit_s": 600.0,
+  "threads": 1,
+  "machine_tag": "adi-laptop-win11",
+  "git_commit": "665e719",
+  "python": "3.12.10",
+  "instances": {
+    "t1_three_tier@core@d=0@s=1": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1",
+      "location_set": "core",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=0@s=100": {
+      "source": "topologies/t1_three_tier.json@d=0@s=100",
+      "location_set": "core",
+      "sha256": "619f441294edb38460080c0e2bb9c36341c9d8030049c4fe51e1d2ac376a5700",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=1@s=1": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1",
+      "location_set": "core",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=1@s=100": {
+      "source": "topologies/t1_three_tier.json@d=1@s=100",
+      "location_set": "core",
+      "sha256": "993e33e8bd3d3429eff9427c2bdbb7833ca0e66d0ae65402e8068a308b953669",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=2@s=1": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1",
+      "location_set": "core",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=2@s=100": {
+      "source": "topologies/t1_three_tier.json@d=2@s=100",
+      "location_set": "core",
+      "sha256": "df53086b60821d20833815ed197f1af28286f6ca1b974c2145b8601e9c2df01d",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=3@s=1": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1",
+      "location_set": "core",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=3@s=100": {
+      "source": "topologies/t1_three_tier.json@d=3@s=100",
+      "location_set": "core",
+      "sha256": "4079bbd4f6ebc9b4dd6b985f71f8f8ca23a932e937495be40f55b3638699b0c3",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=4@s=1": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1",
+      "location_set": "core",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=4@s=100": {
+      "source": "topologies/t1_three_tier.json@d=4@s=100",
+      "location_set": "core",
+      "sha256": "5a9ce8aac7180d83171cf7de25fa99524f916aca125854934256ae6f54376419",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=5@s=1": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1",
+      "location_set": "core",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=5@s=100": {
+      "source": "topologies/t1_three_tier.json@d=5@s=100",
+      "location_set": "core",
+      "sha256": "a385da8f05ea0fff92260abd660b80ce7e084c2702af2599b57b1fb6cfd6cdfa",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=6@s=1": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1",
+      "location_set": "core",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=6@s=100": {
+      "source": "topologies/t1_three_tier.json@d=6@s=100",
+      "location_set": "core",
+      "sha256": "e9f461b76d8fab07fb70e1075ed7fde9eefe434f15c103f6ffad14818834fe5c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=7@s=1": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1",
+      "location_set": "core",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=7@s=100": {
+      "source": "topologies/t1_three_tier.json@d=7@s=100",
+      "location_set": "core",
+      "sha256": "64c30681648a5b3413e0927f73dd510984d2dd988e3174470451b2bee02f2fad",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=8@s=1": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1",
+      "location_set": "core",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=8@s=100": {
+      "source": "topologies/t1_three_tier.json@d=8@s=100",
+      "location_set": "core",
+      "sha256": "6baf0b27bf49f79270dc1c8af4f1491e808dba0c949237e480f5a3bc3353169b",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=9@s=1": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1",
+      "location_set": "core",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=9@s=100": {
+      "source": "topologies/t1_three_tier.json@d=9@s=100",
+      "location_set": "core",
+      "sha256": "585d14c53fd4ca2fe62d5ce2d79b33ed7e0aac9a5b649ce08b199dad6ccf78fe",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=10@s=1": {
+      "source": "topologies/t1_three_tier.json@d=10@s=1",
+      "location_set": "core",
+      "sha256": "837e5581491a2d4c0fd608d879ff815731780e243e3859220081a706ef553f0f",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=10@s=100": {
+      "source": "topologies/t1_three_tier.json@d=10@s=100",
+      "location_set": "core",
+      "sha256": "093c60a642d77120e3db4bc0f483a1063486af4d730fdfd3a09cf7fd5397f0ad",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=11@s=1": {
+      "source": "topologies/t1_three_tier.json@d=11@s=1",
+      "location_set": "core",
+      "sha256": "a1d825b81ac4fd557fba9c2f6a512528ebd366725ddbcdb19c98f36418037c8c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=11@s=100": {
+      "source": "topologies/t1_three_tier.json@d=11@s=100",
+      "location_set": "core",
+      "sha256": "4cf8e2c716138e7283153b7f7db3de6c557705d1442e0595ca5bfc03f30d6173",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=12@s=1": {
+      "source": "topologies/t1_three_tier.json@d=12@s=1",
+      "location_set": "core",
+      "sha256": "06e8a5450a9c9e3c3eef9a6a896597c53879398fc6dd257b899fe40e8d8e192e",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=12@s=100": {
+      "source": "topologies/t1_three_tier.json@d=12@s=100",
+      "location_set": "core",
+      "sha256": "c95fdeb0c0d8843c97885b18219fc400a2b50020025c549ad66978373587ae4e",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=13@s=1": {
+      "source": "topologies/t1_three_tier.json@d=13@s=1",
+      "location_set": "core",
+      "sha256": "4c8857aa41e9c0fb3204726d74c23df1446519ffc72cb3fb2c23a402e0951f18",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=13@s=100": {
+      "source": "topologies/t1_three_tier.json@d=13@s=100",
+      "location_set": "core",
+      "sha256": "50d388881aed64f1a20f6f02bb4956a9027f38923206be8aecab1e63d4c4afe5",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=14@s=1": {
+      "source": "topologies/t1_three_tier.json@d=14@s=1",
+      "location_set": "core",
+      "sha256": "e97ce162aaf9dce4bb48da43c3137e4d46170e279693428553ed0a85e16b0fd9",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=14@s=100": {
+      "source": "topologies/t1_three_tier.json@d=14@s=100",
+      "location_set": "core",
+      "sha256": "6c78c78e8c7c7de5f341d013b2427bf11d49ad236205fff5fd93ee91406093a4",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=15@s=1": {
+      "source": "topologies/t1_three_tier.json@d=15@s=1",
+      "location_set": "core",
+      "sha256": "5c2ffa3ef869f0f650f4a2ab3b49bace37f8b50e71f85e335bf8d09f8e5d08bf",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=15@s=100": {
+      "source": "topologies/t1_three_tier.json@d=15@s=100",
+      "location_set": "core",
+      "sha256": "ea895c498163feff9b8b028027922b17e9e4b55844096ccbe61979756d61a385",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=16@s=1": {
+      "source": "topologies/t1_three_tier.json@d=16@s=1",
+      "location_set": "core",
+      "sha256": "95d58b0778d30c235658110b67c54708305206bc681a156bc6ae8750eaeeed92",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=16@s=100": {
+      "source": "topologies/t1_three_tier.json@d=16@s=100",
+      "location_set": "core",
+      "sha256": "384f9ac5738a18e5c74a998dc9b2a41b7d97e763201a604ad23925ad460ddc85",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=17@s=1": {
+      "source": "topologies/t1_three_tier.json@d=17@s=1",
+      "location_set": "core",
+      "sha256": "acbd38d80f759c883aad5d2c60c8ffd947b0d6dca41c57db35dc2e1acc142cdc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=17@s=100": {
+      "source": "topologies/t1_three_tier.json@d=17@s=100",
+      "location_set": "core",
+      "sha256": "ab73321080ed2fe0520095fa96a253466b22b4651bb5f4cab8a2cacd99d4d86d",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=18@s=1": {
+      "source": "topologies/t1_three_tier.json@d=18@s=1",
+      "location_set": "core",
+      "sha256": "aea4938f77b156c3c8fdae27d604d040f89b96b6ab4da95fa02be043e4390265",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=18@s=100": {
+      "source": "topologies/t1_three_tier.json@d=18@s=100",
+      "location_set": "core",
+      "sha256": "5cc1f97bcdb0fa830cea17e80d4581b4b23f08f41ddce061304ec478286fb48b",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=19@s=1": {
+      "source": "topologies/t1_three_tier.json@d=19@s=1",
+      "location_set": "core",
+      "sha256": "adacba51517ecbdb67732f5beeff44e95f98b5525cba7e11cca84158aa05a967",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=19@s=100": {
+      "source": "topologies/t1_three_tier.json@d=19@s=100",
+      "location_set": "core",
+      "sha256": "23362e1b3dc29ea1bf3f4ed51e0d1ddab07267ac08048df3a81d022fb8f30cc2",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=20@s=1": {
+      "source": "topologies/t1_three_tier.json@d=20@s=1",
+      "location_set": "core",
+      "sha256": "7c6c171b4c218d6024e5db628f7e1f9783d7945b8cd6c17d353b743fd6994c8a",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=20@s=100": {
+      "source": "topologies/t1_three_tier.json@d=20@s=100",
+      "location_set": "core",
+      "sha256": "16daffc41d38a3a0411c2f0cdab59729421e8ea9a36d847bee6791a9f8eb6cfb",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=21@s=1": {
+      "source": "topologies/t1_three_tier.json@d=21@s=1",
+      "location_set": "core",
+      "sha256": "4f89ded32b6b7c3f3e04d4129408f72f8682c79f82f28b78f8d659f06930608b",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=21@s=100": {
+      "source": "topologies/t1_three_tier.json@d=21@s=100",
+      "location_set": "core",
+      "sha256": "ffa97d6874007fa2e3bc0a76765608e80a0efc49c35a6ed7e305156fab0f283d",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=22@s=1": {
+      "source": "topologies/t1_three_tier.json@d=22@s=1",
+      "location_set": "core",
+      "sha256": "1c3a15b0af9d6e96d83f950d547407360467f883ac8b180774263a0c10dc12ac",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=22@s=100": {
+      "source": "topologies/t1_three_tier.json@d=22@s=100",
+      "location_set": "core",
+      "sha256": "edef1846286b069880a7431b2aead9c6212a021e22f61a3bf2e1afea5a6d1114",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=23@s=1": {
+      "source": "topologies/t1_three_tier.json@d=23@s=1",
+      "location_set": "core",
+      "sha256": "92cc1c3e2beb18a604f6d8b5187bd773b1a6076b6366df79fa4a621112821aa5",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=23@s=100": {
+      "source": "topologies/t1_three_tier.json@d=23@s=100",
+      "location_set": "core",
+      "sha256": "d33f8c5915a5670f912b78897a026f3f65eaec5304c9ac7f9e67056417e723dd",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=24@s=1": {
+      "source": "topologies/t1_three_tier.json@d=24@s=1",
+      "location_set": "core",
+      "sha256": "438a17846ae2de3fc2d9b87907a6817b9ab5fcdb88a58c5f60bd1db3034bb3d9",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=24@s=100": {
+      "source": "topologies/t1_three_tier.json@d=24@s=100",
+      "location_set": "core",
+      "sha256": "66f1b384f37c89c34fff7a578d965cc8298c93a641a088a606243b0ec2defa2c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=25@s=1": {
+      "source": "topologies/t1_three_tier.json@d=25@s=1",
+      "location_set": "core",
+      "sha256": "6a87d8c4d8fd29bb95abb27859d95566a21bd00c36494ab53e1cec749977069f",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=25@s=100": {
+      "source": "topologies/t1_three_tier.json@d=25@s=100",
+      "location_set": "core",
+      "sha256": "be9ef2da3ac718e0eb579289d2fb1d1a2c0d514db943ddd5c1d4a4cf4f61a7bf",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=26@s=1": {
+      "source": "topologies/t1_three_tier.json@d=26@s=1",
+      "location_set": "core",
+      "sha256": "7670ce1a289b71f30ae4fdcd1912d4b34ea5aba2b969ae3c165bcb61dfb3583f",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=26@s=100": {
+      "source": "topologies/t1_three_tier.json@d=26@s=100",
+      "location_set": "core",
+      "sha256": "a5582599d581f32d93b7f90d34ae6e6fcbfb4834348a0167e549fa8cd9e169ff",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=27@s=1": {
+      "source": "topologies/t1_three_tier.json@d=27@s=1",
+      "location_set": "core",
+      "sha256": "8263f2942aa8b22504c51e297bbbdf72b5efa6ac9c18314bd25f4081a391f545",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=27@s=100": {
+      "source": "topologies/t1_three_tier.json@d=27@s=100",
+      "location_set": "core",
+      "sha256": "a1b5038285df7a8ce8eb9bff04261af7dca4c71e4f5fed827e4c84674bc49824",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=28@s=1": {
+      "source": "topologies/t1_three_tier.json@d=28@s=1",
+      "location_set": "core",
+      "sha256": "79172108c4db1493996638167104961d3a6d8cdb031d68131d14d29b2d6c34dd",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=28@s=100": {
+      "source": "topologies/t1_three_tier.json@d=28@s=100",
+      "location_set": "core",
+      "sha256": "65793e5e009474d3751430cbc65d3788b8b163203b331c3739e9c759ac053f99",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=29@s=1": {
+      "source": "topologies/t1_three_tier.json@d=29@s=1",
+      "location_set": "core",
+      "sha256": "5fcef5bc1eac832b0fe12a3c1413ae5d2c6f663aa2601b18390512311c8834e0",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@core@d=29@s=100": {
+      "source": "topologies/t1_three_tier.json@d=29@s=100",
+      "location_set": "core",
+      "sha256": "be6a06a1deda04c8a69c6f3304053d1ffe98226515a97cf877ee8143861027a2",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t2_pipeline@core@d=0@s=1": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1",
+      "location_set": "core",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=0@s=100": {
+      "source": "topologies/t2_pipeline.json@d=0@s=100",
+      "location_set": "core",
+      "sha256": "279f421c10db48e200c4fcbe05ed9e967de819d31cef339589307ca908d77633",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=1@s=1": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1",
+      "location_set": "core",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=1@s=100": {
+      "source": "topologies/t2_pipeline.json@d=1@s=100",
+      "location_set": "core",
+      "sha256": "8f9730fc3f177860ffedcbed50bd15ce6fbbfbf2230dd0481759d3f1535448a5",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=2@s=1": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1",
+      "location_set": "core",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=2@s=100": {
+      "source": "topologies/t2_pipeline.json@d=2@s=100",
+      "location_set": "core",
+      "sha256": "0017cae6c33e989f22c2a27b973bece4e11b8879a7b92a4ca564f448aa5e93ec",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=3@s=1": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1",
+      "location_set": "core",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=3@s=100": {
+      "source": "topologies/t2_pipeline.json@d=3@s=100",
+      "location_set": "core",
+      "sha256": "5aee75ed11e7af1d40c0f807eebf9ee0da2dd2893f873d574efa77c528abdb96",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=4@s=1": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1",
+      "location_set": "core",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=4@s=100": {
+      "source": "topologies/t2_pipeline.json@d=4@s=100",
+      "location_set": "core",
+      "sha256": "3b3ea394209948ac3ddb08454ca4a84e74548091478c245b8ceb843e9a70b0d5",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=5@s=1": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1",
+      "location_set": "core",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=5@s=100": {
+      "source": "topologies/t2_pipeline.json@d=5@s=100",
+      "location_set": "core",
+      "sha256": "1f9707fae6896714f2a30f2bcb560fa589d5a503df5cf47d6e7fa6d36af1f9e9",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=6@s=1": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1",
+      "location_set": "core",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=6@s=100": {
+      "source": "topologies/t2_pipeline.json@d=6@s=100",
+      "location_set": "core",
+      "sha256": "93d63999e54276f8ac0c0ed0cac950dc18f8dd85b58bfdd41abd44903e0d019b",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=7@s=1": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1",
+      "location_set": "core",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=7@s=100": {
+      "source": "topologies/t2_pipeline.json@d=7@s=100",
+      "location_set": "core",
+      "sha256": "c547d7d007e8cdfa9b3aaac7d49f7bb823afbb82239d76734e2061c2c510a86d",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=8@s=1": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1",
+      "location_set": "core",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=8@s=100": {
+      "source": "topologies/t2_pipeline.json@d=8@s=100",
+      "location_set": "core",
+      "sha256": "653d31a7fb19a6cf87faaba33288e0ba1f9fb859da4aefe46794c8adee434702",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=9@s=1": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1",
+      "location_set": "core",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=9@s=100": {
+      "source": "topologies/t2_pipeline.json@d=9@s=100",
+      "location_set": "core",
+      "sha256": "bbdea8ce3081b9db5dc46b709922bebf33bd499afb736345f75198678a07c44d",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=10@s=1": {
+      "source": "topologies/t2_pipeline.json@d=10@s=1",
+      "location_set": "core",
+      "sha256": "a502446e8b4e1e80cf0b7d07d5a81872920189aecb6e5a9883017b38a94009f2",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=10@s=100": {
+      "source": "topologies/t2_pipeline.json@d=10@s=100",
+      "location_set": "core",
+      "sha256": "6b18c88f3c19eaa71553829d4d3b96e7721b592c1b77a1d97963ff9acefb5941",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=11@s=1": {
+      "source": "topologies/t2_pipeline.json@d=11@s=1",
+      "location_set": "core",
+      "sha256": "3e95179271b9b85b616c11bcc724d6b0851baadb7b04b0615c2fa41ab19927a3",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=11@s=100": {
+      "source": "topologies/t2_pipeline.json@d=11@s=100",
+      "location_set": "core",
+      "sha256": "63aa5f924ede66c1ab8f0fe4f34947800bc72944dbfcbe5626c613670f81044d",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=12@s=1": {
+      "source": "topologies/t2_pipeline.json@d=12@s=1",
+      "location_set": "core",
+      "sha256": "aaba0a693cc7e80fa1ef638c92be0ca42582739b4fad31daa6e458f1f63bb29b",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=12@s=100": {
+      "source": "topologies/t2_pipeline.json@d=12@s=100",
+      "location_set": "core",
+      "sha256": "783bea484d68dfd716550ddd140a2ad93ae0beed72ddefb3062f6852b9a7a238",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=13@s=1": {
+      "source": "topologies/t2_pipeline.json@d=13@s=1",
+      "location_set": "core",
+      "sha256": "47aa2bc190c5c5756b6add49bce8503ea8935039bc4c11513ce3b1efc35e872a",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=13@s=100": {
+      "source": "topologies/t2_pipeline.json@d=13@s=100",
+      "location_set": "core",
+      "sha256": "eadabb5b274dcbbcf155caa87d4324c231f290ec41a25cfc4ebbc1473e406798",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=14@s=1": {
+      "source": "topologies/t2_pipeline.json@d=14@s=1",
+      "location_set": "core",
+      "sha256": "6d02999fe23f82c1ea1c2372f7b52c33d67fc9fdb6a89e5ed411332add58fbcb",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=14@s=100": {
+      "source": "topologies/t2_pipeline.json@d=14@s=100",
+      "location_set": "core",
+      "sha256": "047847f1c6a6228b49b2befc480bf22e7e4feecf04ada73f95e87fdf091ea2ca",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=15@s=1": {
+      "source": "topologies/t2_pipeline.json@d=15@s=1",
+      "location_set": "core",
+      "sha256": "0e87096684d315a2d3af6f0d4e411f404ef45b56010d3468bd405cc65d972303",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=15@s=100": {
+      "source": "topologies/t2_pipeline.json@d=15@s=100",
+      "location_set": "core",
+      "sha256": "fe3a6f3dd3e472e15fbc156a846de714567dea656410d923f515c573d3171513",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=16@s=1": {
+      "source": "topologies/t2_pipeline.json@d=16@s=1",
+      "location_set": "core",
+      "sha256": "beeb6d8afdf97e22eaba66b5ca49b2d5f2b92319b3faa965d8b59c8ad433edd7",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=16@s=100": {
+      "source": "topologies/t2_pipeline.json@d=16@s=100",
+      "location_set": "core",
+      "sha256": "a8ebe4e0e0cf47abfc6e065bad375cb6e658b3437ca4438a40e7e54f57e664b8",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=17@s=1": {
+      "source": "topologies/t2_pipeline.json@d=17@s=1",
+      "location_set": "core",
+      "sha256": "7d992a716a96a86be23515dc15fc797f63828e7733051a8710d5b9fd43de7526",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=17@s=100": {
+      "source": "topologies/t2_pipeline.json@d=17@s=100",
+      "location_set": "core",
+      "sha256": "87ba26b1a717971f0e150be0bef1575574bb5ec93548bfb297971b92bbe10e1d",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=18@s=1": {
+      "source": "topologies/t2_pipeline.json@d=18@s=1",
+      "location_set": "core",
+      "sha256": "34831736122678b7aaf3b7002ce2d1d1e96b7f7bb0bdf47272dbe65a3b9ab863",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=18@s=100": {
+      "source": "topologies/t2_pipeline.json@d=18@s=100",
+      "location_set": "core",
+      "sha256": "fde228d3da8d7b954c8a374d828e093117915c4447cc77d62e4447c873bc369a",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=19@s=1": {
+      "source": "topologies/t2_pipeline.json@d=19@s=1",
+      "location_set": "core",
+      "sha256": "8287d60a8bfe90470cff5815e8c8ec31839813ae03704e891105ba23cdf3becf",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=19@s=100": {
+      "source": "topologies/t2_pipeline.json@d=19@s=100",
+      "location_set": "core",
+      "sha256": "2f7a64175e10eaadf3a48c01c918fa0ec22a4d34d49386bc1457180426d292b7",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=20@s=1": {
+      "source": "topologies/t2_pipeline.json@d=20@s=1",
+      "location_set": "core",
+      "sha256": "991ee6d478e6c4689f88eefa323db725c16ffcd875b79c697de335484fdab527",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=20@s=100": {
+      "source": "topologies/t2_pipeline.json@d=20@s=100",
+      "location_set": "core",
+      "sha256": "c1d3f8105e7d3fa1db3710c40730003e9dc3add6c4ac6f41fe59c5b883383ad9",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=21@s=1": {
+      "source": "topologies/t2_pipeline.json@d=21@s=1",
+      "location_set": "core",
+      "sha256": "368a1d62cdae056a67674c1ba6e2d8f6f31952050fe844cdcb7e6a465e60efcb",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=21@s=100": {
+      "source": "topologies/t2_pipeline.json@d=21@s=100",
+      "location_set": "core",
+      "sha256": "210146877431b47000b1dccfdde2a23d1d078f546fb4069b935476f22dba5aab",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=22@s=1": {
+      "source": "topologies/t2_pipeline.json@d=22@s=1",
+      "location_set": "core",
+      "sha256": "96b3f156c1c699104fe048e6a607be8da51146081bcfdb80885947fc95371723",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=22@s=100": {
+      "source": "topologies/t2_pipeline.json@d=22@s=100",
+      "location_set": "core",
+      "sha256": "8c87e044441a0d3c36da4c12265acb21338a9e3fb715396ebec47d47a5bec67e",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=23@s=1": {
+      "source": "topologies/t2_pipeline.json@d=23@s=1",
+      "location_set": "core",
+      "sha256": "d338813926a59381c589697ddc394ca709558b874414464749728aa481977b11",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=23@s=100": {
+      "source": "topologies/t2_pipeline.json@d=23@s=100",
+      "location_set": "core",
+      "sha256": "a6ca2a51d58d9635ea22d80ea41cd581b914e3f9dada4a32f04e7687191c8de1",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=24@s=1": {
+      "source": "topologies/t2_pipeline.json@d=24@s=1",
+      "location_set": "core",
+      "sha256": "f5612468b9058c5d04b9006360c6409467141e7619d0894f533f9bd201569979",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=24@s=100": {
+      "source": "topologies/t2_pipeline.json@d=24@s=100",
+      "location_set": "core",
+      "sha256": "1d3ce74d8c7adf1cf85798dd50b8276b9451f6bc1718da970c692ed1655ab07d",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=25@s=1": {
+      "source": "topologies/t2_pipeline.json@d=25@s=1",
+      "location_set": "core",
+      "sha256": "4103fc85e80dc9f5706687846d320b89b4edc6d695445f1589d4958e9d7e6088",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=25@s=100": {
+      "source": "topologies/t2_pipeline.json@d=25@s=100",
+      "location_set": "core",
+      "sha256": "f11ea988e4b740db3dce5c2c6de635f969133f8a958c541842ea41403d3106ea",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=26@s=1": {
+      "source": "topologies/t2_pipeline.json@d=26@s=1",
+      "location_set": "core",
+      "sha256": "0df744d67315cc302070ad2ec162e1572e03fb9a1150c9dbb91983db7c6cd182",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=26@s=100": {
+      "source": "topologies/t2_pipeline.json@d=26@s=100",
+      "location_set": "core",
+      "sha256": "7e4a71fe3124bf027957d448cae352fd3cdc1c6950d37ae4dd182771c7e27ef7",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=27@s=1": {
+      "source": "topologies/t2_pipeline.json@d=27@s=1",
+      "location_set": "core",
+      "sha256": "8b695fa27d477caea17c234e5da3a8083307fe62e1c8903a02c57de4c3da372d",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=27@s=100": {
+      "source": "topologies/t2_pipeline.json@d=27@s=100",
+      "location_set": "core",
+      "sha256": "d012fe2406949f5a9b707ebb9fa03dc3ff439af056eb926faba295c21e17b456",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=28@s=1": {
+      "source": "topologies/t2_pipeline.json@d=28@s=1",
+      "location_set": "core",
+      "sha256": "a5ea562e297fcd90fc8837eb435f817260ce600ad2e0b6e7d063d8b3fa0ea53a",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=28@s=100": {
+      "source": "topologies/t2_pipeline.json@d=28@s=100",
+      "location_set": "core",
+      "sha256": "917e379e479a0af3ca059096c3797719448bac97b1d83fb367fb46f84296c131",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=29@s=1": {
+      "source": "topologies/t2_pipeline.json@d=29@s=1",
+      "location_set": "core",
+      "sha256": "4578b3258fec90837c7832638fd6ee801ebf55fbcb1e53c42139194f51ba93aa",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@core@d=29@s=100": {
+      "source": "topologies/t2_pipeline.json@d=29@s=100",
+      "location_set": "core",
+      "sha256": "71fa213ded5340fbe49eb1e34242220e909a2bc35c5cf13ac3c1cc09b1c19d6d",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t3_microservices@core@d=0@s=1": {
+      "source": "topologies/t3_microservices.json@d=0@s=1",
+      "location_set": "core",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=0@s=100": {
+      "source": "topologies/t3_microservices.json@d=0@s=100",
+      "location_set": "core",
+      "sha256": "09c410048967d343aaea5c5bddc17d189938ea277a780477d43eeea6dc45a97f",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=1@s=1": {
+      "source": "topologies/t3_microservices.json@d=1@s=1",
+      "location_set": "core",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=1@s=100": {
+      "source": "topologies/t3_microservices.json@d=1@s=100",
+      "location_set": "core",
+      "sha256": "822d6078602b0734504d7e11887da2250919870add4b9e41b46bc6fca2bfb42d",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=2@s=1": {
+      "source": "topologies/t3_microservices.json@d=2@s=1",
+      "location_set": "core",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=2@s=100": {
+      "source": "topologies/t3_microservices.json@d=2@s=100",
+      "location_set": "core",
+      "sha256": "e26ffcfa9d5eee9e24d3932835d262ccb51fc6a629cdb0ddd42115424e80e7e4",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=3@s=1": {
+      "source": "topologies/t3_microservices.json@d=3@s=1",
+      "location_set": "core",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=3@s=100": {
+      "source": "topologies/t3_microservices.json@d=3@s=100",
+      "location_set": "core",
+      "sha256": "fd6edc9305dd9204ee90df3b13c25a64f62e109bc7cbac947dc1de98dc216663",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=4@s=1": {
+      "source": "topologies/t3_microservices.json@d=4@s=1",
+      "location_set": "core",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=4@s=100": {
+      "source": "topologies/t3_microservices.json@d=4@s=100",
+      "location_set": "core",
+      "sha256": "16f4ac40732c9fd36c910b0b639de5f835c636620b25bb455f6d42c866c84f68",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=5@s=1": {
+      "source": "topologies/t3_microservices.json@d=5@s=1",
+      "location_set": "core",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=5@s=100": {
+      "source": "topologies/t3_microservices.json@d=5@s=100",
+      "location_set": "core",
+      "sha256": "ae2bb06d864183d784b8b5a9988aebdfe46469a9b61be1a9e684a39b9fae9197",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=6@s=1": {
+      "source": "topologies/t3_microservices.json@d=6@s=1",
+      "location_set": "core",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=6@s=100": {
+      "source": "topologies/t3_microservices.json@d=6@s=100",
+      "location_set": "core",
+      "sha256": "00239c7705d708c43cc5ff07ac68be7666bbd3332080e805dc15d1ee41b9b840",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=7@s=1": {
+      "source": "topologies/t3_microservices.json@d=7@s=1",
+      "location_set": "core",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=7@s=100": {
+      "source": "topologies/t3_microservices.json@d=7@s=100",
+      "location_set": "core",
+      "sha256": "86a8098f31cfeba5bb2cc244624fb644150124685bfd1f0495dfeaf5ad87b09a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=8@s=1": {
+      "source": "topologies/t3_microservices.json@d=8@s=1",
+      "location_set": "core",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=8@s=100": {
+      "source": "topologies/t3_microservices.json@d=8@s=100",
+      "location_set": "core",
+      "sha256": "939c79d5eb311f082de91bfc0e463c9a814e4f27e766b23f73e6639cd3ee84c5",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=9@s=1": {
+      "source": "topologies/t3_microservices.json@d=9@s=1",
+      "location_set": "core",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=9@s=100": {
+      "source": "topologies/t3_microservices.json@d=9@s=100",
+      "location_set": "core",
+      "sha256": "b619a13219d185988e33f1796f7d14bec0c6450717132854e89914d2966d86d9",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=10@s=1": {
+      "source": "topologies/t3_microservices.json@d=10@s=1",
+      "location_set": "core",
+      "sha256": "ce1d12eaaf554ab88e10e8a367fb0fe7c7079c6e709290b6678e53d3a68cfc0a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=10@s=100": {
+      "source": "topologies/t3_microservices.json@d=10@s=100",
+      "location_set": "core",
+      "sha256": "092cd03e2c1b1ca09c7a66d96fbb9a8744323b8c836d98983116f03329250848",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=11@s=1": {
+      "source": "topologies/t3_microservices.json@d=11@s=1",
+      "location_set": "core",
+      "sha256": "e44c824b15c6979f76ccaa19102c0d31096d6ffe453266f80a576d8ccd3e5e1c",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=11@s=100": {
+      "source": "topologies/t3_microservices.json@d=11@s=100",
+      "location_set": "core",
+      "sha256": "628bbfdb12d20896a352957e1c61745f20be87c8c4a8ee31ce8b83ac436bd3f2",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=12@s=1": {
+      "source": "topologies/t3_microservices.json@d=12@s=1",
+      "location_set": "core",
+      "sha256": "7907f7cdd617625611f0c9fe656aefd701a36db929cf1b4831040630f55b7253",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=12@s=100": {
+      "source": "topologies/t3_microservices.json@d=12@s=100",
+      "location_set": "core",
+      "sha256": "591e7f195cf397b0a2d9c30c1be7b06a39d7c50224e28796b3bd70dcaa5e5097",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=13@s=1": {
+      "source": "topologies/t3_microservices.json@d=13@s=1",
+      "location_set": "core",
+      "sha256": "c5d6c6c29efb42b0a7c1d4c73b433e4d78cc56e4d1e5f4be97b9206418cfa83f",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=13@s=100": {
+      "source": "topologies/t3_microservices.json@d=13@s=100",
+      "location_set": "core",
+      "sha256": "30b0c44a802e00f6db878e1ca68fc83b6d9fe05d55b8000d051e5ef205035668",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=14@s=1": {
+      "source": "topologies/t3_microservices.json@d=14@s=1",
+      "location_set": "core",
+      "sha256": "c0ebb5e5b0b1bd15af7b77227859f6f8326bb7b9f68517b4c480c234e5b19bb1",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=14@s=100": {
+      "source": "topologies/t3_microservices.json@d=14@s=100",
+      "location_set": "core",
+      "sha256": "380f6897c30d9a1ba989a865aa15d13d40d045c76852bfd67ac96b3733ffd1d4",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=15@s=1": {
+      "source": "topologies/t3_microservices.json@d=15@s=1",
+      "location_set": "core",
+      "sha256": "3f6409a1ac96cd55535cab26040c4bf3abd31b9f003f4f2d927f2459df711c6d",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=15@s=100": {
+      "source": "topologies/t3_microservices.json@d=15@s=100",
+      "location_set": "core",
+      "sha256": "b24396d1d18f365607d61fb58ecf8476fba13f7039c46c4dbd65efe608680b6a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=16@s=1": {
+      "source": "topologies/t3_microservices.json@d=16@s=1",
+      "location_set": "core",
+      "sha256": "664002da5ea8a9689594244153525c5ad88b7ab014cf00d5a47b5dd602e324ef",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=16@s=100": {
+      "source": "topologies/t3_microservices.json@d=16@s=100",
+      "location_set": "core",
+      "sha256": "4e8292e94469f6c2b6238fcac11e7884064314e0d0984ce434ab2316366de655",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=17@s=1": {
+      "source": "topologies/t3_microservices.json@d=17@s=1",
+      "location_set": "core",
+      "sha256": "4ec6c4f0d4e8ec2ed5aaffea86340a7a7ac0402078ba4b26fe8a01916183dce9",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=17@s=100": {
+      "source": "topologies/t3_microservices.json@d=17@s=100",
+      "location_set": "core",
+      "sha256": "b7654a550188354b9dc47e0dfc27fb9570124465ea8fd9dafcbde6ddeebbf4d3",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=18@s=1": {
+      "source": "topologies/t3_microservices.json@d=18@s=1",
+      "location_set": "core",
+      "sha256": "521a8aefa3c5bd2f4f8257c72955b395cfdbca6f2fc60accabc65e8e377c9934",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=18@s=100": {
+      "source": "topologies/t3_microservices.json@d=18@s=100",
+      "location_set": "core",
+      "sha256": "de8ee56ff90cf1feee759633a3d5a657f2c242c71e7f42ceff3240bcbfbaa4b2",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=19@s=1": {
+      "source": "topologies/t3_microservices.json@d=19@s=1",
+      "location_set": "core",
+      "sha256": "4fb610d8df1900c76242c23612b2df6e70c72153df8bbc8505a52df53e46e2ae",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=19@s=100": {
+      "source": "topologies/t3_microservices.json@d=19@s=100",
+      "location_set": "core",
+      "sha256": "59988713674a1645d9c4bcd2c00b15a59d1c539df81d024fdcd10acb5680721e",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=20@s=1": {
+      "source": "topologies/t3_microservices.json@d=20@s=1",
+      "location_set": "core",
+      "sha256": "acfd4747aa654541980529000934ef2bbc85b81f0983a793ba83514f316b928e",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=20@s=100": {
+      "source": "topologies/t3_microservices.json@d=20@s=100",
+      "location_set": "core",
+      "sha256": "73a43c339efe655d388d6e0bc8e1b698f0e0bec8cd2f0514603ef91467ea502c",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=21@s=1": {
+      "source": "topologies/t3_microservices.json@d=21@s=1",
+      "location_set": "core",
+      "sha256": "9404cd4087cae829bff96b102851c22df9fd668b1fcfe654a08ab0b34e1f98c3",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=21@s=100": {
+      "source": "topologies/t3_microservices.json@d=21@s=100",
+      "location_set": "core",
+      "sha256": "9a5b406d25a9b9ac2a37d21ca15de9c35c7d2f8c0b136178c544f64e02a71b85",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=22@s=1": {
+      "source": "topologies/t3_microservices.json@d=22@s=1",
+      "location_set": "core",
+      "sha256": "5375b2a37273fd5f8577d07130aece91cb5c24967613091f24ed721021d2be30",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=22@s=100": {
+      "source": "topologies/t3_microservices.json@d=22@s=100",
+      "location_set": "core",
+      "sha256": "00aeadcb6a75693be437274b869e31a8b9e9dab211c7ace060899b72b2566dc7",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=23@s=1": {
+      "source": "topologies/t3_microservices.json@d=23@s=1",
+      "location_set": "core",
+      "sha256": "85843421eab0fde9fc78d21eab224ec5a105c427090acc052e5ebef79426dc49",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=23@s=100": {
+      "source": "topologies/t3_microservices.json@d=23@s=100",
+      "location_set": "core",
+      "sha256": "2e1ee3cf7e2aa909591090bbaf1a5c9c2dd18d1190853d574b2e47b9ccf7e848",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=24@s=1": {
+      "source": "topologies/t3_microservices.json@d=24@s=1",
+      "location_set": "core",
+      "sha256": "b9905785eb442b01a93fef64b486e71165668834c90155c87b013cc381141cf5",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=24@s=100": {
+      "source": "topologies/t3_microservices.json@d=24@s=100",
+      "location_set": "core",
+      "sha256": "887d8043990e64424e89dc5772861fa67b7ce39ce362b30425d0e2a8b29107b0",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=25@s=1": {
+      "source": "topologies/t3_microservices.json@d=25@s=1",
+      "location_set": "core",
+      "sha256": "eb80afc8e010e8203dea7a6193320c22e5519de5dec97e311d691ef66f938df0",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=25@s=100": {
+      "source": "topologies/t3_microservices.json@d=25@s=100",
+      "location_set": "core",
+      "sha256": "d4e90779dd449f375f943a715d8b185a42e416b1732693336c3a09781a4fda64",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=26@s=1": {
+      "source": "topologies/t3_microservices.json@d=26@s=1",
+      "location_set": "core",
+      "sha256": "f433e10ac0dd34a75f817f5ee5691678aa5dae878b8a1e9d67fc3fbfa980287d",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=26@s=100": {
+      "source": "topologies/t3_microservices.json@d=26@s=100",
+      "location_set": "core",
+      "sha256": "ebf7269cd959aca315f57480a41f1bde177a3ee8e03ed88c732d997a468e325a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=27@s=1": {
+      "source": "topologies/t3_microservices.json@d=27@s=1",
+      "location_set": "core",
+      "sha256": "0e2c14ec5915a918adc357268ac36b4df4c092d45021615c13e16d56247b421b",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=27@s=100": {
+      "source": "topologies/t3_microservices.json@d=27@s=100",
+      "location_set": "core",
+      "sha256": "10c45c15d53806a89b4ef69f628fbf91e752b3fdecf66b8cc6f965c2afb1749f",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=28@s=1": {
+      "source": "topologies/t3_microservices.json@d=28@s=1",
+      "location_set": "core",
+      "sha256": "7207294e4c84bdfdcdbc86cd6ef2b4012feddb70cdfda55e8aa02e0318a9ab8c",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=28@s=100": {
+      "source": "topologies/t3_microservices.json@d=28@s=100",
+      "location_set": "core",
+      "sha256": "23dda411dcf8f595765df52c1730712fb47d6ba52ef5e589c9d239d935a22a2c",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=29@s=1": {
+      "source": "topologies/t3_microservices.json@d=29@s=1",
+      "location_set": "core",
+      "sha256": "71098be53ba82462df543835bff8e785f35d9f746b6bc264cb5ba610d67757b5",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@core@d=29@s=100": {
+      "source": "topologies/t3_microservices.json@d=29@s=100",
+      "location_set": "core",
+      "sha256": "42762a1254873f6d9d4b7580cc46c975321b5e2b8bd80dfe1390d67c3ae92552",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    }
+  },
+  "sessions": [
+    {
+      "run_utc": "2026-09-22T20:52:40Z",
+      "git_commit": "665e719",
+      "machine_tag": "adi-laptop-win11",
+      "jobs_total": 4320,
+      "jobs_skipped": 0,
+      "jobs_run": 4318,
+      "jobs_failed": 2,
+      "wall_s": 2851.189,
+      "finished": true
+    },
+    {
+      "run_utc": "2026-09-22T21:40:44Z",
+      "git_commit": "30542d5",
+      "machine_tag": "adi-laptop-win11",
+      "jobs_total": 4320,
+      "jobs_skipped": 4318,
+      "jobs_run": 2,
+      "jobs_failed": 0,
+      "wall_s": 1.062,
+      "finished": true
+    }
+  ],
+  "notes": {
+    "runs.csv": "one row per (instance, method, seed); standard columns (01 \u00a74) first; appended as each job finishes; resume skips present keys.",
+    "runtime_s": "method wall time; ILP = build + CBC; greedy_1opt includes greedy.",
+    "status": "optimal (ILP proven) | feasible (ILP incumbent, not proven) | no_solution | ok (heuristic or baseline)"
+  }
+}

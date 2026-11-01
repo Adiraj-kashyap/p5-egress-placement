@@ -1,0 +1,49 @@
+2026-09-22 12:51:12,348  INFO     M08 baselines | snapshot 2026-09-21 | location set core | git d51adf8
+2026-09-22 12:51:12,356  INFO     
+2026-09-22 12:51:12,356  INFO     t1_three_tier@core  (4 components, 12 locations)
+2026-09-22 12:51:12,356  INFO       method      total_usd     compute   storage     egress   internet  eg_shr prov  placement
+2026-09-22 12:51:12,356  INFO       B1             497.58      420.48      4.16      14.44      58.49   2.90%    2  web@aws:us-east-1, api@aws:us-east-1, cache@aws:us-east-1, db@azure:eastus
+2026-09-22 12:51:12,356  INFO       B2-aws         483.57      420.48      4.60       0.00      58.49   0.00%    1  aws:us-east-1
+2026-09-22 12:51:12,356  INFO       B2-azure       481.18      420.48      4.16       0.00      56.54   0.00%    1  azure:eastus
+2026-09-22 12:51:12,356  INFO       B2-gcp         544.29      467.93      3.73       0.00      72.64   0.00%    1  gcp:europe-west1
+2026-09-22 12:51:12,356  INFO       B2-best        481.18      420.48      4.16       0.00      56.54   0.00%    1  = B2-azure
+2026-09-22 12:51:12,356  INFO       B1 tie for web              aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,356  INFO       B1 tie for api              aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,356  INFO       B1 tie for cache            aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,356  INFO       B1 sensitivity: last-location-id tie-break gives total 481.18 (reported B1 497.58)
+2026-09-22 12:51:12,364  INFO     
+2026-09-22 12:51:12,364  INFO     t2_pipeline@core  (7 components, 12 locations)
+2026-09-22 12:51:12,364  INFO       method      total_usd     compute   storage     egress   internet  eg_shr prov  placement
+2026-09-22 12:51:12,364  INFO       B1            1303.65      981.12     46.80     274.83       0.90  21.08%    2  ingest@aws:us-east-1, queue@azure:eastus, transform-1@aws:us-east-1, transform-2@aws:us-east-1, aggregate@aws:us-east-1, warehouse@azure:eastus, dashboard@aws:us-east-1
+2026-09-22 12:51:12,364  INFO       B2-aws        1033.77      981.12     51.75       0.00       0.90   0.00%    1  aws:us-east-1
+2026-09-22 12:51:12,364  INFO       B2-azure      1028.79      981.12     46.80       0.00       0.87   0.00%    1  azure:eastus
+2026-09-22 12:51:12,364  INFO       B2-gcp        1134.87     1091.84     41.91       0.00       1.12   0.00%    1  gcp:europe-west1
+2026-09-22 12:51:12,364  INFO       B2-best       1028.79      981.12     46.80       0.00       0.87   0.00%    1  = B2-azure
+2026-09-22 12:51:12,364  INFO       B1 tie for ingest           aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,364  INFO       B1 tie for transform-1      aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,364  INFO       B1 tie for transform-2      aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,364  INFO       B1 tie for aggregate        aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,364  INFO       B1 tie for dashboard        aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,364  INFO       B1 sensitivity: last-location-id tie-break gives total 1028.79 (reported B1 1303.65)
+2026-09-22 12:51:12,373  INFO     
+2026-09-22 12:51:12,373  INFO     t3_microservices@core  (11 components, 12 locations)
+2026-09-22 12:51:12,373  INFO       method      total_usd     compute   storage     egress   internet  eg_shr prov  placement
+2026-09-22 12:51:12,373  INFO       B1            1822.60      840.96      0.00       0.00     981.64   0.00%    1  frontend@aws:us-east-1, cart@aws:us-east-1, productcatalog@aws:us-east-1, currency@aws:us-east-1, payment@aws:us-east-1, shipping@aws:us-east-1, email@aws:us-east-1, checkout@aws:us-east-1, recommendation@aws:us-east-1, ad@aws:us-east-1, redis-cart@aws:us-east-1
+2026-09-22 12:51:12,373  INFO       B2-aws        1822.60      840.96      0.00       0.00     981.64   0.00%    1  aws:us-east-1
+2026-09-22 12:51:12,373  INFO       B2-azure      1789.88      840.96      0.00       0.00     948.92   0.00%    1  azure:eastus
+2026-09-22 12:51:12,373  INFO       B2-gcp        2154.84      935.87      0.00       0.00    1218.97   0.00%    1  gcp:europe-west1
+2026-09-22 12:51:12,373  INFO       B2-best       1789.88      840.96      0.00       0.00     948.92   0.00%    1  = B2-azure
+2026-09-22 12:51:12,373  INFO       B1 tie for frontend         aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for cart             aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for productcatalog   aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for currency         aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for payment          aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for shipping         aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for email            aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for checkout         aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for recommendation   aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for ad               aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 tie for redis-cart       aws:us-east-1, azure:eastus
+2026-09-22 12:51:12,373  INFO       B1 sensitivity: last-location-id tie-break gives total 1789.88 (reported B1 1822.60)
+2026-09-22 12:51:12,373  INFO     
+2026-09-22 12:51:12,373  INFO     wrote results/baselines/runs.csv (15 rows) and config.json

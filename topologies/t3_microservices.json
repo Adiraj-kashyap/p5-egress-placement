@@ -1,0 +1,402 @@
+{
+  "id": "t3_microservices",
+  "description": "Google Online Boutique (microservices-demo): 11 services, gRPC call graph from the source code.",
+  "provenance": "stated",
+  "assumptions": {
+    "frontend_http_requests_per_s": 100.0,
+    "handler_mix_per_25_requests": {
+      "home": 3,
+      "set_currency": 2,
+      "product": 12,
+      "add_to_cart": 2,
+      "view_cart": 5,
+      "place_order": 1
+    },
+    "cart_items": 2,
+    "catalog_products": 9,
+    "recommendation_ids": 5,
+    "grpc_framing_bytes_per_message": 150,
+    "rpc_payload_bytes": {
+      "GetSupportedCurrencies": [
+        0,
+        165
+      ],
+      "Convert": [
+        30,
+        25
+      ],
+      "ListProducts": [
+        0,
+        4680
+      ],
+      "GetProduct": [
+        20,
+        520
+      ],
+      "GetCart": [
+        40,
+        100
+      ],
+      "AddItem": [
+        70,
+        0
+      ],
+      "EmptyCart": [
+        40,
+        0
+      ],
+      "ListRecommendations": [
+        60,
+        60
+      ],
+      "GetQuote": [
+        160,
+        25
+      ],
+      "GetAds": [
+        20,
+        150
+      ],
+      "PlaceOrder": [
+        225,
+        290
+      ],
+      "Charge": [
+        75,
+        36
+      ],
+      "ShipOrder": [
+        160,
+        20
+      ],
+      "SendOrderConfirmation": [
+        320,
+        0
+      ],
+      "redis:read": [
+        100,
+        90
+      ],
+      "redis:write": [
+        160,
+        10
+      ]
+    },
+    "page_bytes": 50000,
+    "redirect_bytes": 500,
+    "note": "Call graph and counts verified in the repository source (evidence/logs/M06_online_boutique_sources.txt); payload sizes are estimates. loadgenerator is excluded (it stands in for users)."
+  },
+  "references": [
+    "GoogleCloudPlatform/microservices-demo (Online Boutique), https://github.com/GoogleCloudPlatform/microservices-demo, main branch, fetched 2026-09-21: src/frontend/handlers.go, src/frontend/rpc.go, src/checkoutservice/main.go, src/recommendationservice/recommendation_server.py, src/loadgenerator/locustfile.py, src/productcatalogservice/products.json"
+  ],
+  "components": [
+    {
+      "id": "frontend",
+      "vcpu": 4,
+      "ram_gb": 16,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Go HTTP server; renders every page and fans out to 7 services"
+    },
+    {
+      "id": "cart",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "C# cart service"
+    },
+    {
+      "id": "productcatalog",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Go catalog service"
+    },
+    {
+      "id": "currency",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Node.js currency conversion"
+    },
+    {
+      "id": "payment",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Node.js mock payment"
+    },
+    {
+      "id": "shipping",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Go shipping quotes/shipments"
+    },
+    {
+      "id": "email",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Python mock email"
+    },
+    {
+      "id": "checkout",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Go order orchestration"
+    },
+    {
+      "id": "recommendation",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Python recommendations"
+    },
+    {
+      "id": "ad",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Java text ads"
+    },
+    {
+      "id": "redis-cart",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "Redis holding carts in memory"
+    }
+  ],
+  "edges": [
+    {
+      "src": "ad",
+      "dst": "frontend",
+      "gb_per_month": 46.656,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses ad->frontend: 180 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "cart",
+      "dst": "checkout",
+      "gb_per_month": 4.147,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses cart->checkout: 16 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "cart",
+      "dst": "frontend",
+      "gb_per_month": 54.95,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses cart->frontend: 212 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "cart",
+      "dst": "redis-cart",
+      "gb_per_month": 28.823,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests cart->redis-cart: 111 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "checkout",
+      "dst": "cart",
+      "gb_per_month": 3.94,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests checkout->cart: 15 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "checkout",
+      "dst": "currency",
+      "gb_per_month": 5.599,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests checkout->currency: 22 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "checkout",
+      "dst": "email",
+      "gb_per_month": 4.873,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests checkout->email: 19 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "checkout",
+      "dst": "frontend",
+      "gb_per_month": 4.562,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses checkout->frontend: 18 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "checkout",
+      "dst": "payment",
+      "gb_per_month": 2.333,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests checkout->payment: 9 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "checkout",
+      "dst": "productcatalog",
+      "gb_per_month": 3.525,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests checkout->productcatalog: 14 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "checkout",
+      "dst": "shipping",
+      "gb_per_month": 6.428,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests checkout->shipping: 25 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "currency",
+      "dst": "checkout",
+      "gb_per_month": 5.443,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses currency->checkout: 21 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "currency",
+      "dst": "frontend",
+      "gb_per_month": 166.562,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses currency->frontend: 643 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "email",
+      "dst": "checkout",
+      "gb_per_month": 1.555,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses email->checkout: 6 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "frontend",
+      "dst": "ad",
+      "gb_per_month": 26.438,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests frontend->ad: 102 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "frontend",
+      "dst": "cart",
+      "gb_per_month": 43.96,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests frontend->cart: 170 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "frontend",
+      "dst": "checkout",
+      "gb_per_month": 3.888,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests frontend->checkout: 15 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "frontend",
+      "dst": "currency",
+      "gb_per_month": 133.436,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests frontend->currency: 515 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "frontend",
+      "dst": "productcatalog",
+      "gb_per_month": 205.597,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests frontend->productcatalog: 793 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "frontend",
+      "dst": "recommendation",
+      "gb_per_month": 39.191,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests frontend->recommendation: 151 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "frontend",
+      "dst": "shipping",
+      "gb_per_month": 16.07,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests frontend->shipping: 62 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "payment",
+      "dst": "checkout",
+      "gb_per_month": 1.928,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses payment->checkout: 7 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "productcatalog",
+      "dst": "checkout",
+      "gb_per_month": 13.893,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses productcatalog->checkout: 54 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "productcatalog",
+      "dst": "frontend",
+      "gb_per_month": 942.14,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses productcatalog->frontend: 3635 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "productcatalog",
+      "dst": "recommendation",
+      "gb_per_month": 901.394,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses productcatalog->recommendation: 3478 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "recommendation",
+      "dst": "frontend",
+      "gb_per_month": 39.191,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses recommendation->frontend: 151 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "recommendation",
+      "dst": "productcatalog",
+      "gb_per_month": 27.994,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "requests recommendation->productcatalog: 108 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "redis-cart",
+      "dst": "cart",
+      "gb_per_month": 21.773,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses redis-cart->cart: 84 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "shipping",
+      "dst": "checkout",
+      "gb_per_month": 3.577,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses shipping->checkout: 14 B per frontend request x 100 req/s"
+    },
+    {
+      "src": "shipping",
+      "dst": "frontend",
+      "gb_per_month": 9.072,
+      "provenance": "stated:payload estimate x load-generator mix x 100 req/s",
+      "rationale": "responses shipping->frontend: 35 B per frontend request x 100 req/s"
+    }
+  ],
+  "internet_egress": [
+    {
+      "src": "frontend",
+      "gb_per_month": 10907.136,
+      "provenance": "stated:page-size estimate x load-generator mix x 100 req/s",
+      "rationale": "42080 B per request (50000 B rendered pages, 500 B redirects) x 100 req/s"
+    }
+  ]
+}

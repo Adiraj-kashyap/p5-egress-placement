@@ -1,0 +1,1 @@
+﻿A1/optimality: 0 violation(s) over 180 (topology, scale, draw) points, 4320 rows

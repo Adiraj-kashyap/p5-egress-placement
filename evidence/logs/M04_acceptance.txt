@@ -1,0 +1,19 @@
+source: public_pricing_pages | snapshot_date: 2026-09-21
+A1 us-east4             core=[0.035605] ram=[0.004771]
+A1 europe-west1         core=[0.034773] ram=[0.004661]
+A1 asia-south1          core=[0.03797] ram=[0.005088]
+A1 asia-southeast1      core=[0.038999] ram=[0.005226]
+A1 us-west1             core=[0.031611] ram=[0.004237]
+A1 europe-west3         core=[0.04073] ram=[0.005458]
+A1 asia-northeast1      core=[0.040618] ram=[0.005419]
+A1 southamerica-east1   core=[0.05018] ram=[0.006725]
+A1 PASS (8 regions)
+A2 internet coverage by continent group: {'Americas': 3, 'EMEA': 2, 'APAC': 3} | inter-region pairs missing: []
+A2 PASS
+A3 storage: {'asia-northeast1': 0.023, 'asia-south1': 0.02, 'asia-southeast1': 0.02, 'europe-west1': 0.02, 'europe-west3': 0.023, 'southamerica-east1': 0.035, 'us-east4': 0.023, 'us-west1': 0.02}
+A3 PASS
+A4 grep -c 'key=':
+  evidence/logs/M04_gcp_pull.txt : 0
+  logs/pull_2026-09-21.log : 0
+A5 pytest -q: 52 passed, 4 warnings in 0.51s
+F1 pytest tests/test_free_tier.py: 7 passed in 0.07s

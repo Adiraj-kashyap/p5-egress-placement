@@ -1,0 +1,4922 @@
+{
+  "exp_id": "sensitivity",
+  "created_utc": "2026-09-22T21:41:02Z",
+  "config_path": "experiments/configs/sensitivity.json",
+  "config_sha256": "87d8c6fc468c3f591601212be0a71fd892b323a3b0ead28e8a0da6a9ad846a3d",
+  "config": {
+    "exp_id": "sensitivity",
+    "snapshot_date": "2026-09-21",
+    "location_set": "ext",
+    "instances": [
+      {
+        "topology": "topologies/t1_three_tier.json"
+      },
+      {
+        "topology": "topologies/t2_pipeline.json"
+      },
+      {
+        "topology": "topologies/t3_microservices.json"
+      }
+    ],
+    "draws": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "scales": [
+      1.0
+    ],
+    "egress_multipliers": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "locations_per_provider": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "methods": [
+      "ilp_full",
+      "b1",
+      "b2_best"
+    ],
+    "time_limits": {
+      "ilp_full": 600
+    },
+    "method_params": {},
+    "notes": {
+      "purpose": "M17 step 4: how the result moves with the price of leaving a provider and with the number of candidate regions (06 S12).",
+      "egress_multipliers": "multiplies every CROSS-PROVIDER egress rate; same-provider inter-region rates, the zero diagonal and internet rates are untouched, so the knob is exactly 'what does leaving a provider cost'. x = 1 reproduces the real snapshot exactly and anchors the sweep.",
+      "locations_per_provider": "prefix of each provider's regions in LOCATIONS_EXT declaration order, so the grids nest: k = 1 subset 2 subset 4 subset 8. k = 4 is exactly the core location set and k = 8 is ext, which ties the sweep to the rest of the project.",
+      "location_set": "ext, because the k axis needs 8 regions per provider to exist; k = 4 reproduces core.",
+      "comparability": "these transforms change the true cost model, so a row is comparable only with rows at the same (egress_mult, locs_per_provider). Both are their own runs.csv columns and part of the configuration key in check_replication.",
+      "draws": "R = 10 (05 S2 default for a grid this size; the n >= 3 floor is what check_replication enforces). Same draw ids and generator as results/replicates, so the grid is paired with the s = 1 core rows.",
+      "methods": "ilp_full, b1 and b2_best only: the question here is how the OPTIMUM and the baselines move, not which heuristic tracks it."
+    }
+  },
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "hours_per_month": 730,
+  "method_seeds": [],
+  "time_limits": {
+    "ilp_full": 600
+  },
+  "ilp_default_time_limit_s": 600.0,
+  "threads": 1,
+  "machine_tag": "adi-laptop-win11",
+  "git_commit": "4d77c4e",
+  "python": "3.12.10",
+  "instances": {
+    "t1_three_tier@ext@d=0@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=0@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=0@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "91e826d9d7c0e5637ac81d885f6da59edf9df3e2f663fa73b778397c4ee6d9dd",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=1@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=1@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "a9d6f913ca80f5473a75ab1dc200058879891c8af9808e128bcddf9aa62df319",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=2@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=2@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "c9bf25c8b58828cb4a6810a1a92e2b82d0b1d12f2433a7d0d7bd99fa935b95cc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=3@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=3@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "8c6bc36dae9fd67285bc0e7c8e0d84fdf9925f509b4c3c98f8ae91a5120d85a6",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=4@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=4@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "f7acbbb9ad1e4c6f915efe8a2ec428398c3ad18892e0efb789ad554bec95d057",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=5@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=5@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "77253819f29ae1bb28aeddc9708b292de731205a9b181c89261e5f408f87704c",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=6@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=6@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "dc5fc3d55d9941a33ae9a05f44aab5e6997b4e0564f35e90305e45e13141d065",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=7@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=7@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "498b1018e96c12634d3b0fdf76875ce842984f938816f13d9a98d720c8249a67",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=8@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=8@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "6d39ec16a540cdd7725181fecf947cad6b550f841ee62ed405552f00cc137927",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=0.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=0.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=0.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=0.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=0.75@k=1": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=0.75@k=2": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=0.75@k=4": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=0.75@k=8": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1@k=1": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1@k=2": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1@k=4": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1@k=8": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1.25@k=1": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1.25@k=2": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1.25@k=4": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1.25@k=8": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1.5@k=1": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 3,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1.5@k=2": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 6,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1.5@k=4": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "t1_three_tier@ext@d=9@s=1@x=1.5@k=8": {
+      "source": "topologies/t1_three_tier.json@d=9@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "64a1b5446cf78b3e504f71577ea59b479a9b1548436ef39d1032c52a54403abc",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "t2_pipeline@ext@d=0@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=0@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=0@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "eb7050f0b4598325cf696bcc7807e56555be4c0381ae610dcbb198a116b0efb1",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=1@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=1@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "27032cf75577167501301002af70c941ae5ae7131e9e1eb0e0d7bcd268e5349c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=2@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=2@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "e1e3ab1dac9a67d03809e87cab4d5b28469e1de1cf643a1381adec53265fe2ff",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=3@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=3@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "2370856a7802e16cd9ebbe8437ac6cea7ffdf95d5a9dee022142d211009052c3",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=4@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=4@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "13a9e0ce7e00e88c7e8406a8e78b2b12d6ddaa62f2d3d33841ba670af0cd9bed",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=5@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=5@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "40b10bd90d3264e4f5b36edd2294e1c66b48e81359b5262b269b215a2bb36626",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=6@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=6@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "0a64992a4aec96a85152d7f1c59f69ed47675e4e242e1408d16ac1707fa10d9c",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=7@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=7@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "640ade2fb06775fc0dabeb21d90328f06818e17718ec02ee3ccd7abfb943f9a0",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=8@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=8@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "5baf9ce0e4d7aa006b5b4a21a730c5df5f9e83da9cfdebed0c67317b388e7d4b",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=0.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=0.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=0.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=0.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=0.75@k=1": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=0.75@k=2": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=0.75@k=4": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=0.75@k=8": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1@k=1": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1@k=2": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1@k=4": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1@k=8": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1.25@k=1": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1.25@k=2": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1.25@k=4": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1.25@k=8": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1.5@k=1": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 3,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1.5@k=2": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 6,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1.5@k=4": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 12,
+      "n_edges": 8
+    },
+    "t2_pipeline@ext@d=9@s=1@x=1.5@k=8": {
+      "source": "topologies/t2_pipeline.json@d=9@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "ec6da5f5aecc9b5e339e41b573b5265fb838db11453f386d9d676a43ae953397",
+      "n_components": 7,
+      "n_locations": 24,
+      "n_edges": 8
+    },
+    "t3_microservices@ext@d=0@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=0@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=0@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "cf1279906e15b7a28fafdda9ace6a9dcc67f71aede83eee1d560b3c0644ff61a",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=1@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=1@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "767ef1f4999cf24f5e4156726bc01d6c34cb8f43b65b438f5944d1d496d796db",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=2@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=2@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "8de6962628cb22db9c38afe852c07bf82a24f6a5ca8542c38558df1ab9867033",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=3@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=3@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "5c7050e47eda4673305bd9c889db35dbbcd3c3c6413e3b9df037efcc6c1e2e2e",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=4@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=4@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "56fa7481da44647ab3999abca7c504dc69b23c9fa48404ffefcf22dcfc77db73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=5@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=5@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "a6e0c340ad87210f827ea133b6f748030ab936a72977e5cbe89c99e5bea1b2aa",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=6@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=6@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "2688ea941982a193f11caf453d7a5e2e4f73e513f7090b1d37edb3634f847647",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=7@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=7@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "1cadeefd9264d6876d4de3cac902c314827e2880710540a3cc8b26b7181f1b19",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=8@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=8@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "f57a691886abdd494b799f72335acc68336cf2412e6760ba37138f58ae02de73",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=0.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=0.5@k=1",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=0.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=0.5@k=2",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=0.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=0.5@k=4",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=0.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=0.5@k=8",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=0.75@k=1": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=0.75@k=1",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=0.75@k=2": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=0.75@k=2",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=0.75@k=4": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=0.75@k=4",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=0.75@k=8": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=0.75@k=8",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1@k=1": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1@k=1",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1@k=2": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1@k=2",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1@k=4": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1@k=4",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1@k=8": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1@k=8",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1.25@k=1": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1.25@k=1",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1.25@k=2": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1.25@k=2",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1.25@k=4": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1.25@k=4",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1.25@k=8": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1.25@k=8",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1.5@k=1": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1.5@k=1",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 3,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1.5@k=2": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1.5@k=2",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 6,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1.5@k=4": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1.5@k=4",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 12,
+      "n_edges": 30
+    },
+    "t3_microservices@ext@d=9@s=1@x=1.5@k=8": {
+      "source": "topologies/t3_microservices.json@d=9@s=1@x=1.5@k=8",
+      "location_set": "ext",
+      "sha256": "641481ad6ee34cee097f351c147bd8ec44b2178ef4ecd69c4b75cde3a8f74ead",
+      "n_components": 11,
+      "n_locations": 24,
+      "n_edges": 30
+    }
+  },
+  "sessions": [
+    {
+      "run_utc": "2026-09-22T21:41:02Z",
+      "git_commit": "4d77c4e",
+      "machine_tag": "adi-laptop-win11",
+      "jobs_total": 1800,
+      "jobs_skipped": 0,
+      "jobs_run": 976,
+      "jobs_failed": 2,
+      "wall_s": null,
+      "finished": false
+    },
+    {
+      "run_utc": "2026-09-22T21:52:24Z",
+      "git_commit": "7962d6c",
+      "machine_tag": "adi-laptop-win11",
+      "jobs_total": 1800,
+      "jobs_skipped": 976,
+      "jobs_run": 823,
+      "jobs_failed": 1,
+      "wall_s": 166.498,
+      "finished": true
+    },
+    {
+      "run_utc": "2026-09-22T21:55:27Z",
+      "git_commit": "3e0cbe4",
+      "machine_tag": "adi-laptop-win11",
+      "jobs_total": 1800,
+      "jobs_skipped": 1799,
+      "jobs_run": 1,
+      "jobs_failed": 0,
+      "wall_s": 3.153,
+      "finished": true
+    }
+  ],
+  "notes": {
+    "runs.csv": "one row per (instance, method, seed); standard columns (01 \u00a74) first; appended as each job finishes; resume skips present keys.",
+    "runtime_s": "method wall time; ILP = build + CBC; greedy_1opt includes greedy.",
+    "status": "optimal (ILP proven) | feasible (ILP incumbent, not proven) | no_solution | ok (heuristic or baseline)"
+  }
+}

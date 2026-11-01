@@ -1,0 +1,43 @@
+M13 runner | exp smoke | config experiments/configs/smoke.json (sha256 511716b2d68d) | snapshot 2026-09-21 | machine adi-laptop-win11 | git c1dff72 | run 2026-09-22T09:56:56Z
+job 1/32 syn_n6_s1@core         ilp_tight     seed=    optimal  total=   1507.3229  0.0664 s
+job 2/32 syn_n6_s1@core         ilp_mccormick seed=    optimal  total=   1507.3229  0.0937 s
+job 3/32 syn_n6_s1@core         greedy        seed=    ok       total=   1516.1431  0.0002 s
+job 4/32 syn_n6_s1@core         greedy_1opt   seed=    ok       total=   1516.1431  0.0003 s
+job 5/32 syn_n6_s1@core         sa            seed=0   ok       total=   1507.3229  0.3135 s
+job 6/32 syn_n6_s1@core         sa            seed=1   ok       total=   1507.3229  0.2892 s
+job 7/32 syn_n6_s1@core         b1            seed=    ok       total=  1543.44056  0.0006 s
+job 8/32 syn_n6_s1@core         b2_best       seed=    ok       total=   1507.3229  0.0002 s
+job 9/32 syn_n6_s2@core         ilp_tight     seed=    optimal  total=   994.52912  0.0700 s
+job 10/32 syn_n6_s2@core         ilp_mccormick seed=    optimal  total=   994.52912  0.0927 s
+job 11/32 syn_n6_s2@core         greedy        seed=    ok       total=   994.52912  0.0002 s
+job 12/32 syn_n6_s2@core         greedy_1opt   seed=    ok       total=   994.52912  0.0002 s
+job 13/32 syn_n6_s2@core         sa            seed=0   ok       total=   994.52912  0.2862 s
+job 14/32 syn_n6_s2@core         sa            seed=1   ok       total=   994.52912  0.3138 s
+job 15/32 syn_n6_s2@core         b1            seed=    ok       total=  1252.78538  0.0005 s
+job 16/32 syn_n6_s2@core         b2_best       seed=    ok       total=   994.52912  0.0001 s
+job 17/32 syn_n12_s1@core        ilp_tight     seed=    optimal  total=  3377.24103  0.1334 s
+job 18/32 syn_n12_s1@core        ilp_mccormick seed=    optimal  total=  3377.24103  0.1724 s
+job 19/32 syn_n12_s1@core        greedy        seed=    ok       total=   3382.9824  0.0004 s
+job 20/32 syn_n12_s1@core        greedy_1opt   seed=    ok       total=   3382.9824  0.0009 s
+job 21/32 syn_n12_s1@core        sa            seed=0   ok       total=  3377.24103  0.6775 s
+job 22/32 syn_n12_s1@core        sa            seed=1   ok       total=   3382.9824  0.7790 s
+job 23/32 syn_n12_s1@core        b1            seed=    ok       total=  3552.67173  0.0004 s
+job 24/32 syn_n12_s1@core        b2_best       seed=    ok       total=  3377.24103  0.0002 s
+job 25/32 syn_n12_s2@core        ilp_tight     seed=    optimal  total=  3115.24633  0.1178 s
+job 26/32 syn_n12_s2@core        ilp_mccormick seed=    optimal  total=  3115.24633  0.1718 s
+job 27/32 syn_n12_s2@core        greedy        seed=    ok       total=  3115.24633  0.0002 s
+job 28/32 syn_n12_s2@core        greedy_1opt   seed=    ok       total=  3115.24633  0.0005 s
+job 29/32 syn_n12_s2@core        sa            seed=0   ok       total=  3115.24633  0.7354 s
+job 30/32 syn_n12_s2@core        sa            seed=1   ok       total=  3115.24633  0.7491 s
+job 31/32 syn_n12_s2@core        b1            seed=    ok       total=  3174.43744  0.0006 s
+job 32/32 syn_n12_s2@core        b2_best       seed=    ok       total=  3115.24633  0.0002 s
+
+jobs 32 | skipped (already present) 0 | run 32 | failed 0 | runs.csv rows 32 | wall 5.5 s
+  method          rows  statuses median_runtime_s
+  ilp_tight          4   optimal         0.0939
+  ilp_mccormick      4   optimal         0.1327
+  greedy             4        ok         0.0002
+  greedy_1opt        4        ok         0.0004
+  sa                 8        ok         0.4957
+  b1                 4        ok         0.0005
+  b2_best            4        ok         0.0002

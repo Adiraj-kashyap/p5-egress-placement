@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: web, namespace: p5, labels: {app: web}}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: web}}
+  template:
+    metadata: {labels: {app: web}}
+    spec:
+      enableServiceLinks: false  # else k8s injects DB_PORT=tcp://... etc.
+      containers:
+        - name: web
+          image: p5-web:m07
+          imagePullPolicy: Never
+          env:
+            - {name: API_HOST, value: api}
+          ports: [{containerPort: 8000}]
+          readinessProbe:
+            httpGet: {path: /healthz, port: 8000}
+            periodSeconds: 30
+          resources:
+            requests: {cpu: 250m, memory: 128Mi}
+            limits: {cpu: "1", memory: 256Mi}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: web, namespace: p5}
+spec:
+  type: NodePort
+  selector: {app: web}
+  ports: [{port: 8000, targetPort: 8000, nodePort: 30080}]

@@ -1,0 +1,26 @@
+{
+  "exp_id": "sensitivity",
+  "snapshot_date": "2026-09-21",
+  "location_set": "ext",
+  "instances": [
+    {"topology": "topologies/t1_three_tier.json"},
+    {"topology": "topologies/t2_pipeline.json"},
+    {"topology": "topologies/t3_microservices.json"}
+  ],
+  "draws": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "scales": [1.0],
+  "egress_multipliers": [0.5, 0.75, 1.0, 1.25, 1.5],
+  "locations_per_provider": [1, 2, 4, 8],
+  "methods": ["ilp_full", "b1", "b2_best"],
+  "time_limits": {"ilp_full": 600},
+  "method_params": {},
+  "notes": {
+    "purpose": "M17 step 4: how the result moves with the price of leaving a provider and with the number of candidate regions (06 S12).",
+    "egress_multipliers": "multiplies every CROSS-PROVIDER egress rate; same-provider inter-region rates, the zero diagonal and internet rates are untouched, so the knob is exactly 'what does leaving a provider cost'. x = 1 reproduces the real snapshot exactly and anchors the sweep.",
+    "locations_per_provider": "prefix of each provider's regions in LOCATIONS_EXT declaration order, so the grids nest: k = 1 subset 2 subset 4 subset 8. k = 4 is exactly the core location set and k = 8 is ext, which ties the sweep to the rest of the project.",
+    "location_set": "ext, because the k axis needs 8 regions per provider to exist; k = 4 reproduces core.",
+    "comparability": "these transforms change the true cost model, so a row is comparable only with rows at the same (egress_mult, locs_per_provider). Both are their own runs.csv columns and part of the configuration key in check_replication.",
+    "draws": "R = 10 (05 S2 default for a grid this size; the n >= 3 floor is what check_replication enforces). Same draw ids and generator as results/replicates, so the grid is paired with the s = 1 core rows.",
+    "methods": "ilp_full, b1 and b2_best only: the question here is how the OPTIMUM and the baselines move, not which heuristic tracks it."
+  }
+}

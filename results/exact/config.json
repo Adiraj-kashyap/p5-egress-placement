@@ -1,0 +1,35 @@
+{
+  "exp_id": "exact",
+  "module": "M10",
+  "created_utc": "2026-09-22T07:45:42Z",
+  "git_commit": "89cb6a3",
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "location_set": "core",
+  "hours_per_month": 730,
+  "formulations": [
+    "tight",
+    "mccormick"
+  ],
+  "repeats": 5,
+  "time_limit_s": 600,
+  "solver": "CBC via pulp.PULP_CBC_CMD, threads=1, default gaps",
+  "machine_tag": "adi-laptop-win11",
+  "seeds": [],
+  "topologies": {
+    "topologies/t1_three_tier.json": {
+      "sha256": "25fa9003d9dab68115b80e55458dc8ec159dab990aa9a146936267d522676f0f"
+    },
+    "topologies/t2_pipeline.json": {
+      "sha256": "8d31603266e4093a33481188ffe11499526d037fc408417e4f8d98cc2cd9de29"
+    },
+    "topologies/t3_microservices.json": {
+      "sha256": "a9ccd871eb33459f5b854480853a8a5e5d209415cea8b796d95d1c73d65daddb"
+    }
+  },
+  "notes": {
+    "runtime_s": "wall time around the CBC call (model build excluded; build_s separate).",
+    "proven_optimal": "from the CBC log ('Result - Optimal solution found'), not PuLP's status.",
+    "runs.csv": "append-only; one row per (topology, formulation, repeat); run_utc groups a run."
+  }
+}

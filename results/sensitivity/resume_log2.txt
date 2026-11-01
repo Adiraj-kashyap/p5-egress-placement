@@ -1,0 +1,8 @@
+M13 runner | exp sensitivity | config experiments/configs/sensitivity.json (sha256 87d8c6fc468c) | snapshot 2026-09-21 | machine adi-laptop-win11 | git 3e0cbe4 | run 2026-09-22T21:55:27Z
+job 1018/1800 t2_pipeline@ext@d=6@s=1@x=1.5@k=8 ilp_full      seed=    optimal  total= 1023.300479  0.1633 s
+
+jobs 1800 | skipped (already present) 1799 | run 1 | failed 0 | runs.csv rows 1800 | wall 3.2 s
+  method          rows  statuses median_runtime_s
+  ilp_full         600   optimal         0.0696
+  b1               600        ok         0.0002
+  b2_best          600        ok         0.0002

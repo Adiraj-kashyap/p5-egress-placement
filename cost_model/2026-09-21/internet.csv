@@ -1,0 +1,25 @@
+provider,region,usd_per_gb,tier,source
+aws,us-east-1,0.09,first paid tier from 0 GB,sku:HQEH3ZWJVT46JHRG
+aws,eu-west-1,0.09,first paid tier from 0 GB,sku:FSEU4E6BRE95JTX8
+aws,ap-south-1,0.1093,first paid tier from 0 GB,sku:UKQ34C8EAAJUUK8Q
+aws,ap-southeast-1,0.12,first paid tier from 0 GB,sku:SDHP4R7WGBVJPQPY
+aws,us-west-2,0.09,first paid tier from 0 GB,sku:5M4327XEUKBBTWAT
+aws,eu-central-1,0.09,first paid tier from 0 GB,sku:F62Y6TKR8NC6Q2ZB
+aws,ap-northeast-1,0.114,first paid tier from 0 GB,sku:9ESU2G5WSY6FMZR3
+aws,sa-east-1,0.15,first paid tier from 0 GB,sku:QKTPK3975YUWDU3Q
+azure,eastus,0.087,first paid tier from 100 GB (MGN),sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,0.087,first paid tier from 100 GB (MGN),sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,centralindia,0.12,first paid tier from 100 GB (MGN),sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,0.12,first paid tier from 100 GB (MGN),sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,westus2,0.087,first paid tier from 100 GB (MGN),sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,0.087,first paid tier from 100 GB (MGN),sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,japaneast,0.12,first paid tier from 100 GB (MGN),sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,brazilsouth,0.181,first paid tier from 100 GB (MGN),sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+gcp,us-east4,0.111759,first paid tier from 0 GiB to North America,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->North America
+gcp,europe-west1,0.111759,first paid tier from 0 GiB to Europe,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Europe
+gcp,asia-south1,0.111759,"first paid tier from 0 GiB to Asia Excl Korea, Indonesia","page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Asia Excl Korea, Indonesia"
+gcp,asia-southeast1,0.111759,"first paid tier from 0 GiB to Asia Excl Korea, Indonesia","page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Asia Excl Korea, Indonesia"
+gcp,us-west1,0.111759,first paid tier from 1 GiB to North America,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->North America
+gcp,europe-west3,0.111759,first paid tier from 0 GiB to Europe,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Europe
+gcp,asia-northeast1,0.111759,"first paid tier from 0 GiB to Asia Excl Korea, Indonesia","page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Asia Excl Korea, Indonesia"
+gcp,southamerica-east1,0.176951,"first paid tier from 0 GiB to Australia, Indonesia, Korea, South America, Saudi Arabia","page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Australia, Indonesia, Korea, South America, Saudi Arabia"

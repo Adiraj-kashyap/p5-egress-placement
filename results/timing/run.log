@@ -1,0 +1,223 @@
+2026-09-23 01:39:14,021 runner INFO M13 runner | exp timing | config experiments/configs/timing.json (sha256 ef3d102bb7f0) | snapshot 2026-09-21 | machine adi-laptop-win11 | git 067b7d9 | run 2026-09-22T20:09:14Z
+2026-09-23 01:39:14,251 placement.ilp INFO ILP syn_n8_s1@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2455.109700 bound=2455.109700 | 0.117 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s1_core__ilp_tight__r0.log
+2026-09-23 01:39:14,255 runner INFO job 1/162 syn_n8_s1@core         ilp_tight     seed=    optimal  total=   2455.1097  0.1166 s
+2026-09-23 01:39:14,381 placement.ilp INFO ILP syn_n8_s1@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2455.109700 bound=2455.109700 | 0.095 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s1_core__ilp_tight__r1.log
+2026-09-23 01:39:14,394 runner INFO job 2/162 syn_n8_s1@core         ilp_tight     seed=    optimal  total=   2455.1097  0.0950 s
+2026-09-23 01:39:14,522 placement.ilp INFO ILP syn_n8_s1@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2455.109700 bound=2455.109700 | 0.098 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s1_core__ilp_tight__r2.log
+2026-09-23 01:39:14,582 runner INFO job 3/162 syn_n8_s1@core         ilp_tight     seed=    optimal  total=   2455.1097  0.0981 s
+2026-09-23 01:39:14,594 runner INFO job 4/162 syn_n8_s1@core         greedy_1opt   seed=    ok       total=   2455.1097  0.0006 s
+2026-09-23 01:39:14,613 runner INFO job 5/162 syn_n8_s1@core         greedy_1opt   seed=    ok       total=   2455.1097  0.0004 s
+2026-09-23 01:39:14,626 runner INFO job 6/162 syn_n8_s1@core         greedy_1opt   seed=    ok       total=   2455.1097  0.0004 s
+2026-09-23 01:39:15,296 runner INFO job 7/162 syn_n8_s1@core         sa            seed=0   ok       total=   2455.1097  0.6052 s
+2026-09-23 01:39:15,957 runner INFO job 8/162 syn_n8_s1@core         sa            seed=0   ok       total=   2455.1097  0.5915 s
+2026-09-23 01:39:16,604 runner INFO job 9/162 syn_n8_s1@core         sa            seed=0   ok       total=   2455.1097  0.5837 s
+2026-09-23 01:39:16,747 placement.ilp INFO ILP syn_n8_s2@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2116.979260 bound=2116.979260 | 0.096 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s2_core__ilp_tight__r0.log
+2026-09-23 01:39:16,760 runner INFO job 10/162 syn_n8_s2@core         ilp_tight     seed=    optimal  total=  2116.97926  0.0963 s
+2026-09-23 01:39:16,900 placement.ilp INFO ILP syn_n8_s2@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2116.979260 bound=2116.979260 | 0.109 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s2_core__ilp_tight__r1.log
+2026-09-23 01:39:16,915 runner INFO job 11/162 syn_n8_s2@core         ilp_tight     seed=    optimal  total=  2116.97926  0.1092 s
+2026-09-23 01:39:17,036 placement.ilp INFO ILP syn_n8_s2@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2116.979260 bound=2116.979260 | 0.097 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s2_core__ilp_tight__r2.log
+2026-09-23 01:39:17,113 runner INFO job 12/162 syn_n8_s2@core         ilp_tight     seed=    optimal  total=  2116.97926  0.0966 s
+2026-09-23 01:39:17,131 runner INFO job 13/162 syn_n8_s2@core         greedy_1opt   seed=    ok       total=  2147.55755  0.0004 s
+2026-09-23 01:39:17,142 runner INFO job 14/162 syn_n8_s2@core         greedy_1opt   seed=    ok       total=  2147.55755  0.0004 s
+2026-09-23 01:39:17,157 runner INFO job 15/162 syn_n8_s2@core         greedy_1opt   seed=    ok       total=  2147.55755  0.0004 s
+2026-09-23 01:39:17,763 runner INFO job 16/162 syn_n8_s2@core         sa            seed=0   ok       total=  2116.97926  0.5843 s
+2026-09-23 01:39:18,379 runner INFO job 17/162 syn_n8_s2@core         sa            seed=0   ok       total=  2116.97926  0.5488 s
+2026-09-23 01:39:18,975 runner INFO job 18/162 syn_n8_s2@core         sa            seed=0   ok       total=  2116.97926  0.5307 s
+2026-09-23 01:39:19,112 placement.ilp INFO ILP syn_n8_s3@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2641.943980 bound=2641.943980 | 0.098 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s3_core__ilp_tight__r0.log
+2026-09-23 01:39:19,124 runner INFO job 19/162 syn_n8_s3@core         ilp_tight     seed=    optimal  total=  2641.94398  0.0977 s
+2026-09-23 01:39:19,262 placement.ilp INFO ILP syn_n8_s3@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2641.943980 bound=2641.943980 | 0.106 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s3_core__ilp_tight__r1.log
+2026-09-23 01:39:19,333 runner INFO job 20/162 syn_n8_s3@core         ilp_tight     seed=    optimal  total=  2641.94398  0.1056 s
+2026-09-23 01:39:19,450 placement.ilp INFO ILP syn_n8_s3@core | tight | n=8 L=12 | vars=1104 cons=176 | Optimal (Optimal solution found) | obj=2641.943980 bound=2641.943980 | 0.091 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s3_core__ilp_tight__r2.log
+2026-09-23 01:39:19,463 runner INFO job 21/162 syn_n8_s3@core         ilp_tight     seed=    optimal  total=  2641.94398  0.0906 s
+2026-09-23 01:39:19,481 runner INFO job 22/162 syn_n8_s3@core         greedy_1opt   seed=    ok       total=  2662.18727  0.0006 s
+2026-09-23 01:39:19,500 runner INFO job 23/162 syn_n8_s3@core         greedy_1opt   seed=    ok       total=  2662.18727  0.0004 s
+2026-09-23 01:39:19,512 runner INFO job 24/162 syn_n8_s3@core         greedy_1opt   seed=    ok       total=  2662.18727  0.0006 s
+2026-09-23 01:39:20,086 runner INFO job 25/162 syn_n8_s3@core         sa            seed=0   ok       total=   2644.4099  0.5693 s
+2026-09-23 01:39:20,737 runner INFO job 26/162 syn_n8_s3@core         sa            seed=0   ok       total=   2644.4099  0.5843 s
+2026-09-23 01:39:21,370 runner INFO job 27/162 syn_n8_s3@core         sa            seed=0   ok       total=   2644.4099  0.5640 s
+2026-09-23 01:39:21,851 placement.ilp INFO ILP syn_n15_s1@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=3727.965840 bound=3727.965840 | 0.359 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s1_core__ilp_tight__r0.log
+2026-09-23 01:39:21,864 runner INFO job 28/162 syn_n15_s1@core        ilp_tight     seed=    optimal  total=  3727.96584  0.3586 s
+2026-09-23 01:39:22,236 placement.ilp INFO ILP syn_n15_s1@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=3727.965840 bound=3727.965840 | 0.298 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s1_core__ilp_tight__r1.log
+2026-09-23 01:39:22,304 runner INFO job 29/162 syn_n15_s1@core        ilp_tight     seed=    optimal  total=  3727.96584  0.2976 s
+2026-09-23 01:39:22,677 placement.ilp INFO ILP syn_n15_s1@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=3727.965840 bound=3727.965840 | 0.301 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s1_core__ilp_tight__r2.log
+2026-09-23 01:39:22,758 runner INFO job 30/162 syn_n15_s1@core        ilp_tight     seed=    optimal  total=  3727.96584  0.3007 s
+2026-09-23 01:39:22,774 runner INFO job 31/162 syn_n15_s1@core        greedy_1opt   seed=    ok       total=  3903.79214  0.0009 s
+2026-09-23 01:39:22,790 runner INFO job 32/162 syn_n15_s1@core        greedy_1opt   seed=    ok       total=  3903.79214  0.0009 s
+2026-09-23 01:39:22,804 runner INFO job 33/162 syn_n15_s1@core        greedy_1opt   seed=    ok       total=  3903.79214  0.0010 s
+2026-09-23 01:39:24,484 runner INFO job 34/162 syn_n15_s1@core        sa            seed=0   ok       total=  3870.37297  1.6185 s
+2026-09-23 01:39:26,232 runner INFO job 35/162 syn_n15_s1@core        sa            seed=0   ok       total=  3870.37297  1.6836 s
+2026-09-23 01:39:27,952 runner INFO job 36/162 syn_n15_s1@core        sa            seed=0   ok       total=  3870.37297  1.6534 s
+2026-09-23 01:39:28,390 placement.ilp INFO ILP syn_n15_s2@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=4546.982550 bound=4546.982550 | 0.280 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s2_core__ilp_tight__r0.log
+2026-09-23 01:39:28,402 runner INFO job 37/162 syn_n15_s2@core        ilp_tight     seed=    optimal  total=  4546.98255  0.2796 s
+2026-09-23 01:39:28,833 placement.ilp INFO ILP syn_n15_s2@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=4546.982550 bound=4546.982550 | 0.283 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s2_core__ilp_tight__r1.log
+2026-09-23 01:39:28,850 runner INFO job 38/162 syn_n15_s2@core        ilp_tight     seed=    optimal  total=  4546.98255  0.2831 s
+2026-09-23 01:39:29,200 placement.ilp INFO ILP syn_n15_s2@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=4546.982550 bound=4546.982550 | 0.271 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s2_core__ilp_tight__r2.log
+2026-09-23 01:39:29,280 runner INFO job 39/162 syn_n15_s2@core        ilp_tight     seed=    optimal  total=  4546.98255  0.2707 s
+2026-09-23 01:39:29,294 runner INFO job 40/162 syn_n15_s2@core        greedy_1opt   seed=    ok       total=  4546.98255  0.0015 s
+2026-09-23 01:39:29,311 runner INFO job 41/162 syn_n15_s2@core        greedy_1opt   seed=    ok       total=  4546.98255  0.0011 s
+2026-09-23 01:39:29,330 runner INFO job 42/162 syn_n15_s2@core        greedy_1opt   seed=    ok       total=  4546.98255  0.0015 s
+2026-09-23 01:39:30,993 runner INFO job 43/162 syn_n15_s2@core        sa            seed=0   ok       total=  4546.98255  1.6639 s
+2026-09-23 01:39:32,713 runner INFO job 44/162 syn_n15_s2@core        sa            seed=0   ok       total=  4546.98255  1.6537 s
+2026-09-23 01:39:34,411 runner INFO job 45/162 syn_n15_s2@core        sa            seed=0   ok       total=  4546.98255  1.6269 s
+2026-09-23 01:39:34,781 placement.ilp INFO ILP syn_n15_s3@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=5659.995910 bound=5659.995910 | 0.275 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s3_core__ilp_tight__r0.log
+2026-09-23 01:39:34,797 runner INFO job 46/162 syn_n15_s3@core        ilp_tight     seed=    optimal  total=  5659.99591  0.2754 s
+2026-09-23 01:39:35,221 placement.ilp INFO ILP syn_n15_s3@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=5659.995910 bound=5659.995910 | 0.345 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s3_core__ilp_tight__r1.log
+2026-09-23 01:39:35,227 runner INFO job 47/162 syn_n15_s3@core        ilp_tight     seed=    optimal  total=  5659.99591  0.3448 s
+2026-09-23 01:39:35,581 placement.ilp INFO ILP syn_n15_s3@core | tight | n=15 L=12 | vars=3924 cons=639 | Optimal (Optimal solution found) | obj=5659.995910 bound=5659.995910 | 0.272 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s3_core__ilp_tight__r2.log
+2026-09-23 01:39:35,603 runner INFO job 48/162 syn_n15_s3@core        ilp_tight     seed=    optimal  total=  5659.99591  0.2716 s
+2026-09-23 01:39:35,620 runner INFO job 49/162 syn_n15_s3@core        greedy_1opt   seed=    ok       total=   5663.0519  0.0009 s
+2026-09-23 01:39:35,635 runner INFO job 50/162 syn_n15_s3@core        greedy_1opt   seed=    ok       total=   5663.0519  0.0012 s
+2026-09-23 01:39:35,650 runner INFO job 51/162 syn_n15_s3@core        greedy_1opt   seed=    ok       total=   5663.0519  0.0011 s
+2026-09-23 01:39:37,350 runner INFO job 52/162 syn_n15_s3@core        sa            seed=0   ok       total=   5663.0519  1.6329 s
+2026-09-23 01:39:38,970 runner INFO job 53/162 syn_n15_s3@core        sa            seed=0   ok       total=   5663.0519  1.5871 s
+2026-09-23 01:39:40,590 runner INFO job 54/162 syn_n15_s3@core        sa            seed=0   ok       total=   5663.0519  1.5580 s
+2026-09-23 01:39:42,200 placement.ilp INFO ILP syn_n25_s1@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=5463.383760 bound=5463.383760 | 1.312 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s1_core__ilp_tight__r0.log
+2026-09-23 01:39:42,205 runner INFO job 55/162 syn_n25_s1@core        ilp_tight     seed=    optimal  total=  5463.38376  1.3121 s
+2026-09-23 01:39:43,701 placement.ilp INFO ILP syn_n25_s1@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=5463.383760 bound=5463.383760 | 1.300 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s1_core__ilp_tight__r1.log
+2026-09-23 01:39:43,712 runner INFO job 56/162 syn_n25_s1@core        ilp_tight     seed=    optimal  total=  5463.38376  1.2997 s
+2026-09-23 01:39:45,140 placement.ilp INFO ILP syn_n25_s1@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=5463.383760 bound=5463.383760 | 1.230 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s1_core__ilp_tight__r2.log
+2026-09-23 01:39:45,141 runner INFO job 57/162 syn_n25_s1@core        ilp_tight     seed=    optimal  total=  5463.38376  1.2302 s
+2026-09-23 01:39:45,161 runner INFO job 58/162 syn_n25_s1@core        greedy_1opt   seed=    ok       total=   5467.6902  0.0025 s
+2026-09-23 01:39:45,180 runner INFO job 59/162 syn_n25_s1@core        greedy_1opt   seed=    ok       total=   5467.6902  0.0030 s
+2026-09-23 01:39:45,197 runner INFO job 60/162 syn_n25_s1@core        greedy_1opt   seed=    ok       total=   5467.6902  0.0025 s
+2026-09-23 01:39:48,581 runner INFO job 61/162 syn_n25_s1@core        sa            seed=0   ok       total=   5467.6902  3.3188 s
+2026-09-23 01:39:51,935 runner INFO job 62/162 syn_n25_s1@core        sa            seed=0   ok       total=   5467.6902  3.3505 s
+2026-09-23 01:39:55,340 runner INFO job 63/162 syn_n25_s1@core        sa            seed=0   ok       total=   5467.6902  3.4010 s
+2026-09-23 01:39:56,854 placement.ilp INFO ILP syn_n25_s2@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=6909.378970 bound=6909.378970 | 1.299 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s2_core__ilp_tight__r0.log
+2026-09-23 01:39:56,863 runner INFO job 64/162 syn_n25_s2@core        ilp_tight     seed=    optimal  total=  6909.37897  1.2985 s
+2026-09-23 01:39:58,301 placement.ilp INFO ILP syn_n25_s2@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=6909.378970 bound=6909.378970 | 1.245 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s2_core__ilp_tight__r1.log
+2026-09-23 01:39:58,307 runner INFO job 65/162 syn_n25_s2@core        ilp_tight     seed=    optimal  total=  6909.37897  1.2455 s
+2026-09-23 01:39:59,642 placement.ilp INFO ILP syn_n25_s2@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=6909.378970 bound=6909.378970 | 1.154 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s2_core__ilp_tight__r2.log
+2026-09-23 01:39:59,710 runner INFO job 66/162 syn_n25_s2@core        ilp_tight     seed=    optimal  total=  6909.37897  1.1538 s
+2026-09-23 01:39:59,726 runner INFO job 67/162 syn_n25_s2@core        greedy_1opt   seed=    ok       total=  6909.37897  0.0021 s
+2026-09-23 01:39:59,742 runner INFO job 68/162 syn_n25_s2@core        greedy_1opt   seed=    ok       total=  6909.37897  0.0030 s
+2026-09-23 01:39:59,762 runner INFO job 69/162 syn_n25_s2@core        greedy_1opt   seed=    ok       total=  6909.37897  0.0026 s
+2026-09-23 01:40:03,472 runner INFO job 70/162 syn_n25_s2@core        sa            seed=0   ok       total=  6909.37897  3.7039 s
+2026-09-23 01:40:07,314 runner INFO job 71/162 syn_n25_s2@core        sa            seed=0   ok       total=  6909.37897  3.7773 s
+2026-09-23 01:40:11,061 runner INFO job 72/162 syn_n25_s2@core        sa            seed=0   ok       total=  6909.37897  3.6778 s
+2026-09-23 01:40:12,397 placement.ilp INFO ILP syn_n25_s3@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=6426.280240 bound=6426.280240 | 1.118 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s3_core__ilp_tight__r0.log
+2026-09-23 01:40:12,405 runner INFO job 73/162 syn_n25_s3@core        ilp_tight     seed=    optimal  total=  6426.28024  1.1178 s
+2026-09-23 01:40:13,802 placement.ilp INFO ILP syn_n25_s3@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=6426.280240 bound=6426.280240 | 1.201 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s3_core__ilp_tight__r1.log
+2026-09-23 01:40:13,810 runner INFO job 74/162 syn_n25_s3@core        ilp_tight     seed=    optimal  total=  6426.28024  1.2006 s
+2026-09-23 01:40:15,171 placement.ilp INFO ILP syn_n25_s3@core | tight | n=25 L=12 | vars=11100 cons=1825 | Optimal (Optimal solution found) | obj=6426.280240 bound=6426.280240 | 1.184 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s3_core__ilp_tight__r2.log
+2026-09-23 01:40:15,244 runner INFO job 75/162 syn_n25_s3@core        ilp_tight     seed=    optimal  total=  6426.28024  1.1838 s
+2026-09-23 01:40:15,260 runner INFO job 76/162 syn_n25_s3@core        greedy_1opt   seed=    ok       total=  7137.14522  0.0022 s
+2026-09-23 01:40:15,277 runner INFO job 77/162 syn_n25_s3@core        greedy_1opt   seed=    ok       total=  7137.14522  0.0026 s
+2026-09-23 01:40:15,294 runner INFO job 78/162 syn_n25_s3@core        greedy_1opt   seed=    ok       total=  7137.14522  0.0022 s
+2026-09-23 01:40:18,613 runner INFO job 79/162 syn_n25_s3@core        sa            seed=0   ok       total=    6432.524  3.2475 s
+2026-09-23 01:40:21,960 runner INFO job 80/162 syn_n25_s3@core        sa            seed=0   ok       total=    6432.524  3.3114 s
+2026-09-23 01:40:25,310 runner INFO job 81/162 syn_n25_s3@core        sa            seed=0   ok       total=    6432.524  3.2822 s
+2026-09-23 01:40:25,692 placement.ilp INFO ILP syn_n8_s1@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2452.242660 bound=2452.242660 | 0.227 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s1_ext__ilp_tight__r0.log
+2026-09-23 01:40:25,747 runner INFO job 82/162 syn_n8_s1@ext          ilp_tight     seed=    optimal  total=  2452.24266  0.2274 s
+2026-09-23 01:40:26,068 placement.ilp INFO ILP syn_n8_s1@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2452.242660 bound=2452.242660 | 0.241 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s1_ext__ilp_tight__r1.log
+2026-09-23 01:40:26,081 runner INFO job 83/162 syn_n8_s1@ext          ilp_tight     seed=    optimal  total=  2452.24266  0.2409 s
+2026-09-23 01:40:26,410 placement.ilp INFO ILP syn_n8_s1@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2452.242660 bound=2452.242660 | 0.237 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s1_ext__ilp_tight__r2.log
+2026-09-23 01:40:26,490 runner INFO job 84/162 syn_n8_s1@ext          ilp_tight     seed=    optimal  total=  2452.24266  0.2373 s
+2026-09-23 01:40:26,509 runner INFO job 85/162 syn_n8_s1@ext          greedy_1opt   seed=    ok       total=  2452.24266  0.0006 s
+2026-09-23 01:40:26,523 runner INFO job 86/162 syn_n8_s1@ext          greedy_1opt   seed=    ok       total=  2452.24266  0.0007 s
+2026-09-23 01:40:26,533 runner INFO job 87/162 syn_n8_s1@ext          greedy_1opt   seed=    ok       total=  2452.24266  0.0007 s
+2026-09-23 01:40:28,049 runner INFO job 88/162 syn_n8_s1@ext          sa            seed=0   ok       total=  2452.24266  1.5073 s
+2026-09-23 01:40:29,601 runner INFO job 89/162 syn_n8_s1@ext          sa            seed=0   ok       total=  2452.24266  1.4855 s
+2026-09-23 01:40:31,082 runner INFO job 90/162 syn_n8_s1@ext          sa            seed=0   ok       total=  2452.24266  1.4272 s
+2026-09-23 01:40:31,482 placement.ilp INFO ILP syn_n8_s2@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2115.984700 bound=2115.984700 | 0.258 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s2_ext__ilp_tight__r0.log
+2026-09-23 01:40:31,493 runner INFO job 91/162 syn_n8_s2@ext          ilp_tight     seed=    optimal  total=   2115.9847  0.2579 s
+2026-09-23 01:40:31,791 placement.ilp INFO ILP syn_n8_s2@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2115.984700 bound=2115.984700 | 0.227 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s2_ext__ilp_tight__r1.log
+2026-09-23 01:40:31,873 runner INFO job 92/162 syn_n8_s2@ext          ilp_tight     seed=    optimal  total=   2115.9847  0.2267 s
+2026-09-23 01:40:32,221 placement.ilp INFO ILP syn_n8_s2@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2115.984700 bound=2115.984700 | 0.257 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s2_ext__ilp_tight__r2.log
+2026-09-23 01:40:32,236 runner INFO job 93/162 syn_n8_s2@ext          ilp_tight     seed=    optimal  total=   2115.9847  0.2571 s
+2026-09-23 01:40:32,251 runner INFO job 94/162 syn_n8_s2@ext          greedy_1opt   seed=    ok       total=  2147.26595  0.0006 s
+2026-09-23 01:40:32,265 runner INFO job 95/162 syn_n8_s2@ext          greedy_1opt   seed=    ok       total=  2147.26595  0.0010 s
+2026-09-23 01:40:32,274 runner INFO job 96/162 syn_n8_s2@ext          greedy_1opt   seed=    ok       total=  2147.26595  0.0009 s
+2026-09-23 01:40:34,022 runner INFO job 97/162 syn_n8_s2@ext          sa            seed=0   ok       total=   2115.9847  1.6784 s
+2026-09-23 01:40:35,747 runner INFO job 98/162 syn_n8_s2@ext          sa            seed=0   ok       total=   2115.9847  1.6583 s
+2026-09-23 01:40:37,431 runner INFO job 99/162 syn_n8_s2@ext          sa            seed=0   ok       total=   2115.9847  1.6159 s
+2026-09-23 01:40:37,874 placement.ilp INFO ILP syn_n8_s3@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2640.686620 bound=2640.686620 | 0.351 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s3_ext__ilp_tight__r0.log
+2026-09-23 01:40:37,942 runner INFO job 100/162 syn_n8_s3@ext          ilp_tight     seed=    optimal  total=  2640.68662  0.3509 s
+2026-09-23 01:40:38,254 placement.ilp INFO ILP syn_n8_s3@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2640.686620 bound=2640.686620 | 0.231 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s3_ext__ilp_tight__r1.log
+2026-09-23 01:40:38,271 runner INFO job 101/162 syn_n8_s3@ext          ilp_tight     seed=    optimal  total=  2640.68662  0.2305 s
+2026-09-23 01:40:38,570 placement.ilp INFO ILP syn_n8_s3@ext | tight | n=8 L=24 | vars=4224 cons=344 | Optimal (Optimal solution found) | obj=2640.686620 bound=2640.686620 | 0.219 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n8_s3_ext__ilp_tight__r2.log
+2026-09-23 01:40:38,645 runner INFO job 102/162 syn_n8_s3@ext          ilp_tight     seed=    optimal  total=  2640.68662  0.2190 s
+2026-09-23 01:40:38,661 runner INFO job 103/162 syn_n8_s3@ext          greedy_1opt   seed=    ok       total=  2661.59759  0.0007 s
+2026-09-23 01:40:38,679 runner INFO job 104/162 syn_n8_s3@ext          greedy_1opt   seed=    ok       total=  2661.59759  0.0011 s
+2026-09-23 01:40:38,693 runner INFO job 105/162 syn_n8_s3@ext          greedy_1opt   seed=    ok       total=  2661.59759  0.0010 s
+2026-09-23 01:40:40,350 runner INFO job 106/162 syn_n8_s3@ext          sa            seed=0   ok       total=  2640.68662  1.6509 s
+2026-09-23 01:40:42,030 runner INFO job 107/162 syn_n8_s3@ext          sa            seed=0   ok       total=  2640.68662  1.6148 s
+2026-09-23 01:40:43,716 runner INFO job 108/162 syn_n8_s3@ext          sa            seed=0   ok       total=  2640.68662  1.6181 s
+2026-09-23 01:40:45,352 placement.ilp INFO ILP syn_n15_s1@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=3726.630240 bound=3726.630240 | 1.356 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s1_ext__ilp_tight__r0.log
+2026-09-23 01:40:45,352 runner INFO job 109/162 syn_n15_s1@ext         ilp_tight     seed=    optimal  total=  3726.63024  1.3558 s
+2026-09-23 01:40:46,801 placement.ilp INFO ILP syn_n15_s1@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=3726.630240 bound=3726.630240 | 1.205 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s1_ext__ilp_tight__r1.log
+2026-09-23 01:40:46,870 runner INFO job 110/162 syn_n15_s1@ext         ilp_tight     seed=    optimal  total=  3726.63024  1.2054 s
+2026-09-23 01:40:48,330 placement.ilp INFO ILP syn_n15_s1@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=3726.630240 bound=3726.630240 | 1.224 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s1_ext__ilp_tight__r2.log
+2026-09-23 01:40:48,404 runner INFO job 111/162 syn_n15_s1@ext         ilp_tight     seed=    optimal  total=  3726.63024  1.2243 s
+2026-09-23 01:40:48,423 runner INFO job 112/162 syn_n15_s1@ext         greedy_1opt   seed=    ok       total=  3903.74942  0.0024 s
+2026-09-23 01:40:48,440 runner INFO job 113/162 syn_n15_s1@ext         greedy_1opt   seed=    ok       total=  3903.74942  0.0019 s
+2026-09-23 01:40:48,458 runner INFO job 114/162 syn_n15_s1@ext         greedy_1opt   seed=    ok       total=  3903.74942  0.0018 s
+2026-09-23 01:40:52,543 runner INFO job 115/162 syn_n15_s1@ext         sa            seed=0   ok       total=  3726.63024  4.0245 s
+2026-09-23 01:40:56,635 runner INFO job 116/162 syn_n15_s1@ext         sa            seed=0   ok       total=  3726.63024  4.0254 s
+2026-09-23 01:41:00,744 runner INFO job 117/162 syn_n15_s1@ext         sa            seed=0   ok       total=  3726.63024  4.1031 s
+2026-09-23 01:41:02,106 placement.ilp INFO ILP syn_n15_s2@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=4542.069990 bound=4542.069990 | 1.103 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s2_ext__ilp_tight__r0.log
+2026-09-23 01:41:02,172 runner INFO job 118/162 syn_n15_s2@ext         ilp_tight     seed=    optimal  total=  4542.06999  1.1027 s
+2026-09-23 01:41:03,645 placement.ilp INFO ILP syn_n15_s2@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=4542.069990 bound=4542.069990 | 1.139 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s2_ext__ilp_tight__r1.log
+2026-09-23 01:41:03,652 runner INFO job 119/162 syn_n15_s2@ext         ilp_tight     seed=    optimal  total=  4542.06999  1.1394 s
+2026-09-23 01:41:05,045 placement.ilp INFO ILP syn_n15_s2@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=4542.069990 bound=4542.069990 | 1.161 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s2_ext__ilp_tight__r2.log
+2026-09-23 01:41:05,051 runner INFO job 120/162 syn_n15_s2@ext         ilp_tight     seed=    optimal  total=  4542.06999  1.1611 s
+2026-09-23 01:41:05,071 runner INFO job 121/162 syn_n15_s2@ext         greedy_1opt   seed=    ok       total=  4542.06999  0.0027 s
+2026-09-23 01:41:05,087 runner INFO job 122/162 syn_n15_s2@ext         greedy_1opt   seed=    ok       total=  4542.06999  0.0019 s
+2026-09-23 01:41:05,103 runner INFO job 123/162 syn_n15_s2@ext         greedy_1opt   seed=    ok       total=  4542.06999  0.0021 s
+2026-09-23 01:41:09,652 runner INFO job 124/162 syn_n15_s2@ext         sa            seed=0   ok       total=  4542.06999  4.4939 s
+2026-09-23 01:41:14,092 runner INFO job 125/162 syn_n15_s2@ext         sa            seed=0   ok       total=  4542.06999  4.3713 s
+2026-09-23 01:41:18,542 runner INFO job 126/162 syn_n15_s2@ext         sa            seed=0   ok       total=  4542.06999  4.3828 s
+2026-09-23 01:41:19,841 placement.ilp INFO ILP syn_n15_s3@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=5658.040870 bound=5658.040870 | 0.983 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s3_ext__ilp_tight__r0.log
+2026-09-23 01:41:19,850 runner INFO job 127/162 syn_n15_s3@ext         ilp_tight     seed=    optimal  total=  5658.04087  0.9829 s
+2026-09-23 01:41:21,150 placement.ilp INFO ILP syn_n15_s3@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=5658.040870 bound=5658.040870 | 1.044 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s3_ext__ilp_tight__r1.log
+2026-09-23 01:41:21,155 runner INFO job 128/162 syn_n15_s3@ext         ilp_tight     seed=    optimal  total=  5658.04087  1.0436 s
+2026-09-23 01:41:22,664 placement.ilp INFO ILP syn_n15_s3@ext | tight | n=15 L=24 | vars=15336 cons=1263 | Optimal (Optimal solution found) | obj=5658.040870 bound=5658.040870 | 1.185 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n15_s3_ext__ilp_tight__r2.log
+2026-09-23 01:41:22,671 runner INFO job 129/162 syn_n15_s3@ext         ilp_tight     seed=    optimal  total=  5658.04087  1.1848 s
+2026-09-23 01:41:22,690 runner INFO job 130/162 syn_n15_s3@ext         greedy_1opt   seed=    ok       total=   5663.0519  0.0021 s
+2026-09-23 01:41:22,705 runner INFO job 131/162 syn_n15_s3@ext         greedy_1opt   seed=    ok       total=   5663.0519  0.0016 s
+2026-09-23 01:41:22,723 runner INFO job 132/162 syn_n15_s3@ext         greedy_1opt   seed=    ok       total=   5663.0519  0.0024 s
+2026-09-23 01:41:27,283 runner INFO job 133/162 syn_n15_s3@ext         sa            seed=0   ok       total=   5663.0519  4.5571 s
+2026-09-23 01:41:31,935 runner INFO job 134/162 syn_n15_s3@ext         sa            seed=0   ok       total=   5663.0519  4.5858 s
+2026-09-23 01:41:36,543 runner INFO job 135/162 syn_n15_s3@ext         sa            seed=0   ok       total=   5663.0519  4.5401 s
+2026-09-23 01:41:46,523 placement.ilp INFO ILP syn_n25_s1@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=5460.165360 bound=5460.165360 | 9.203 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s1_ext__ilp_tight__r0.log
+2026-09-23 01:41:46,607 runner INFO job 136/162 syn_n25_s1@ext         ilp_tight     seed=    optimal  total=  5460.16536  9.2029 s
+2026-09-23 01:41:56,430 placement.ilp INFO ILP syn_n25_s1@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=5460.165360 bound=5460.165360 | 9.067 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s1_ext__ilp_tight__r1.log
+2026-09-23 01:41:56,510 runner INFO job 137/162 syn_n25_s1@ext         ilp_tight     seed=    optimal  total=  5460.16536  9.0670 s
+2026-09-23 01:42:06,193 placement.ilp INFO ILP syn_n25_s1@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=5460.165360 bound=5460.165360 | 8.956 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s1_ext__ilp_tight__r2.log
+2026-09-23 01:42:06,273 runner INFO job 138/162 syn_n25_s1@ext         ilp_tight     seed=    optimal  total=  5460.16536  8.9563 s
+2026-09-23 01:42:06,293 runner INFO job 139/162 syn_n25_s1@ext         greedy_1opt   seed=    ok       total=   5467.6902  0.0060 s
+2026-09-23 01:42:06,311 runner INFO job 140/162 syn_n25_s1@ext         greedy_1opt   seed=    ok       total=   5467.6902  0.0044 s
+2026-09-23 01:42:06,331 runner INFO job 141/162 syn_n25_s1@ext         greedy_1opt   seed=    ok       total=   5467.6902  0.0048 s
+2026-09-23 01:42:15,085 runner INFO job 142/162 syn_n25_s1@ext         sa            seed=0   ok       total=   5467.6902  8.6873 s
+2026-09-23 01:42:23,980 runner INFO job 143/162 syn_n25_s1@ext         sa            seed=0   ok       total=   5467.6902  8.8243 s
+2026-09-23 01:42:32,668 runner INFO job 144/162 syn_n25_s1@ext         sa            seed=0   ok       total=   5467.6902  8.6844 s
+2026-09-23 01:42:42,113 placement.ilp INFO ILP syn_n25_s2@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=6903.880090 bound=6903.880090 | 8.672 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s2_ext__ilp_tight__r0.log
+2026-09-23 01:42:42,192 runner INFO job 145/162 syn_n25_s2@ext         ilp_tight     seed=    optimal  total=  6903.88009  8.6721 s
+2026-09-23 01:42:51,512 placement.ilp INFO ILP syn_n25_s2@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=6903.880090 bound=6903.880090 | 8.591 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s2_ext__ilp_tight__r1.log
+2026-09-23 01:42:51,530 runner INFO job 146/162 syn_n25_s2@ext         ilp_tight     seed=    optimal  total=  6903.88009  8.5915 s
+2026-09-23 01:43:01,013 placement.ilp INFO ILP syn_n25_s2@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=6903.880090 bound=6903.880090 | 8.718 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s2_ext__ilp_tight__r2.log
+2026-09-23 01:43:01,031 runner INFO job 147/162 syn_n25_s2@ext         ilp_tight     seed=    optimal  total=  6903.88009  8.7184 s
+2026-09-23 01:43:01,051 runner INFO job 148/162 syn_n25_s2@ext         greedy_1opt   seed=    ok       total=  6909.37897  0.0050 s
+2026-09-23 01:43:01,063 runner INFO job 149/162 syn_n25_s2@ext         greedy_1opt   seed=    ok       total=  6909.37897  0.0043 s
+2026-09-23 01:43:01,086 runner INFO job 150/162 syn_n25_s2@ext         greedy_1opt   seed=    ok       total=  6909.37897  0.0042 s
+2026-09-23 01:43:10,300 runner INFO job 151/162 syn_n25_s2@ext         sa            seed=0   ok       total=  6909.37897  9.2087 s
+2026-09-23 01:43:19,402 runner INFO job 152/162 syn_n25_s2@ext         sa            seed=0   ok       total=  6909.37897  9.0989 s
+2026-09-23 01:43:28,320 runner INFO job 153/162 syn_n25_s2@ext         sa            seed=0   ok       total=  6909.37897  8.9162 s
+2026-09-23 01:43:37,026 placement.ilp INFO ILP syn_n25_s3@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=6422.820400 bound=6422.820400 | 7.963 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s3_ext__ilp_tight__r0.log
+2026-09-23 01:43:37,051 runner INFO job 154/162 syn_n25_s3@ext         ilp_tight     seed=    optimal  total=   6422.8204  7.9630 s
+2026-09-23 01:43:45,796 placement.ilp INFO ILP syn_n25_s3@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=6422.820400 bound=6422.820400 | 7.961 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s3_ext__ilp_tight__r1.log
+2026-09-23 01:43:45,812 runner INFO job 155/162 syn_n25_s3@ext         ilp_tight     seed=    optimal  total=   6422.8204  7.9612 s
+2026-09-23 01:43:54,726 placement.ilp INFO ILP syn_n25_s3@ext | tight | n=25 L=24 | vars=43800 cons=3625 | Optimal (Optimal solution found) | obj=6422.820400 bound=6422.820400 | 8.173 s | log D:\Workspace\cloud_project\p5-egress-placement\results\timing\cbc\syn_n25_s3_ext__ilp_tight__r2.log
+2026-09-23 01:43:54,741 runner INFO job 156/162 syn_n25_s3@ext         ilp_tight     seed=    optimal  total=   6422.8204  8.1725 s
+2026-09-23 01:43:54,760 runner INFO job 157/162 syn_n25_s3@ext         greedy_1opt   seed=    ok       total=  7134.01106  0.0042 s
+2026-09-23 01:43:54,780 runner INFO job 158/162 syn_n25_s3@ext         greedy_1opt   seed=    ok       total=  7134.01106  0.0053 s
+2026-09-23 01:43:54,800 runner INFO job 159/162 syn_n25_s3@ext         greedy_1opt   seed=    ok       total=  7134.01106  0.0058 s
+2026-09-23 01:44:03,266 runner INFO job 160/162 syn_n25_s3@ext         sa            seed=0   ok       total=    6432.524  8.3997 s
+2026-09-23 01:44:11,549 runner INFO job 161/162 syn_n25_s3@ext         sa            seed=0   ok       total=    6432.524  8.2158 s
+2026-09-23 01:44:20,044 runner INFO job 162/162 syn_n25_s3@ext         sa            seed=0   ok       total=    6432.524  8.4284 s
+2026-09-23 01:44:20,061 runner INFO 
+2026-09-23 01:44:20,061 runner INFO jobs 162 | skipped (already present) 0 | run 162 | failed 0 | runs.csv rows 162 | wall 306.0 s
+2026-09-23 01:44:20,061 runner INFO   method          rows  statuses median_runtime_s
+2026-09-23 01:44:20,064 runner INFO   ilp_tight         54   optimal         0.6707
+2026-09-23 01:44:20,064 runner INFO   greedy_1opt       54        ok         0.0015
+2026-09-23 01:44:20,064 runner INFO   sa                54        ok         2.4656

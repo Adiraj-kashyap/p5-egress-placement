@@ -1,0 +1,145 @@
+{
+  "id": "t2_pipeline",
+  "description": "Batch/stream data pipeline: ingest -> queue -> two transforms -> aggregate -> warehouse -> dashboard.",
+  "provenance": "stated",
+  "assumptions": {
+    "raw_input_gb_per_month": 1000.0,
+    "edge_fraction_of_raw": {
+      "ingest->queue": 1.0,
+      "queue->transform-1": 1.0,
+      "queue->transform-2": 1.0,
+      "transform-1->aggregate": 0.3,
+      "transform-2->aggregate": 0.2,
+      "aggregate->warehouse": 0.1,
+      "warehouse->dashboard": 0.02,
+      "dashboard->warehouse": 0.001
+    },
+    "internet_fraction_of_raw": 0.01,
+    "note": "Raw input arrives from the internet (ingress, free, not modelled). Queue control traffic (acks, offsets) is under 1% and omitted."
+  },
+  "references": [],
+  "components": [
+    {
+      "id": "ingest",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "stateless HTTP/stream collector"
+    },
+    {
+      "id": "queue",
+      "vcpu": 4,
+      "ram_gb": 16,
+      "storage_gb": 250,
+      "pinned_to": null,
+      "rationale": "log-structured queue; 7-day retention of 1 TB/month is about 233 GB"
+    },
+    {
+      "id": "transform-1",
+      "vcpu": 4,
+      "ram_gb": 16,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "parse/clean/filter worker"
+    },
+    {
+      "id": "transform-2",
+      "vcpu": 4,
+      "ram_gb": 16,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "sessionisation/enrichment worker"
+    },
+    {
+      "id": "aggregate",
+      "vcpu": 4,
+      "ram_gb": 16,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "joins both transform outputs and rolls them up"
+    },
+    {
+      "id": "warehouse",
+      "vcpu": 8,
+      "ram_gb": 32,
+      "storage_gb": 2000,
+      "pinned_to": null,
+      "rationale": "columnar warehouse, 2 TB (module spec); about 20 months at 100 GB/month"
+    },
+    {
+      "id": "dashboard",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "BI dashboard server"
+    }
+  ],
+  "edges": [
+    {
+      "src": "ingest",
+      "dst": "queue",
+      "gb_per_month": 1000.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "1 x 1000 GB: ingest forwards every raw event unchanged"
+    },
+    {
+      "src": "queue",
+      "dst": "transform-1",
+      "gb_per_month": 1000.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "1 x 1000 GB: fan-out: transform-1 consumes the full topic"
+    },
+    {
+      "src": "queue",
+      "dst": "transform-2",
+      "gb_per_month": 1000.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "1 x 1000 GB: fan-out: transform-2 consumes the full topic"
+    },
+    {
+      "src": "transform-1",
+      "dst": "aggregate",
+      "gb_per_month": 300.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "0.3 x 1000 GB: parsing and filtering keeps about 30% of the bytes"
+    },
+    {
+      "src": "transform-2",
+      "dst": "aggregate",
+      "gb_per_month": 200.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "0.2 x 1000 GB: sessionised records are about 20% of the raw bytes"
+    },
+    {
+      "src": "aggregate",
+      "dst": "warehouse",
+      "gb_per_month": 100.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "0.1 x 1000 GB: compressed columnar batches of rolled-up and retained detail rows, about 10%"
+    },
+    {
+      "src": "warehouse",
+      "dst": "dashboard",
+      "gb_per_month": 20.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "0.02 x 1000 GB: query result sets for dashboards, about 2%"
+    },
+    {
+      "src": "dashboard",
+      "dst": "warehouse",
+      "gb_per_month": 1.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "0.001 x 1000 GB: SQL queries sent to the warehouse, about 0.1%"
+    }
+  ],
+  "internet_egress": [
+    {
+      "src": "dashboard",
+      "gb_per_month": 10.0,
+      "provenance": "stated:fraction of 1 TB/month raw input",
+      "rationale": "0.01 x 1000 GB: dashboards and exports viewed by analysts"
+    }
+  ]
+}

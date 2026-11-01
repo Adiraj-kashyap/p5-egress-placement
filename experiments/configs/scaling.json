@@ -1,0 +1,14 @@
+{
+  "exp_id": "scaling",
+  "description": "M14 scaling and optimality-gap experiment (O3, H2): n in {4..40} x L in {core 12, ext 24} x 5 synthetic instances per cell (seeds 1-5, density 0.25 fixed before any result, D-052); ILP tight (600 s, threads=1), greedy_1opt, SA x 10 seeds (sa_seeds.json); McCormick ablation for n <= 12 only.",
+  "snapshot_date": "2026-09-21",
+  "location_sets": ["core", "ext"],
+  "instances": [
+    {"synthetic": {"n": [4, 6, 8, 10, 12, 15, 20, 25, 30, 40], "seeds": [1, 2, 3, 4, 5], "density": 0.25, "volume_dist": "lognormal", "median_gb": 200, "pin_fraction": 0.0}}
+  ],
+  "methods": ["ilp_tight", "ilp_mccormick", "greedy_1opt", "sa"],
+  "method_max_n": {"ilp_mccormick": 12},
+  "method_seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "time_limits": {"ilp_tight": 600, "ilp_mccormick": 600, "sa": null},
+  "method_params": {"greedy_1opt": {"max_passes": 50}, "sa": {"alpha": 0.995}}
+}

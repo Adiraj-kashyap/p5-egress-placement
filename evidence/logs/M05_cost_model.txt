@@ -1,0 +1,38 @@
+# M05 evidence run 2026-09-22 09:46 P5_SNAPSHOT_DATE=2026-09-21
+$ python -m pricing.build_cost_model
+2026-09-22 09:46:38,022  costmodel   INFO     building cost model for snapshot 2026-09-21
+2026-09-22 09:46:38,022  costmodel   INFO     loaded aws_compute      rows=32  snapshot_date=2026-09-21
+2026-09-22 09:46:38,022  costmodel   INFO     loaded azure_compute    rows=32  snapshot_date=2026-09-21
+2026-09-22 09:46:38,022  costmodel   INFO     loaded gcp_compute      rows=16  snapshot_date=2026-09-21
+2026-09-22 09:46:38,024  costmodel   INFO     loaded aws_storage      rows=24  snapshot_date=2026-09-21
+2026-09-22 09:46:38,024  costmodel   INFO     loaded azure_storage    rows=24  snapshot_date=2026-09-21
+2026-09-22 09:46:38,024  costmodel   INFO     loaded gcp_storage      rows=8  snapshot_date=2026-09-21
+2026-09-22 09:46:38,024  costmodel   INFO     loaded aws_egress       rows=96  snapshot_date=2026-09-21
+2026-09-22 09:46:38,024  costmodel   INFO     loaded azure_egress     rows=120  snapshot_date=2026-09-21
+2026-09-22 09:46:38,024  costmodel   INFO     loaded gcp_egress       rows=217  snapshot_date=2026-09-21
+2026-09-22 09:46:38,030  costmodel   INFO     compute rows built: 96
+2026-09-22 09:46:38,030  costmodel   INFO     storage rows built: 24
+2026-09-22 09:46:38,042  costmodel   INFO     egress matrix built: 576 cells, 0 R2 cells used fallback rates
+2026-09-22 09:46:38,042  costmodel   INFO     internet rows built: 24
+2026-09-22 09:46:38,046  costmodel   INFO     WROTE cost_model/2026-09-21/compute.csv  rows=96
+2026-09-22 09:46:38,048  costmodel   INFO     WROTE cost_model/2026-09-21/storage.csv  rows=24
+2026-09-22 09:46:38,048  costmodel   INFO     WROTE cost_model/2026-09-21/egress.csv  rows=576
+2026-09-22 09:46:38,048  costmodel   INFO     WROTE cost_model/2026-09-21/internet.csv  rows=24
+2026-09-22 09:46:38,048  costmodel   INFO     cost model complete for snapshot 2026-09-21
+exit=0
+$ python -m pricing.validate_cost_model
+V1   PASS  compute.csv = 24 locations x 4 shapes = 96 rows  [96 rows, 96 distinct]
+V2   PASS  egress.csv = 24 x 24 = 576 directed cells  [576 rows, 576 distinct ordered pairs]
+V3   PASS  egress diagonal is 0  [24/24 zero]
+V4   PASS  all prices finite and non-negative (no NaN)  [0 bad values]
+V5   PASS  per shape, max/min over 12 core locations < 3x  [small 1.250x, medium 1.250x, large 1.250x, xlarge 1.250x]
+V6   PASS  GCP composed / AWS matched-region price within 0.5x-2x  [32 ratios, range 0.998-1.155]
+V7   PASS  matrix is asymmetric where prices differ by sender  [229 unordered pairs with egress[a][b] != egress[b][a]]
+V8   PASS  fallback cells <= 25% of R2 cells  [0/168 R2 cells = 0.0%]
+V9   PASS  rule matches endpoints (R1/R2/R3) and every cell has a source  [0 mismatches]
+V10  PASS  internet.csv and storage.csv: one positive price per ext location  [internet 24 rows, storage 24 rows]
+egress R1: cells=24 min=0.0000 median=0.0000 max=0.0000
+egress R2: cells=168 min=0.0186 median=0.0745 max=0.1600
+egress R3: cells=384 min=0.0870 median=0.1118 max=0.1810
+WROTE cost_model/2026-09-21/validation.md  10/10 PASS
+exit=0

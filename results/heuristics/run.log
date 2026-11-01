@@ -1,0 +1,18 @@
+2026-09-22 13:23:18,440 run_heuristics INFO M11 heuristics | snapshot 2026-09-21 | location set core | repeats 5 | max_passes 50 | machine adi-laptop-win11 | git 175b3e5
+2026-09-22 13:23:18,550 run_heuristics INFO 
+2026-09-22 13:23:18,550 run_heuristics INFO t1_three_tier@core  (4 components, 12 locations)   B1 497.58   B2-best 481.18 (azure)   ILP 481.18 (proven True; M10 481.18)
+2026-09-22 13:23:18,550 run_heuristics INFO   method         total_usd     gap_%    egress  internet prov passes moves    median_s  placement
+2026-09-22 13:23:18,550 run_heuristics INFO   greedy            483.57     0.497      0.00     58.49    1                 0.000112  all @ aws:us-east-1
+2026-09-22 13:23:18,550 run_heuristics INFO   greedy_1opt       483.57     0.497      0.00     58.49    1      1     0    0.000148  all @ aws:us-east-1
+2026-09-22 13:23:18,744 run_heuristics INFO 
+2026-09-22 13:23:18,744 run_heuristics INFO t2_pipeline@core  (7 components, 12 locations)   B1 1303.65   B2-best 1028.79 (azure)   ILP 1028.79 (proven True; M10 1028.79)
+2026-09-22 13:23:18,745 run_heuristics INFO   method         total_usd     gap_%    egress  internet prov passes moves    median_s  placement
+2026-09-22 13:23:18,808 run_heuristics INFO   greedy           1028.79     0.000      0.00      0.87    1                 0.000136  all @ azure:eastus
+2026-09-22 13:23:18,810 run_heuristics INFO   greedy_1opt      1028.79     0.000      0.00      0.87    1      1     0    0.000216  all @ azure:eastus
+2026-09-22 13:23:19,006 run_heuristics INFO 
+2026-09-22 13:23:19,006 run_heuristics INFO t3_microservices@core  (11 components, 12 locations)   B1 1822.60   B2-best 1789.88 (azure)   ILP 1789.88 (proven True; M10 1789.88)
+2026-09-22 13:23:19,006 run_heuristics INFO   method         total_usd     gap_%    egress  internet prov passes moves    median_s  placement
+2026-09-22 13:23:19,006 run_heuristics INFO   greedy           1822.60     1.828      0.00    981.64    1                 0.000236  all @ aws:us-east-1
+2026-09-22 13:23:19,012 run_heuristics INFO   greedy_1opt      1822.60     1.828      0.00    981.64    1      1     0    0.000939  all @ aws:us-east-1
+2026-09-22 13:23:19,020 run_heuristics INFO 
+2026-09-22 13:23:19,020 run_heuristics INFO appended 30 rows to results/heuristics/runs.csv

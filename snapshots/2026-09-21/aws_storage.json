@@ -1,0 +1,286 @@
+{
+ "snapshot_date": "2026-09-21",
+ "pulled_at_utc": "2026-09-21T20:33:39Z",
+ "row_count": 24,
+ "meta": {
+  "api": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/region_index.json",
+  "auth": "none",
+  "regions": [
+   "us-east-1",
+   "eu-west-1",
+   "ap-south-1",
+   "ap-southeast-1",
+   "us-west-2",
+   "eu-central-1",
+   "ap-northeast-1",
+   "sa-east-1"
+  ],
+  "class": "S3 Standard"
+ },
+ "rows": [
+  {
+   "provider": "aws",
+   "region": "us-east-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 0.0,
+   "tier_max_gb": 51200.0,
+   "usd_per_gb_month": 0.023,
+   "usage_type": "TimedStorage-ByteHrs",
+   "sku": "WP9ANXZGBYYSGJEA",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "us-east-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 51200.0,
+   "tier_max_gb": 512000.0,
+   "usd_per_gb_month": 0.022,
+   "usage_type": "TimedStorage-ByteHrs",
+   "sku": "WP9ANXZGBYYSGJEA",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "us-east-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 512000.0,
+   "tier_max_gb": null,
+   "usd_per_gb_month": 0.021,
+   "usage_type": "TimedStorage-ByteHrs",
+   "sku": "WP9ANXZGBYYSGJEA",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "eu-west-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 0.0,
+   "tier_max_gb": 51200.0,
+   "usd_per_gb_month": 0.023,
+   "usage_type": "EU-TimedStorage-ByteHrs",
+   "sku": "4AJHPB29ZPVFADXP",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "eu-west-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 51200.0,
+   "tier_max_gb": 512000.0,
+   "usd_per_gb_month": 0.022,
+   "usage_type": "EU-TimedStorage-ByteHrs",
+   "sku": "4AJHPB29ZPVFADXP",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "eu-west-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 512000.0,
+   "tier_max_gb": null,
+   "usd_per_gb_month": 0.021,
+   "usage_type": "EU-TimedStorage-ByteHrs",
+   "sku": "4AJHPB29ZPVFADXP",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-south-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 0.0,
+   "tier_max_gb": 51200.0,
+   "usd_per_gb_month": 0.025,
+   "usage_type": "APS3-TimedStorage-ByteHrs",
+   "sku": "USGUTP2JY23N9GH2",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-south-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 51200.0,
+   "tier_max_gb": 512000.0,
+   "usd_per_gb_month": 0.024,
+   "usage_type": "APS3-TimedStorage-ByteHrs",
+   "sku": "USGUTP2JY23N9GH2",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-south-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 512000.0,
+   "tier_max_gb": null,
+   "usd_per_gb_month": 0.023,
+   "usage_type": "APS3-TimedStorage-ByteHrs",
+   "sku": "USGUTP2JY23N9GH2",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-southeast-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 0.0,
+   "tier_max_gb": 51200.0,
+   "usd_per_gb_month": 0.025,
+   "usage_type": "APS1-TimedStorage-ByteHrs",
+   "sku": "M6MTARCQFUQBQ2V3",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-southeast-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 51200.0,
+   "tier_max_gb": 512000.0,
+   "usd_per_gb_month": 0.024,
+   "usage_type": "APS1-TimedStorage-ByteHrs",
+   "sku": "M6MTARCQFUQBQ2V3",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-southeast-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 512000.0,
+   "tier_max_gb": null,
+   "usd_per_gb_month": 0.023,
+   "usage_type": "APS1-TimedStorage-ByteHrs",
+   "sku": "M6MTARCQFUQBQ2V3",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "us-west-2",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 0.0,
+   "tier_max_gb": 51200.0,
+   "usd_per_gb_month": 0.023,
+   "usage_type": "USW2-TimedStorage-ByteHrs",
+   "sku": "Z3FQZG73HYSPVABR",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "us-west-2",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 51200.0,
+   "tier_max_gb": 512000.0,
+   "usd_per_gb_month": 0.022,
+   "usage_type": "USW2-TimedStorage-ByteHrs",
+   "sku": "Z3FQZG73HYSPVABR",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "us-west-2",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 512000.0,
+   "tier_max_gb": null,
+   "usd_per_gb_month": 0.021,
+   "usage_type": "USW2-TimedStorage-ByteHrs",
+   "sku": "Z3FQZG73HYSPVABR",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "eu-central-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 0.0,
+   "tier_max_gb": 51200.0,
+   "usd_per_gb_month": 0.0245,
+   "usage_type": "EUC1-TimedStorage-ByteHrs",
+   "sku": "NRYRNCXF5TWHB476",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "eu-central-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 51200.0,
+   "tier_max_gb": 512000.0,
+   "usd_per_gb_month": 0.0235,
+   "usage_type": "EUC1-TimedStorage-ByteHrs",
+   "sku": "NRYRNCXF5TWHB476",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "eu-central-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 512000.0,
+   "tier_max_gb": null,
+   "usd_per_gb_month": 0.0225,
+   "usage_type": "EUC1-TimedStorage-ByteHrs",
+   "sku": "NRYRNCXF5TWHB476",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-northeast-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 0.0,
+   "tier_max_gb": 51200.0,
+   "usd_per_gb_month": 0.025,
+   "usage_type": "APN1-TimedStorage-ByteHrs",
+   "sku": "CCBFTMENTDWZHXHX",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-northeast-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 51200.0,
+   "tier_max_gb": 512000.0,
+   "usd_per_gb_month": 0.024,
+   "usage_type": "APN1-TimedStorage-ByteHrs",
+   "sku": "CCBFTMENTDWZHXHX",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "ap-northeast-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 512000.0,
+   "tier_max_gb": null,
+   "usd_per_gb_month": 0.023,
+   "usage_type": "APN1-TimedStorage-ByteHrs",
+   "sku": "CCBFTMENTDWZHXHX",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "sa-east-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 0.0,
+   "tier_max_gb": 51200.0,
+   "usd_per_gb_month": 0.0405,
+   "usage_type": "SAE1-TimedStorage-ByteHrs",
+   "sku": "ZNX83R5ZU4NXKACG",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "sa-east-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 51200.0,
+   "tier_max_gb": 512000.0,
+   "usd_per_gb_month": 0.039,
+   "usage_type": "SAE1-TimedStorage-ByteHrs",
+   "sku": "ZNX83R5ZU4NXKACG",
+   "effective_date": "2026-09-01"
+  },
+  {
+   "provider": "aws",
+   "region": "sa-east-1",
+   "storage_class": "S3 Standard",
+   "tier_min_gb": 512000.0,
+   "tier_max_gb": null,
+   "usd_per_gb_month": 0.037,
+   "usage_type": "SAE1-TimedStorage-ByteHrs",
+   "sku": "ZNX83R5ZU4NXKACG",
+   "effective_date": "2026-09-01"
+  }
+ ]
+}

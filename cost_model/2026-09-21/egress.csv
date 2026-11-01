@@ -1,0 +1,577 @@
+src_provider,src_region,dst_provider,dst_region,usd_per_gb,rule,source
+aws,us-east-1,aws,us-east-1,0.0,R1,rule:R1 same region
+aws,us-east-1,aws,eu-west-1,0.02,R2,sku:NW4B786HNAH6HZ7R
+aws,us-east-1,aws,ap-south-1,0.02,R2,sku:BHM7BATGW8NG4NZ4
+aws,us-east-1,aws,ap-southeast-1,0.02,R2,sku:2T92AZQGNFAQHEXW
+aws,us-east-1,aws,us-west-2,0.02,R2,sku:XGXYRYWGNXSSEUVT
+aws,us-east-1,aws,eu-central-1,0.02,R2,sku:2BG23N2FNX3BKVFW
+aws,us-east-1,aws,ap-northeast-1,0.02,R2,sku:EDJPFY8K3AW2AD23
+aws,us-east-1,aws,sa-east-1,0.02,R2,sku:X67HWFH8QVT6NSW7
+aws,us-east-1,azure,eastus,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,azure,westeurope,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,azure,centralindia,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,azure,southeastasia,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,azure,westus2,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,azure,germanywestcentral,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,azure,japaneast,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,azure,brazilsouth,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,gcp,us-east4,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,gcp,europe-west1,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,gcp,asia-south1,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,gcp,asia-southeast1,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,gcp,us-west1,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,gcp,europe-west3,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,gcp,asia-northeast1,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,us-east-1,gcp,southamerica-east1,0.09,R3,sku:HQEH3ZWJVT46JHRG
+aws,eu-west-1,aws,us-east-1,0.02,R2,sku:N7JF33XCBEZEKJFQ
+aws,eu-west-1,aws,eu-west-1,0.0,R1,rule:R1 same region
+aws,eu-west-1,aws,ap-south-1,0.02,R2,sku:H626VPFSJA3HJEPT
+aws,eu-west-1,aws,ap-southeast-1,0.02,R2,sku:VSXU9UFR67S6KGTY
+aws,eu-west-1,aws,us-west-2,0.02,R2,sku:YYWF3B8AYWMW6UBM
+aws,eu-west-1,aws,eu-central-1,0.02,R2,sku:SPB4R8J5N27DQQSQ
+aws,eu-west-1,aws,ap-northeast-1,0.02,R2,sku:XNKCM8BJ7Q7G8G4N
+aws,eu-west-1,aws,sa-east-1,0.02,R2,sku:G4ZWEDXHXZBGPHFD
+aws,eu-west-1,azure,eastus,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,azure,westeurope,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,azure,centralindia,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,azure,southeastasia,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,azure,westus2,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,azure,germanywestcentral,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,azure,japaneast,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,azure,brazilsouth,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,gcp,us-east4,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,gcp,europe-west1,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,gcp,asia-south1,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,gcp,asia-southeast1,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,gcp,us-west1,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,gcp,europe-west3,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,gcp,asia-northeast1,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,eu-west-1,gcp,southamerica-east1,0.09,R3,sku:FSEU4E6BRE95JTX8
+aws,ap-south-1,aws,us-east-1,0.086,R2,sku:Q3V4FNRZN9QKF6FC
+aws,ap-south-1,aws,eu-west-1,0.086,R2,sku:9YU2GGXBHV3RVBWY
+aws,ap-south-1,aws,ap-south-1,0.0,R1,rule:R1 same region
+aws,ap-south-1,aws,ap-southeast-1,0.086,R2,sku:92W3SVBMCJQP9HAT
+aws,ap-south-1,aws,us-west-2,0.086,R2,sku:52W5FK4S99HCADGK
+aws,ap-south-1,aws,eu-central-1,0.086,R2,sku:2QXNWQRCPNA3GY7T
+aws,ap-south-1,aws,ap-northeast-1,0.086,R2,sku:KYFEEJJ23XYV8A2F
+aws,ap-south-1,aws,sa-east-1,0.086,R2,sku:ZBSBQ53KX2STBJAX
+aws,ap-south-1,azure,eastus,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,azure,westeurope,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,azure,centralindia,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,azure,southeastasia,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,azure,westus2,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,azure,germanywestcentral,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,azure,japaneast,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,azure,brazilsouth,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,gcp,us-east4,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,gcp,europe-west1,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,gcp,asia-south1,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,gcp,asia-southeast1,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,gcp,us-west1,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,gcp,europe-west3,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,gcp,asia-northeast1,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-south-1,gcp,southamerica-east1,0.1093,R3,sku:UKQ34C8EAAJUUK8Q
+aws,ap-southeast-1,aws,us-east-1,0.09,R2,sku:TYZADFBQUJ5K2FN7
+aws,ap-southeast-1,aws,eu-west-1,0.09,R2,sku:8RAPQYUQHCUAPYTZ
+aws,ap-southeast-1,aws,ap-south-1,0.09,R2,sku:BRYNWPSRZ85SR89V
+aws,ap-southeast-1,aws,ap-southeast-1,0.0,R1,rule:R1 same region
+aws,ap-southeast-1,aws,us-west-2,0.09,R2,sku:YRGJEFXZW24K7ZXS
+aws,ap-southeast-1,aws,eu-central-1,0.09,R2,sku:R24JA2VUM48WEDD5
+aws,ap-southeast-1,aws,ap-northeast-1,0.09,R2,sku:HBGG7EBNT9ZHXCP3
+aws,ap-southeast-1,aws,sa-east-1,0.09,R2,sku:C75TG66HCJET7CN6
+aws,ap-southeast-1,azure,eastus,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,azure,westeurope,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,azure,centralindia,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,azure,southeastasia,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,azure,westus2,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,azure,germanywestcentral,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,azure,japaneast,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,azure,brazilsouth,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,gcp,us-east4,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,gcp,europe-west1,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,gcp,asia-south1,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,gcp,asia-southeast1,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,gcp,us-west1,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,gcp,europe-west3,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,gcp,asia-northeast1,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,ap-southeast-1,gcp,southamerica-east1,0.12,R3,sku:SDHP4R7WGBVJPQPY
+aws,us-west-2,aws,us-east-1,0.02,R2,sku:EAUDKWWNQJZTV253
+aws,us-west-2,aws,eu-west-1,0.02,R2,sku:JYNB73DBWCEJ4U24
+aws,us-west-2,aws,ap-south-1,0.02,R2,sku:8UW4N2NE9BX8WJH7
+aws,us-west-2,aws,ap-southeast-1,0.02,R2,sku:PQJGBSU7YWWTQH72
+aws,us-west-2,aws,us-west-2,0.0,R1,rule:R1 same region
+aws,us-west-2,aws,eu-central-1,0.02,R2,sku:HFXZVSS4PED66CA3
+aws,us-west-2,aws,ap-northeast-1,0.02,R2,sku:KKYH8QKF8CSNVQCC
+aws,us-west-2,aws,sa-east-1,0.02,R2,sku:AXX2SJ548M3K2464
+aws,us-west-2,azure,eastus,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,azure,westeurope,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,azure,centralindia,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,azure,southeastasia,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,azure,westus2,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,azure,germanywestcentral,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,azure,japaneast,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,azure,brazilsouth,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,gcp,us-east4,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,gcp,europe-west1,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,gcp,asia-south1,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,gcp,asia-southeast1,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,gcp,us-west1,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,gcp,europe-west3,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,gcp,asia-northeast1,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,us-west-2,gcp,southamerica-east1,0.09,R3,sku:5M4327XEUKBBTWAT
+aws,eu-central-1,aws,us-east-1,0.02,R2,sku:SACDBTNC2KPVGJ8R
+aws,eu-central-1,aws,eu-west-1,0.02,R2,sku:QX8HRAHPWHJUW379
+aws,eu-central-1,aws,ap-south-1,0.02,R2,sku:PAHWJBGM4MT6UP2S
+aws,eu-central-1,aws,ap-southeast-1,0.02,R2,sku:Z9HPU9KZZCVEQHUH
+aws,eu-central-1,aws,us-west-2,0.02,R2,sku:V7KMP6W4U24AS5GT
+aws,eu-central-1,aws,eu-central-1,0.0,R1,rule:R1 same region
+aws,eu-central-1,aws,ap-northeast-1,0.02,R2,sku:P28SVQVGC7RN5X2N
+aws,eu-central-1,aws,sa-east-1,0.02,R2,sku:UKCGHRU9DE5AD3UU
+aws,eu-central-1,azure,eastus,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,azure,westeurope,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,azure,centralindia,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,azure,southeastasia,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,azure,westus2,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,azure,germanywestcentral,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,azure,japaneast,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,azure,brazilsouth,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,gcp,us-east4,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,gcp,europe-west1,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,gcp,asia-south1,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,gcp,asia-southeast1,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,gcp,us-west1,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,gcp,europe-west3,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,gcp,asia-northeast1,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,eu-central-1,gcp,southamerica-east1,0.09,R3,sku:F62Y6TKR8NC6Q2ZB
+aws,ap-northeast-1,aws,us-east-1,0.09,R2,sku:7EQFT8UVNNKTV2AA
+aws,ap-northeast-1,aws,eu-west-1,0.09,R2,sku:STANFP5BZ9YCG63G
+aws,ap-northeast-1,aws,ap-south-1,0.09,R2,sku:CHMCHK8XUFQ7D6K2
+aws,ap-northeast-1,aws,ap-southeast-1,0.09,R2,sku:F49U9BGATCD8QSNE
+aws,ap-northeast-1,aws,us-west-2,0.09,R2,sku:WAY4K9ZJ8C8754RU
+aws,ap-northeast-1,aws,eu-central-1,0.09,R2,sku:E4QGTN6SQ5FG2UJN
+aws,ap-northeast-1,aws,ap-northeast-1,0.0,R1,rule:R1 same region
+aws,ap-northeast-1,aws,sa-east-1,0.09,R2,sku:VR9U862KBYM6NBUE
+aws,ap-northeast-1,azure,eastus,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,azure,westeurope,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,azure,centralindia,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,azure,southeastasia,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,azure,westus2,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,azure,germanywestcentral,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,azure,japaneast,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,azure,brazilsouth,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,gcp,us-east4,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,gcp,europe-west1,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,gcp,asia-south1,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,gcp,asia-southeast1,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,gcp,us-west1,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,gcp,europe-west3,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,gcp,asia-northeast1,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,ap-northeast-1,gcp,southamerica-east1,0.114,R3,sku:9ESU2G5WSY6FMZR3
+aws,sa-east-1,aws,us-east-1,0.138,R2,sku:TK4PD8NGZPE9EAZ3
+aws,sa-east-1,aws,eu-west-1,0.138,R2,sku:UHTW7Q5JZM4DSC2H
+aws,sa-east-1,aws,ap-south-1,0.138,R2,sku:J4E7XQ6B7GB5WTJ8
+aws,sa-east-1,aws,ap-southeast-1,0.138,R2,sku:6KXJRSCAT2FECTM9
+aws,sa-east-1,aws,us-west-2,0.138,R2,sku:3XN365EHF7K5ZGMR
+aws,sa-east-1,aws,eu-central-1,0.138,R2,sku:GY9F94SMZ3KAGB8T
+aws,sa-east-1,aws,ap-northeast-1,0.138,R2,sku:2CUZQK6WQCMPWQZH
+aws,sa-east-1,aws,sa-east-1,0.0,R1,rule:R1 same region
+aws,sa-east-1,azure,eastus,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,azure,westeurope,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,azure,centralindia,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,azure,southeastasia,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,azure,westus2,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,azure,germanywestcentral,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,azure,japaneast,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,azure,brazilsouth,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,gcp,us-east4,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,gcp,europe-west1,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,gcp,asia-south1,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,gcp,asia-southeast1,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,gcp,us-west1,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,gcp,europe-west3,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,gcp,asia-northeast1,0.15,R3,sku:QKTPK3975YUWDU3Q
+aws,sa-east-1,gcp,southamerica-east1,0.15,R3,sku:QKTPK3975YUWDU3Q
+azure,eastus,aws,us-east-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,aws,eu-west-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,aws,ap-south-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,aws,ap-southeast-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,aws,us-west-2,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,aws,eu-central-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,aws,ap-northeast-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,aws,sa-east-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,azure,eastus,0.0,R1,rule:R1 same region
+azure,eastus,azure,westeurope,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,eastus,azure,centralindia,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,eastus,azure,southeastasia,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,eastus,azure,westus2,0.02,R2,sku:48a72138-d041-55c5-8b83-45703d4b2aed (intra-continent)
+azure,eastus,azure,germanywestcentral,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,eastus,azure,japaneast,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,eastus,azure,brazilsouth,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,eastus,gcp,us-east4,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,gcp,europe-west1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,gcp,asia-south1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,gcp,asia-southeast1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,gcp,us-west1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,gcp,europe-west3,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,gcp,asia-northeast1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,eastus,gcp,southamerica-east1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,aws,us-east-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,aws,eu-west-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,aws,ap-south-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,aws,ap-southeast-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,aws,us-west-2,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,aws,eu-central-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,aws,ap-northeast-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,aws,sa-east-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,azure,eastus,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westeurope,azure,westeurope,0.0,R1,rule:R1 same region
+azure,westeurope,azure,centralindia,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westeurope,azure,southeastasia,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westeurope,azure,westus2,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westeurope,azure,germanywestcentral,0.02,R2,sku:fbf3fda7-3c77-5760-888c-abd984ffd63e (intra-continent)
+azure,westeurope,azure,japaneast,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westeurope,azure,brazilsouth,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westeurope,gcp,us-east4,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,gcp,europe-west1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,gcp,asia-south1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,gcp,asia-southeast1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,gcp,us-west1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,gcp,europe-west3,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,gcp,asia-northeast1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westeurope,gcp,southamerica-east1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,centralindia,aws,us-east-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,aws,eu-west-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,aws,ap-south-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,aws,ap-southeast-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,aws,us-west-2,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,aws,eu-central-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,aws,ap-northeast-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,aws,sa-east-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,azure,eastus,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,centralindia,azure,westeurope,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,centralindia,azure,centralindia,0.0,R1,rule:R1 same region
+azure,centralindia,azure,southeastasia,0.08,R2,sku:7f3d86b8-ad67-57dc-81a9-99186fffde2e (intra-continent)
+azure,centralindia,azure,westus2,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,centralindia,azure,germanywestcentral,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,centralindia,azure,japaneast,0.08,R2,sku:7f3d86b8-ad67-57dc-81a9-99186fffde2e (intra-continent)
+azure,centralindia,azure,brazilsouth,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,centralindia,gcp,us-east4,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,gcp,europe-west1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,gcp,asia-south1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,gcp,asia-southeast1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,gcp,us-west1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,gcp,europe-west3,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,gcp,asia-northeast1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,centralindia,gcp,southamerica-east1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,aws,us-east-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,aws,eu-west-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,aws,ap-south-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,aws,ap-southeast-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,aws,us-west-2,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,aws,eu-central-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,aws,ap-northeast-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,aws,sa-east-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,azure,eastus,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,southeastasia,azure,westeurope,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,southeastasia,azure,centralindia,0.08,R2,sku:40b110a0-46af-52c0-b2d9-42067248ef1d (intra-continent)
+azure,southeastasia,azure,southeastasia,0.0,R1,rule:R1 same region
+azure,southeastasia,azure,westus2,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,southeastasia,azure,germanywestcentral,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,southeastasia,azure,japaneast,0.08,R2,sku:40b110a0-46af-52c0-b2d9-42067248ef1d (intra-continent)
+azure,southeastasia,azure,brazilsouth,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,southeastasia,gcp,us-east4,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,gcp,europe-west1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,gcp,asia-south1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,gcp,asia-southeast1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,gcp,us-west1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,gcp,europe-west3,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,gcp,asia-northeast1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,southeastasia,gcp,southamerica-east1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,westus2,aws,us-east-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,aws,eu-west-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,aws,ap-south-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,aws,ap-southeast-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,aws,us-west-2,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,aws,eu-central-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,aws,ap-northeast-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,aws,sa-east-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,azure,eastus,0.02,R2,sku:23aeb672-af47-5eda-83de-8613fc34c7ea (intra-continent)
+azure,westus2,azure,westeurope,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westus2,azure,centralindia,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westus2,azure,southeastasia,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westus2,azure,westus2,0.0,R1,rule:R1 same region
+azure,westus2,azure,germanywestcentral,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westus2,azure,japaneast,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westus2,azure,brazilsouth,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,westus2,gcp,us-east4,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,gcp,europe-west1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,gcp,asia-south1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,gcp,asia-southeast1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,gcp,us-west1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,gcp,europe-west3,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,gcp,asia-northeast1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,westus2,gcp,southamerica-east1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,aws,us-east-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,aws,eu-west-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,aws,ap-south-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,aws,ap-southeast-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,aws,us-west-2,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,aws,eu-central-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,aws,ap-northeast-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,aws,sa-east-1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,azure,eastus,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,germanywestcentral,azure,westeurope,0.02,R2,sku:5fe01a94-efaa-5c63-99ba-2b48cb5cd720 (intra-continent)
+azure,germanywestcentral,azure,centralindia,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,germanywestcentral,azure,southeastasia,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,germanywestcentral,azure,westus2,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,germanywestcentral,azure,germanywestcentral,0.0,R1,rule:R1 same region
+azure,germanywestcentral,azure,japaneast,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,germanywestcentral,azure,brazilsouth,0.05,R2,"sku:beb1457b-1ab8-4e38-8021-bf7e39b1014b (intercontinental, D-034)"
+azure,germanywestcentral,gcp,us-east4,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,gcp,europe-west1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,gcp,asia-south1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,gcp,asia-southeast1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,gcp,us-west1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,gcp,europe-west3,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,gcp,asia-northeast1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,germanywestcentral,gcp,southamerica-east1,0.087,R3,sku:9995d93a-7d35-4d3f-9c69-7a7fea447ef4
+azure,japaneast,aws,us-east-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,aws,eu-west-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,aws,ap-south-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,aws,ap-southeast-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,aws,us-west-2,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,aws,eu-central-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,aws,ap-northeast-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,aws,sa-east-1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,azure,eastus,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,japaneast,azure,westeurope,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,japaneast,azure,centralindia,0.08,R2,sku:b275a193-a862-57a4-8df4-2fcdebc6da22 (intra-continent)
+azure,japaneast,azure,southeastasia,0.08,R2,sku:b275a193-a862-57a4-8df4-2fcdebc6da22 (intra-continent)
+azure,japaneast,azure,westus2,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,japaneast,azure,germanywestcentral,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,japaneast,azure,japaneast,0.0,R1,rule:R1 same region
+azure,japaneast,azure,brazilsouth,0.08,R2,"sku:7910b1eb-292c-4462-92f8-d3c917924591 (intercontinental, D-034)"
+azure,japaneast,gcp,us-east4,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,gcp,europe-west1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,gcp,asia-south1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,gcp,asia-southeast1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,gcp,us-west1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,gcp,europe-west3,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,gcp,asia-northeast1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,japaneast,gcp,southamerica-east1,0.12,R3,sku:fe167397-a38d-43c3-9bb3-8e2907e56a41
+azure,brazilsouth,aws,us-east-1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,aws,eu-west-1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,aws,ap-south-1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,aws,ap-southeast-1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,aws,us-west-2,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,aws,eu-central-1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,aws,ap-northeast-1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,aws,sa-east-1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,azure,eastus,0.16,R2,"sku:43034668-a244-4031-bb4d-be5bcce22c5f (intercontinental, D-034)"
+azure,brazilsouth,azure,westeurope,0.16,R2,"sku:43034668-a244-4031-bb4d-be5bcce22c5f (intercontinental, D-034)"
+azure,brazilsouth,azure,centralindia,0.16,R2,"sku:43034668-a244-4031-bb4d-be5bcce22c5f (intercontinental, D-034)"
+azure,brazilsouth,azure,southeastasia,0.16,R2,"sku:43034668-a244-4031-bb4d-be5bcce22c5f (intercontinental, D-034)"
+azure,brazilsouth,azure,westus2,0.16,R2,"sku:43034668-a244-4031-bb4d-be5bcce22c5f (intercontinental, D-034)"
+azure,brazilsouth,azure,germanywestcentral,0.16,R2,"sku:43034668-a244-4031-bb4d-be5bcce22c5f (intercontinental, D-034)"
+azure,brazilsouth,azure,japaneast,0.16,R2,"sku:43034668-a244-4031-bb4d-be5bcce22c5f (intercontinental, D-034)"
+azure,brazilsouth,azure,brazilsouth,0.0,R1,rule:R1 same region
+azure,brazilsouth,gcp,us-east4,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,gcp,europe-west1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,gcp,asia-south1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,gcp,asia-southeast1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,gcp,us-west1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,gcp,europe-west3,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,gcp,asia-northeast1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+azure,brazilsouth,gcp,southamerica-east1,0.181,R3,sku:c089a13a-9dd0-44b5-aa9e-44a77bbd6788
+gcp,us-east4,aws,us-east-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->North America
+gcp,us-east4,aws,eu-west-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Europe
+gcp,us-east4,aws,ap-south-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Asia Excl Korea, Indonesia"
+gcp,us-east4,aws,ap-southeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Asia Excl Korea, Indonesia"
+gcp,us-east4,aws,us-west-2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->North America
+gcp,us-east4,aws,eu-central-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Europe
+gcp,us-east4,aws,ap-northeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Asia Excl Korea, Indonesia"
+gcp,us-east4,aws,sa-east-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,us-east4,azure,eastus,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->North America
+gcp,us-east4,azure,westeurope,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Europe
+gcp,us-east4,azure,centralindia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Asia Excl Korea, Indonesia"
+gcp,us-east4,azure,southeastasia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Asia Excl Korea, Indonesia"
+gcp,us-east4,azure,westus2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->North America
+gcp,us-east4,azure,germanywestcentral,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Europe
+gcp,us-east4,azure,japaneast,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Asia Excl Korea, Indonesia"
+gcp,us-east4,azure,brazilsouth,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-east4->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,us-east4,gcp,us-east4,0.0,R1,rule:R1 same region
+gcp,us-east4,gcp,europe-west1,0.046566,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Europe
+gcp,us-east4,gcp,asia-south1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Asia
+gcp,us-east4,gcp,asia-southeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Asia
+gcp,us-east4,gcp,us-west1,0.018626,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->North America
+gcp,us-east4,gcp,europe-west3,0.046566,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Europe
+gcp,us-east4,gcp,asia-northeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Asia
+gcp,us-east4,gcp,southamerica-east1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->South America
+gcp,europe-west1,aws,us-east-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->North America
+gcp,europe-west1,aws,eu-west-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Europe
+gcp,europe-west1,aws,ap-south-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Asia Excl Korea, Indonesia"
+gcp,europe-west1,aws,ap-southeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Asia Excl Korea, Indonesia"
+gcp,europe-west1,aws,us-west-2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->North America
+gcp,europe-west1,aws,eu-central-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Europe
+gcp,europe-west1,aws,ap-northeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Asia Excl Korea, Indonesia"
+gcp,europe-west1,aws,sa-east-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,europe-west1,azure,eastus,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->North America
+gcp,europe-west1,azure,westeurope,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Europe
+gcp,europe-west1,azure,centralindia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Asia Excl Korea, Indonesia"
+gcp,europe-west1,azure,southeastasia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Asia Excl Korea, Indonesia"
+gcp,europe-west1,azure,westus2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->North America
+gcp,europe-west1,azure,germanywestcentral,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Europe
+gcp,europe-west1,azure,japaneast,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Asia Excl Korea, Indonesia"
+gcp,europe-west1,azure,brazilsouth,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,europe-west1,gcp,us-east4,0.046566,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->North America
+gcp,europe-west1,gcp,europe-west1,0.0,R1,rule:R1 same region
+gcp,europe-west1,gcp,asia-south1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->Asia
+gcp,europe-west1,gcp,asia-southeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->Asia
+gcp,europe-west1,gcp,us-west1,0.046566,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->North America
+gcp,europe-west1,gcp,europe-west3,0.018626,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->Europe
+gcp,europe-west1,gcp,asia-northeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->Asia
+gcp,europe-west1,gcp,southamerica-east1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->South America
+gcp,asia-south1,aws,us-east-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->North America
+gcp,asia-south1,aws,eu-west-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Europe
+gcp,asia-south1,aws,ap-south-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Asia Excl Korea, Indonesia"
+gcp,asia-south1,aws,ap-southeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Asia Excl Korea, Indonesia"
+gcp,asia-south1,aws,us-west-2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->North America
+gcp,asia-south1,aws,eu-central-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Europe
+gcp,asia-south1,aws,ap-northeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Asia Excl Korea, Indonesia"
+gcp,asia-south1,aws,sa-east-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,asia-south1,azure,eastus,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->North America
+gcp,asia-south1,azure,westeurope,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Europe
+gcp,asia-south1,azure,centralindia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Asia Excl Korea, Indonesia"
+gcp,asia-south1,azure,southeastasia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Asia Excl Korea, Indonesia"
+gcp,asia-south1,azure,westus2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->North America
+gcp,asia-south1,azure,germanywestcentral,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Europe
+gcp,asia-south1,azure,japaneast,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Asia Excl Korea, Indonesia"
+gcp,asia-south1,azure,brazilsouth,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-south1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,asia-south1,gcp,us-east4,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->North America
+gcp,asia-south1,gcp,europe-west1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Europe
+gcp,asia-south1,gcp,asia-south1,0.0,R1,rule:R1 same region
+gcp,asia-south1,gcp,asia-southeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Asia
+gcp,asia-south1,gcp,us-west1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->North America
+gcp,asia-south1,gcp,europe-west3,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Europe
+gcp,asia-south1,gcp,asia-northeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Asia
+gcp,asia-south1,gcp,southamerica-east1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->South America
+gcp,asia-southeast1,aws,us-east-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->North America
+gcp,asia-southeast1,aws,eu-west-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Europe
+gcp,asia-southeast1,aws,ap-south-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Asia Excl Korea, Indonesia"
+gcp,asia-southeast1,aws,ap-southeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Asia Excl Korea, Indonesia"
+gcp,asia-southeast1,aws,us-west-2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->North America
+gcp,asia-southeast1,aws,eu-central-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Europe
+gcp,asia-southeast1,aws,ap-northeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Asia Excl Korea, Indonesia"
+gcp,asia-southeast1,aws,sa-east-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,asia-southeast1,azure,eastus,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->North America
+gcp,asia-southeast1,azure,westeurope,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Europe
+gcp,asia-southeast1,azure,centralindia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Asia Excl Korea, Indonesia"
+gcp,asia-southeast1,azure,southeastasia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Asia Excl Korea, Indonesia"
+gcp,asia-southeast1,azure,westus2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->North America
+gcp,asia-southeast1,azure,germanywestcentral,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Europe
+gcp,asia-southeast1,azure,japaneast,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Asia Excl Korea, Indonesia"
+gcp,asia-southeast1,azure,brazilsouth,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-southeast1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,asia-southeast1,gcp,us-east4,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->North America
+gcp,asia-southeast1,gcp,europe-west1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Europe
+gcp,asia-southeast1,gcp,asia-south1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Asia
+gcp,asia-southeast1,gcp,asia-southeast1,0.0,R1,rule:R1 same region
+gcp,asia-southeast1,gcp,us-west1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->North America
+gcp,asia-southeast1,gcp,europe-west3,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Europe
+gcp,asia-southeast1,gcp,asia-northeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Asia
+gcp,asia-southeast1,gcp,southamerica-east1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->South America
+gcp,us-west1,aws,us-east-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->North America
+gcp,us-west1,aws,eu-west-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Europe
+gcp,us-west1,aws,ap-south-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Asia Excl Korea, Indonesia"
+gcp,us-west1,aws,ap-southeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Asia Excl Korea, Indonesia"
+gcp,us-west1,aws,us-west-2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->North America
+gcp,us-west1,aws,eu-central-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Europe
+gcp,us-west1,aws,ap-northeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Asia Excl Korea, Indonesia"
+gcp,us-west1,aws,sa-east-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,us-west1,azure,eastus,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->North America
+gcp,us-west1,azure,westeurope,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Europe
+gcp,us-west1,azure,centralindia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Asia Excl Korea, Indonesia"
+gcp,us-west1,azure,southeastasia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Asia Excl Korea, Indonesia"
+gcp,us-west1,azure,westus2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->North America
+gcp,us-west1,azure,germanywestcentral,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Europe
+gcp,us-west1,azure,japaneast,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Asia Excl Korea, Indonesia"
+gcp,us-west1,azure,brazilsouth,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:us-west1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,us-west1,gcp,us-east4,0.018626,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->North America
+gcp,us-west1,gcp,europe-west1,0.046566,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Europe
+gcp,us-west1,gcp,asia-south1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Asia
+gcp,us-west1,gcp,asia-southeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Asia
+gcp,us-west1,gcp,us-west1,0.0,R1,rule:R1 same region
+gcp,us-west1,gcp,europe-west3,0.046566,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Europe
+gcp,us-west1,gcp,asia-northeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->Asia
+gcp,us-west1,gcp,southamerica-east1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:North America->South America
+gcp,europe-west3,aws,us-east-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->North America
+gcp,europe-west3,aws,eu-west-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Europe
+gcp,europe-west3,aws,ap-south-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Asia Excl Korea, Indonesia"
+gcp,europe-west3,aws,ap-southeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Asia Excl Korea, Indonesia"
+gcp,europe-west3,aws,us-west-2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->North America
+gcp,europe-west3,aws,eu-central-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Europe
+gcp,europe-west3,aws,ap-northeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Asia Excl Korea, Indonesia"
+gcp,europe-west3,aws,sa-east-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,europe-west3,azure,eastus,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->North America
+gcp,europe-west3,azure,westeurope,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Europe
+gcp,europe-west3,azure,centralindia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Asia Excl Korea, Indonesia"
+gcp,europe-west3,azure,southeastasia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Asia Excl Korea, Indonesia"
+gcp,europe-west3,azure,westus2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->North America
+gcp,europe-west3,azure,germanywestcentral,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Europe
+gcp,europe-west3,azure,japaneast,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Asia Excl Korea, Indonesia"
+gcp,europe-west3,azure,brazilsouth,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:europe-west3->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,europe-west3,gcp,us-east4,0.046566,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->North America
+gcp,europe-west3,gcp,europe-west1,0.018626,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->Europe
+gcp,europe-west3,gcp,asia-south1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->Asia
+gcp,europe-west3,gcp,asia-southeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->Asia
+gcp,europe-west3,gcp,us-west1,0.046566,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->North America
+gcp,europe-west3,gcp,europe-west3,0.0,R1,rule:R1 same region
+gcp,europe-west3,gcp,asia-northeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->Asia
+gcp,europe-west3,gcp,southamerica-east1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Europe->South America
+gcp,asia-northeast1,aws,us-east-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->North America
+gcp,asia-northeast1,aws,eu-west-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Europe
+gcp,asia-northeast1,aws,ap-south-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Asia Excl Korea, Indonesia"
+gcp,asia-northeast1,aws,ap-southeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Asia Excl Korea, Indonesia"
+gcp,asia-northeast1,aws,us-west-2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->North America
+gcp,asia-northeast1,aws,eu-central-1,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Europe
+gcp,asia-northeast1,aws,ap-northeast-1,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Asia Excl Korea, Indonesia"
+gcp,asia-northeast1,aws,sa-east-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,asia-northeast1,azure,eastus,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->North America
+gcp,asia-northeast1,azure,westeurope,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Europe
+gcp,asia-northeast1,azure,centralindia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Asia Excl Korea, Indonesia"
+gcp,asia-northeast1,azure,southeastasia,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Asia Excl Korea, Indonesia"
+gcp,asia-northeast1,azure,westus2,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->North America
+gcp,asia-northeast1,azure,germanywestcentral,0.111759,R3,page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Europe
+gcp,asia-northeast1,azure,japaneast,0.111759,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Asia Excl Korea, Indonesia"
+gcp,asia-northeast1,azure,brazilsouth,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:asia-northeast1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,asia-northeast1,gcp,us-east4,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->North America
+gcp,asia-northeast1,gcp,europe-west1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Europe
+gcp,asia-northeast1,gcp,asia-south1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Asia
+gcp,asia-northeast1,gcp,asia-southeast1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Asia
+gcp,asia-northeast1,gcp,us-west1,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->North America
+gcp,asia-northeast1,gcp,europe-west3,0.074506,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->Europe
+gcp,asia-northeast1,gcp,asia-northeast1,0.0,R1,rule:R1 same region
+gcp,asia-northeast1,gcp,southamerica-east1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:Asia->South America
+gcp,southamerica-east1,aws,us-east-1,0.176951,R3,page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->North America
+gcp,southamerica-east1,aws,eu-west-1,0.176951,R3,page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Europe
+gcp,southamerica-east1,aws,ap-south-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Asia Excl Korea, Indonesia"
+gcp,southamerica-east1,aws,ap-southeast-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Asia Excl Korea, Indonesia"
+gcp,southamerica-east1,aws,us-west-2,0.176951,R3,page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->North America
+gcp,southamerica-east1,aws,eu-central-1,0.176951,R3,page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Europe
+gcp,southamerica-east1,aws,ap-northeast-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Asia Excl Korea, Indonesia"
+gcp,southamerica-east1,aws,sa-east-1,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,southamerica-east1,azure,eastus,0.176951,R3,page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->North America
+gcp,southamerica-east1,azure,westeurope,0.176951,R3,page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Europe
+gcp,southamerica-east1,azure,centralindia,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Asia Excl Korea, Indonesia"
+gcp,southamerica-east1,azure,southeastasia,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Asia Excl Korea, Indonesia"
+gcp,southamerica-east1,azure,westus2,0.176951,R3,page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->North America
+gcp,southamerica-east1,azure,germanywestcentral,0.176951,R3,page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Europe
+gcp,southamerica-east1,azure,japaneast,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Asia Excl Korea, Indonesia"
+gcp,southamerica-east1,azure,brazilsouth,0.176951,R3,"page:https://cloud.google.com/vpc/network-pricing#internet:southamerica-east1->Australia, Indonesia, Korea, South America, Saudi Arabia"
+gcp,southamerica-east1,gcp,us-east4,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:South America->North America
+gcp,southamerica-east1,gcp,europe-west1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:South America->Europe
+gcp,southamerica-east1,gcp,asia-south1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:South America->Asia
+gcp,southamerica-east1,gcp,asia-southeast1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:South America->Asia
+gcp,southamerica-east1,gcp,us-west1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:South America->North America
+gcp,southamerica-east1,gcp,europe-west3,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:South America->Europe
+gcp,southamerica-east1,gcp,asia-northeast1,0.130385,R2,page:https://cloud.google.com/vpc/network-pricing#inter_region:South America->Asia
+gcp,southamerica-east1,gcp,southamerica-east1,0.0,R1,rule:R1 same region

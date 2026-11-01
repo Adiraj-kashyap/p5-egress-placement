@@ -1,0 +1,25 @@
+provider,region,storage_class,usd_per_gb_month,source
+aws,us-east-1,S3 Standard,0.023,sku:WP9ANXZGBYYSGJEA
+aws,eu-west-1,S3 Standard,0.023,sku:4AJHPB29ZPVFADXP
+aws,ap-south-1,S3 Standard,0.025,sku:USGUTP2JY23N9GH2
+aws,ap-southeast-1,S3 Standard,0.025,sku:M6MTARCQFUQBQ2V3
+aws,us-west-2,S3 Standard,0.023,sku:Z3FQZG73HYSPVABR
+aws,eu-central-1,S3 Standard,0.0245,sku:NRYRNCXF5TWHB476
+aws,ap-northeast-1,S3 Standard,0.025,sku:CCBFTMENTDWZHXHX
+aws,sa-east-1,S3 Standard,0.0405,sku:ZNX83R5ZU4NXKACG
+azure,eastus,Blob Hot LRS,0.0208,sku:272492b3-1c92-4a5f-bee9-52a8e10ca514
+azure,westeurope,Blob Hot LRS,0.0196,sku:10e5ee74-8fd6-4972-909f-65a83f92f0ce
+azure,centralindia,Blob Hot LRS,0.02,sku:5c7a80d0-80f2-45f7-9135-4b4ac42adf49
+azure,southeastasia,Blob Hot LRS,0.02,sku:fc203689-76e7-4fbe-86b9-968d73231c00
+azure,westus2,Blob Hot LRS,0.0184,sku:e490b7ca-7d10-4b35-8b4d-81336dd54bfe
+azure,germanywestcentral,Blob Hot LRS,0.0196,sku:2cae23a6-b7f2-43c1-a174-8807fa5ee984
+azure,japaneast,Blob Hot LRS,0.02,sku:696220f2-91da-4ca5-920b-151e51a6d103
+azure,brazilsouth,Blob Hot LRS,0.0326,sku:af454842-91c2-406f-87a3-d719ea7ee1e0
+gcp,us-east4,STANDARD,0.02142,https://cloud.google.com/storage/pricing
+gcp,europe-west1,STANDARD,0.018626,https://cloud.google.com/storage/pricing
+gcp,asia-south1,STANDARD,0.018626,https://cloud.google.com/storage/pricing
+gcp,asia-southeast1,STANDARD,0.018626,https://cloud.google.com/storage/pricing
+gcp,us-west1,STANDARD,0.018626,https://cloud.google.com/storage/pricing
+gcp,europe-west3,STANDARD,0.02142,https://cloud.google.com/storage/pricing
+gcp,asia-northeast1,STANDARD,0.02142,https://cloud.google.com/storage/pricing
+gcp,southamerica-east1,STANDARD,0.032596,https://cloud.google.com/storage/pricing

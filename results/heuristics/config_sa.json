@@ -1,0 +1,50 @@
+{
+  "exp_id": "heuristics",
+  "module": "M12",
+  "method": "sa",
+  "created_utc": "2026-09-22T08:10:35Z",
+  "git_commit": "540c55c",
+  "snapshot_date": "2026-09-21",
+  "location_set": "core",
+  "seeds_file": "experiments/configs/sa_seeds.json",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "machine_tag": "adi-laptop-win11",
+  "params": {
+    "init": "greedy",
+    "alpha": 0.995,
+    "moves_per_temp": "n_components * n_locations",
+    "max_stale": 20,
+    "stale_rule": "descent (D-046)",
+    "p_relocate": 0.8,
+    "probe_moves": 200,
+    "target_accept": 0.8,
+    "t_min_ratio": 0.0001,
+    "time_limit": null
+  },
+  "topologies": {
+    "topologies/t1_three_tier.json": {
+      "sha256": "25fa9003d9dab68115b80e55458dc8ec159dab990aa9a146936267d522676f0f"
+    },
+    "topologies/t2_pipeline.json": {
+      "sha256": "8d31603266e4093a33481188ffe11499526d037fc408417e4f8d98cc2cd9de29"
+    },
+    "topologies/t3_microservices.json": {
+      "sha256": "a9ccd871eb33459f5b854480853a8a5e5d209415cea8b796d95d1c73d65daddb"
+    }
+  },
+  "notes": {
+    "runs.csv columns for sa": "passes = temperature steps; moves = accepted moves; converged = stopped by t_min or stale rule; repeat = 1 (seeds vary instead)",
+    "sa_detail.csv": "SA-only fields, one row per (topology, seed), append-only"
+  }
+}

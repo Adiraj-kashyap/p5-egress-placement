@@ -1,0 +1,125 @@
+{
+  "exp_id": "smoke",
+  "created_utc": "2026-09-22T09:56:56Z",
+  "config_path": "experiments/configs/smoke.json",
+  "config_sha256": "511716b2d68dc0056251e507fb2b00f04c7dee574429f6cb1ea23afc9fdf9f80",
+  "config": {
+    "exp_id": "smoke",
+    "description": "M13 smoke test of the runner: 2 sizes x 2 instance seeds x all methods (SA x 2 seeds), core location set. Must finish in under 2 minutes.",
+    "snapshot_date": "2026-09-21",
+    "location_set": "core",
+    "instances": [
+      {
+        "synthetic": {
+          "n": [
+            6,
+            12
+          ],
+          "seeds": [
+            1,
+            2
+          ],
+          "density": 0.25,
+          "volume_dist": "lognormal",
+          "median_gb": 200,
+          "pin_fraction": 0.0
+        }
+      }
+    ],
+    "methods": [
+      "ilp_tight",
+      "ilp_mccormick",
+      "greedy",
+      "greedy_1opt",
+      "sa",
+      "b1",
+      "b2_best"
+    ],
+    "method_seeds": [
+      0,
+      1
+    ],
+    "time_limits": {
+      "ilp_tight": 600,
+      "ilp_mccormick": 600,
+      "sa": null
+    },
+    "method_params": {
+      "greedy_1opt": {
+        "max_passes": 50
+      },
+      "sa": {
+        "alpha": 0.995
+      }
+    }
+  },
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "hours_per_month": 730,
+  "method_seeds": [
+    0,
+    1
+  ],
+  "time_limits": {
+    "ilp_tight": 600,
+    "ilp_mccormick": 600,
+    "sa": null
+  },
+  "ilp_default_time_limit_s": 600.0,
+  "threads": 1,
+  "machine_tag": "adi-laptop-win11",
+  "git_commit": "c1dff72",
+  "python": "3.12.10",
+  "instances": {
+    "syn_n6_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "c31f45f866a8cb8441f1aa94f3d48090626c44c3c32f863f39cfdcb4ff2ec1af",
+      "n_components": 6,
+      "n_locations": 12,
+      "n_edges": 10
+    },
+    "syn_n6_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "9a1c69fdd148174d06c8f5ce766d2e2c7e397412bd0e365eabbd6814bb0f4b3f",
+      "n_components": 6,
+      "n_locations": 12,
+      "n_edges": 10
+    },
+    "syn_n12_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "ed676a1723beea6d762aa80e0c2274f64a431b0c579b9ec2406a4d04dd61e25d",
+      "n_components": 12,
+      "n_locations": 12,
+      "n_edges": 32
+    },
+    "syn_n12_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "5ea81ef9ed148acd7a85a5889013943da8118326abde7feb035f7c6da6495fc0",
+      "n_components": 12,
+      "n_locations": 12,
+      "n_edges": 32
+    }
+  },
+  "sessions": [
+    {
+      "run_utc": "2026-09-22T09:56:56Z",
+      "git_commit": "c1dff72",
+      "machine_tag": "adi-laptop-win11",
+      "jobs_total": 32,
+      "jobs_skipped": 0,
+      "jobs_run": 32,
+      "jobs_failed": 0,
+      "wall_s": 5.495,
+      "finished": true
+    }
+  ],
+  "notes": {
+    "runs.csv": "one row per (instance, method, seed); standard columns (01 \u00a74) first; appended as each job finishes; resume skips present keys.",
+    "runtime_s": "method wall time; ILP = build + CBC; greedy_1opt includes greedy.",
+    "status": "optimal (ILP proven) | feasible (ILP incumbent, not proven) | no_solution | ok (heuristic or baseline)"
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "exp_id": "timing",
+  "created_utc": "2026-09-22T20:09:14Z",
+  "config_path": "experiments/configs/timing.json",
+  "config_sha256": "ef3d102bb7f03ae8622c5fb1962788404906ae94cf8100db0949e8e3d4d56beb",
+  "config": {
+    "exp_id": "timing",
+    "snapshot_date": "2026-09-21",
+    "location_sets": [
+      "core",
+      "ext"
+    ],
+    "instances": [
+      {
+        "synthetic": {
+          "n": [
+            8,
+            15,
+            25
+          ],
+          "seeds": [
+            1,
+            2,
+            3
+          ],
+          "density": 0.25
+        }
+      }
+    ],
+    "methods": [
+      "ilp_tight",
+      "greedy_1opt",
+      "sa"
+    ],
+    "method_seeds": [
+      0
+    ],
+    "timing_repeats": 3,
+    "time_limits": {
+      "ilp_tight": 600
+    },
+    "method_params": {},
+    "notes": {
+      "purpose": "M16 step 5: runtime error bars (05 \u00a72, timing repeats). Only the runtime differs between repeats; the assignment and cost are identical by construction, which is the point of D-064.",
+      "location_sets": "core = 12 locations, ext = 24 (L in {12, 24} of the module spec).",
+      "instances": "3 synthetic instances per n, the same generator and density 0.25 as M14, so the runtimes are comparable with the scaling experiment.",
+      "sa_seeds": "one seed: the repeats measure timing variation of an identical job, not seed variation."
+    }
+  },
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "hours_per_month": 730,
+  "method_seeds": [
+    0
+  ],
+  "time_limits": {
+    "ilp_tight": 600
+  },
+  "ilp_default_time_limit_s": 600.0,
+  "threads": 1,
+  "machine_tag": "adi-laptop-win11",
+  "git_commit": "067b7d9",
+  "python": "3.12.10",
+  "instances": {
+    "syn_n8_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 8, \"seed\": 1}",
+      "location_set": "core",
+      "sha256": "8ca4ab64c4369222cc3a8c066220b3d5b5f6574c3f7e0c8433e48550942baa25",
+      "n_components": 8,
+      "n_locations": 12,
+      "n_edges": 14
+    },
+    "syn_n8_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 8, \"seed\": 2}",
+      "location_set": "core",
+      "sha256": "ca074d77749836cfbdf7161945df93469c7836f0abd4e2bcd5b8bd5a5f8e7f60",
+      "n_components": 8,
+      "n_locations": 12,
+      "n_edges": 14
+    },
+    "syn_n8_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 8, \"seed\": 3}",
+      "location_set": "core",
+      "sha256": "a575b6751107070679a6d92e8a4b2c2ec107f01b4bcbcf994a7ea888eb00680d",
+      "n_components": 8,
+      "n_locations": 12,
+      "n_edges": 14
+    },
+    "syn_n15_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 15, \"seed\": 1}",
+      "location_set": "core",
+      "sha256": "b1ad1bc2d386ea5025621124fe107c6efe8699ba0d7397c88afa6beee96a00b4",
+      "n_components": 15,
+      "n_locations": 12,
+      "n_edges": 52
+    },
+    "syn_n15_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 15, \"seed\": 2}",
+      "location_set": "core",
+      "sha256": "62f396f37c6d7e330fe38958e92af391cc0eab2c59036dccf073f4f66836ee65",
+      "n_components": 15,
+      "n_locations": 12,
+      "n_edges": 52
+    },
+    "syn_n15_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 15, \"seed\": 3}",
+      "location_set": "core",
+      "sha256": "d7d9f2662fc9adf10cfe9b7141e5414169bbb128939e2e8513c67c514408d12b",
+      "n_components": 15,
+      "n_locations": 12,
+      "n_edges": 52
+    },
+    "syn_n25_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 25, \"seed\": 1}",
+      "location_set": "core",
+      "sha256": "3a935e62e61dc4abca23221dc357875c680754557981b927f6edbaa951922065",
+      "n_components": 25,
+      "n_locations": 12,
+      "n_edges": 150
+    },
+    "syn_n25_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 25, \"seed\": 2}",
+      "location_set": "core",
+      "sha256": "6ab34c4a3a3b4217cf01fd642d4a7bb55efce421605bb0298774be25bd5fe6ac",
+      "n_components": 25,
+      "n_locations": 12,
+      "n_edges": 150
+    },
+    "syn_n25_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 25, \"seed\": 3}",
+      "location_set": "core",
+      "sha256": "274f7d822ff17945fee5c66db7117cca4fa0ca381fdd5f72cdb1c15f33fe0800",
+      "n_components": 25,
+      "n_locations": 12,
+      "n_edges": 150
+    },
+    "syn_n8_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 8, \"seed\": 1}",
+      "location_set": "ext",
+      "sha256": "5bc2959f5d3cf3555804476c0337dff09405eab4a5d00927f012e216893906a8",
+      "n_components": 8,
+      "n_locations": 24,
+      "n_edges": 14
+    },
+    "syn_n8_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 8, \"seed\": 2}",
+      "location_set": "ext",
+      "sha256": "d1330580de9173313f7938f8f052dbf7357735b4408326f7a02153496390282e",
+      "n_components": 8,
+      "n_locations": 24,
+      "n_edges": 14
+    },
+    "syn_n8_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 8, \"seed\": 3}",
+      "location_set": "ext",
+      "sha256": "75845e803348a49538344d8e0aeb6f955a7fdc999cab2b5617bb4b960f0d1135",
+      "n_components": 8,
+      "n_locations": 24,
+      "n_edges": 14
+    },
+    "syn_n15_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 15, \"seed\": 1}",
+      "location_set": "ext",
+      "sha256": "2eb2c279fdec11bfdd822117466a3f4fd1cc57cc17f74d11f58100bdf815b27b",
+      "n_components": 15,
+      "n_locations": 24,
+      "n_edges": 52
+    },
+    "syn_n15_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 15, \"seed\": 2}",
+      "location_set": "ext",
+      "sha256": "e2305628d9f6ea8a2c62b7b09aae3c911dfc9c7fb066964045859739e39990e6",
+      "n_components": 15,
+      "n_locations": 24,
+      "n_edges": 52
+    },
+    "syn_n15_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 15, \"seed\": 3}",
+      "location_set": "ext",
+      "sha256": "467a0b5622c5573f16759660c7255fe47bbfd22728e71556f7e2764a44b94a9d",
+      "n_components": 15,
+      "n_locations": 24,
+      "n_edges": 52
+    },
+    "syn_n25_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 25, \"seed\": 1}",
+      "location_set": "ext",
+      "sha256": "bdd97be7befb2baf67538830eb6cce20a8567e9af504cc2c81f0e2b6252d03fe",
+      "n_components": 25,
+      "n_locations": 24,
+      "n_edges": 150
+    },
+    "syn_n25_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 25, \"seed\": 2}",
+      "location_set": "ext",
+      "sha256": "777c153594a4d343dddac770ae293cb51be847673fffeb11d6dececdcb437839",
+      "n_components": 25,
+      "n_locations": 24,
+      "n_edges": 150
+    },
+    "syn_n25_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"n\": 25, \"seed\": 3}",
+      "location_set": "ext",
+      "sha256": "73b4caca3fcb9dea68314df34264c2d5a37809a69e0bedd39e674c03a8b71ce2",
+      "n_components": 25,
+      "n_locations": 24,
+      "n_edges": 150
+    }
+  },
+  "sessions": [
+    {
+      "run_utc": "2026-09-22T20:09:14Z",
+      "git_commit": "067b7d9",
+      "machine_tag": "adi-laptop-win11",
+      "jobs_total": 162,
+      "jobs_skipped": 0,
+      "jobs_run": 162,
+      "jobs_failed": 0,
+      "wall_s": 305.959,
+      "finished": true
+    }
+  ],
+  "notes": {
+    "runs.csv": "one row per (instance, method, seed); standard columns (01 \u00a74) first; appended as each job finishes; resume skips present keys.",
+    "runtime_s": "method wall time; ILP = build + CBC; greedy_1opt includes greedy.",
+    "status": "optimal (ILP proven) | feasible (ILP incumbent, not proven) | no_solution | ok (heuristic or baseline)"
+  }
+}

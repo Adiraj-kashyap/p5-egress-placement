@@ -1,0 +1,105 @@
+{
+  "id": "t1_three_tier",
+  "description": "Three-tier web application (web, api, cache, db). The testbed application of M07.",
+  "provenance": "measured",
+  "assumptions": {
+    "requests_per_s": 50.0,
+    "bytes_per_request": {
+      "web->api": 83.31,
+      "api->web": 4217.022,
+      "api->cache": 1220.649,
+      "cache->api": 2967.265,
+      "api->db": 132.19,
+      "db->api": 1144.252
+    },
+    "internet_bytes_per_request": 5014.984,
+    "note": "bytes_per_request = mean TCP-payload bytes per served web request over 3 runs (testbed/measurements/summary.csv); volumes = bytes x requests_per_s x 2,592,000 s. Rescale by changing requests_per_s."
+  },
+  "references": [],
+  "components": [
+    {
+      "id": "web",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "HTTP front end / page renderer (module spec 2 vCPU / 8 GB)"
+    },
+    {
+      "id": "api",
+      "vcpu": 4,
+      "ram_gb": 16,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "application API (module spec 4 vCPU / 16 GB)"
+    },
+    {
+      "id": "cache",
+      "vcpu": 2,
+      "ram_gb": 8,
+      "storage_gb": 0,
+      "pinned_to": null,
+      "rationale": "in-memory cache in front of db (module spec 2 vCPU / 8 GB)"
+    },
+    {
+      "id": "db",
+      "vcpu": 4,
+      "ram_gb": 16,
+      "storage_gb": 200,
+      "pinned_to": null,
+      "rationale": "relational database, 200 GB data (module spec)"
+    }
+  ],
+  "edges": [
+    {
+      "src": "web",
+      "dst": "api",
+      "gb_per_month": 10.797,
+      "provenance": "measured:M07 kind testbed, 3 x 10 min locust runs (testbed/measurements/summary.csv)",
+      "rationale": "83.31 B per web request (measured) x 50 req/s: HTTP requests web sends to api"
+    },
+    {
+      "src": "api",
+      "dst": "web",
+      "gb_per_month": 546.526,
+      "provenance": "measured:M07 kind testbed, 3 x 10 min locust runs (testbed/measurements/summary.csv)",
+      "rationale": "4217.02 B per web request (measured) x 50 req/s: api JSON responses the pages are rendered from"
+    },
+    {
+      "src": "api",
+      "dst": "cache",
+      "gb_per_month": 158.196,
+      "provenance": "measured:M07 kind testbed, 3 x 10 min locust runs (testbed/measurements/summary.csv)",
+      "rationale": "1220.65 B per web request (measured) x 50 req/s: redis commands (GET, and SET on a miss)"
+    },
+    {
+      "src": "cache",
+      "dst": "api",
+      "gb_per_month": 384.558,
+      "provenance": "measured:M07 kind testbed, 3 x 10 min locust runs (testbed/measurements/summary.csv)",
+      "rationale": "2967.26 B per web request (measured) x 50 req/s: redis replies (cached JSON)"
+    },
+    {
+      "src": "api",
+      "dst": "db",
+      "gb_per_month": 17.132,
+      "provenance": "measured:M07 kind testbed, 3 x 10 min locust runs (testbed/measurements/summary.csv)",
+      "rationale": "132.19 B per web request (measured) x 50 req/s: postgres protocol: queries on cache misses and order writes"
+    },
+    {
+      "src": "db",
+      "dst": "api",
+      "gb_per_month": 148.295,
+      "provenance": "measured:M07 kind testbed, 3 x 10 min locust runs (testbed/measurements/summary.csv)",
+      "rationale": "1144.25 B per web request (measured) x 50 req/s: postgres protocol: result rows and acknowledgements"
+    }
+  ],
+  "internet_egress": [
+    {
+      "src": "web",
+      "gb_per_month": 649.942,
+      "provenance": "measured:M07 kind testbed, 3 x 10 min locust runs (testbed/measurements/summary.csv)",
+      "rationale": "5014.98 B HTTP response per web request (measured) x 50 req/s to end users"
+    }
+  ]
+}

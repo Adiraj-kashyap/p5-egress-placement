@@ -1,0 +1,97 @@
+provider,region,shape,instance_type,vcpu,ram_gb,usd_per_hour,usd_per_month,source
+aws,us-east-1,small,m5.large,2,8,0.096,70.08,sku:6C86BEPQVG73ZGGR
+aws,us-east-1,medium,m5.xlarge,4,16,0.192,140.16,sku:5G4TA8Z4MUKE6MJB
+aws,us-east-1,large,m5.2xlarge,8,32,0.384,280.32,sku:ZH8KU2QB7FHAJJXW
+aws,us-east-1,xlarge,m5.4xlarge,16,64,0.768,560.64,sku:DW64VZC89TS9M2P2
+aws,eu-west-1,small,m5.large,2,8,0.107,78.11,sku:FP7Z96TTU3VFSX2H
+aws,eu-west-1,medium,m5.xlarge,4,16,0.214,156.22,sku:HNKY83Z77VRXC2UH
+aws,eu-west-1,large,m5.2xlarge,8,32,0.428,312.44,sku:Z3S5HVHF6HYM2YZJ
+aws,eu-west-1,xlarge,m5.4xlarge,16,64,0.856,624.88,sku:HUR96BZEUM9ZQAKA
+aws,ap-south-1,small,m5.large,2,8,0.101,73.73,sku:ZHUPGV53EVQF5VC7
+aws,ap-south-1,medium,m5.xlarge,4,16,0.202,147.46,sku:VBD2QYRW5UYMAGSN
+aws,ap-south-1,large,m5.2xlarge,8,32,0.404,294.92,sku:HVWA3YJFM6AXUUWR
+aws,ap-south-1,xlarge,m5.4xlarge,16,64,0.808,589.84,sku:CB3SYAC56AHD82RF
+aws,ap-southeast-1,small,m5.large,2,8,0.12,87.6,sku:XSXMGMXPBTAVPRF4
+aws,ap-southeast-1,medium,m5.xlarge,4,16,0.24,175.2,sku:Y7WGCXGA4G2JJPB2
+aws,ap-southeast-1,large,m5.2xlarge,8,32,0.48,350.4,sku:VCCKNYURW3SX8D6J
+aws,ap-southeast-1,xlarge,m5.4xlarge,16,64,0.96,700.8,sku:SD9XDMQX6ZX5F92E
+aws,us-west-2,small,m5.large,2,8,0.096,70.08,sku:VCN9BB3M49B23Y77
+aws,us-west-2,medium,m5.xlarge,4,16,0.192,140.16,sku:T5CRJD6MS45TWRHG
+aws,us-west-2,large,m5.2xlarge,8,32,0.384,280.32,sku:PS6J5UCPGRFJTMMR
+aws,us-west-2,xlarge,m5.4xlarge,16,64,0.768,560.64,sku:RZ9FPRZHKGMYG5N2
+aws,eu-central-1,small,m5.large,2,8,0.115,83.95,sku:JSXG89ERGHPGMPFM
+aws,eu-central-1,medium,m5.xlarge,4,16,0.23,167.9,sku:BXS2CDUKEC83Q4SH
+aws,eu-central-1,large,m5.2xlarge,8,32,0.46,335.8,sku:N5D4RSFRNZ3SRTJ3
+aws,eu-central-1,xlarge,m5.4xlarge,16,64,0.92,671.6,sku:QR7F3KDAWU8AH7GS
+aws,ap-northeast-1,small,m5.large,2,8,0.124,90.52,sku:USE46NRHP4S7UT6J
+aws,ap-northeast-1,medium,m5.xlarge,4,16,0.248,181.04,sku:3KYNGSJGJJ4XEFVU
+aws,ap-northeast-1,large,m5.2xlarge,8,32,0.496,362.08,sku:WEMS88BYNHHUKWC8
+aws,ap-northeast-1,xlarge,m5.4xlarge,16,64,0.992,724.16,sku:SD97GUGBCUND24YK
+aws,sa-east-1,small,m5.large,2,8,0.153,111.69,sku:EFW3QVTF33JCUCBP
+aws,sa-east-1,medium,m5.xlarge,4,16,0.306,223.38,sku:GFJESH549VTK9EBY
+aws,sa-east-1,large,m5.2xlarge,8,32,0.612,446.76,sku:UFS4KMTBWWWQ43VK
+aws,sa-east-1,xlarge,m5.4xlarge,16,64,1.224,893.52,sku:YFYS3RGFGR7H4YBP
+azure,eastus,small,Standard_D2s_v5,2,8,0.096,70.08,sku:36cc2454-47d7-517f-884f-be4d6b7efa55
+azure,eastus,medium,Standard_D4s_v5,4,16,0.192,140.16,sku:db8c0962-f3f8-5b44-99aa-f3c7c1e668c8
+azure,eastus,large,Standard_D8s_v5,8,32,0.384,280.32,sku:17a4cba9-d983-5344-a8ef-ac7c8e0d34af
+azure,eastus,xlarge,Standard_D16s_v5,16,64,0.768,560.64,sku:fe5cc4b8-fb43-5188-a76d-8780fd6eca98
+azure,westeurope,small,Standard_D2s_v5,2,8,0.115,83.95,sku:0561adcb-1c48-542e-9e0c-10dea22fc392
+azure,westeurope,medium,Standard_D4s_v5,4,16,0.23,167.9,sku:1ab41620-5ffa-51b3-ac16-6416f9f747a9
+azure,westeurope,large,Standard_D8s_v5,8,32,0.46,335.8,sku:695fe110-a2c2-57c2-85f1-6c74bdc9e971
+azure,westeurope,xlarge,Standard_D16s_v5,16,64,0.92,671.6,sku:39605047-4e21-53d3-bed5-e5ce5f8dcce2
+azure,centralindia,small,Standard_D2s_v5,2,8,0.101,73.73,sku:5affb6ce-43ec-53ba-b434-3a092f336ed4
+azure,centralindia,medium,Standard_D4s_v5,4,16,0.202,147.46,sku:2382d92d-4ce9-5330-9bb4-8ec9120e6a64
+azure,centralindia,large,Standard_D8s_v5,8,32,0.404,294.92,sku:0d774e21-4bb3-509c-9d53-c91b896f075d
+azure,centralindia,xlarge,Standard_D16s_v5,16,64,0.808,589.84,sku:954e84bc-5590-5cf1-b05e-342581718b3a
+azure,southeastasia,small,Standard_D2s_v5,2,8,0.12,87.6,sku:601bbf78-cf6d-5dc0-b9cf-ab39a3cb1b3e
+azure,southeastasia,medium,Standard_D4s_v5,4,16,0.24,175.2,sku:f4cf6544-ee03-5ddc-9cc0-25d5cb4c48b0
+azure,southeastasia,large,Standard_D8s_v5,8,32,0.48,350.4,sku:b7618c5c-41cd-57e8-b092-c361e22762f3
+azure,southeastasia,xlarge,Standard_D16s_v5,16,64,0.96,700.8,sku:cb6e58ad-f3e8-523c-85fa-538cd26f9b5a
+azure,westus2,small,Standard_D2s_v5,2,8,0.096,70.08,sku:bd647562-16a4-5759-94dd-03265007ed7d
+azure,westus2,medium,Standard_D4s_v5,4,16,0.192,140.16,sku:5ab68e24-08ef-5e5b-ba9a-771e5054e963
+azure,westus2,large,Standard_D8s_v5,8,32,0.384,280.32,sku:5a5788e8-83d3-5e52-aaa6-20073da72ca9
+azure,westus2,xlarge,Standard_D16s_v5,16,64,0.768,560.64,sku:15b8d55e-0ccd-57a2-915b-b03ecd0ae8f6
+azure,germanywestcentral,small,Standard_D2s_v5,2,8,0.115,83.95,sku:7818166d-015a-5f9f-be03-2ff5ce25ed4d
+azure,germanywestcentral,medium,Standard_D4s_v5,4,16,0.23,167.9,sku:4e09681c-b48b-52a2-b86b-39b81a797216
+azure,germanywestcentral,large,Standard_D8s_v5,8,32,0.46,335.8,sku:99eb245b-f485-5548-b635-9e38ea7a6e61
+azure,germanywestcentral,xlarge,Standard_D16s_v5,16,64,0.92,671.6,sku:8bd6b9bb-da18-5913-a6c8-6575d919d25b
+azure,japaneast,small,Standard_D2s_v5,2,8,0.124,90.52,sku:5014c5a1-1252-5169-9b39-31397eef15ad
+azure,japaneast,medium,Standard_D4s_v5,4,16,0.248,181.04,sku:a5a189c2-53b5-5cc2-8b62-6b0fdf6b96b1
+azure,japaneast,large,Standard_D8s_v5,8,32,0.496,362.08,sku:e5744c0c-9638-5411-8ff5-2def353d693e
+azure,japaneast,xlarge,Standard_D16s_v5,16,64,0.992,724.16,sku:f25ca24b-9a4c-5ac3-accb-4344fa5d16a0
+azure,brazilsouth,small,Standard_D2s_v5,2,8,0.153,111.69,sku:ae0f1881-5b13-55ac-80a0-6bc9a9ad29c5
+azure,brazilsouth,medium,Standard_D4s_v5,4,16,0.306,223.38,sku:6c6fb48f-4ee0-555e-a5bc-4a4f0b2fe489
+azure,brazilsouth,large,Standard_D8s_v5,8,32,0.612,446.76,sku:42b7d8a7-e544-5689-88a4-a4ba537f9dfc
+azure,brazilsouth,xlarge,Standard_D16s_v5,16,64,1.224,893.52,sku:7e1adaed-fd7e-539b-b209-1a63167ea440
+gcp,us-east4,small,n2-standard-2,2,8,0.109378,79.8459,"composed:N2 core 0.035605/vCPU-h + ram 0.004771/GiB-h (public page, D-026/D-027)"
+gcp,us-east4,medium,n2-standard-4,4,16,0.218756,159.6919,"composed:N2 core 0.035605/vCPU-h + ram 0.004771/GiB-h (public page, D-026/D-027)"
+gcp,us-east4,large,n2-standard-8,8,32,0.437512,319.3838,"composed:N2 core 0.035605/vCPU-h + ram 0.004771/GiB-h (public page, D-026/D-027)"
+gcp,us-east4,xlarge,n2-standard-16,16,64,0.875024,638.7675,"composed:N2 core 0.035605/vCPU-h + ram 0.004771/GiB-h (public page, D-026/D-027)"
+gcp,europe-west1,small,n2-standard-2,2,8,0.106834,77.9888,"composed:N2 core 0.034773/vCPU-h + ram 0.004661/GiB-h (public page, D-026/D-027)"
+gcp,europe-west1,medium,n2-standard-4,4,16,0.213668,155.9776,"composed:N2 core 0.034773/vCPU-h + ram 0.004661/GiB-h (public page, D-026/D-027)"
+gcp,europe-west1,large,n2-standard-8,8,32,0.427336,311.9553,"composed:N2 core 0.034773/vCPU-h + ram 0.004661/GiB-h (public page, D-026/D-027)"
+gcp,europe-west1,xlarge,n2-standard-16,16,64,0.854672,623.9106,"composed:N2 core 0.034773/vCPU-h + ram 0.004661/GiB-h (public page, D-026/D-027)"
+gcp,asia-south1,small,n2-standard-2,2,8,0.116644,85.1501,"composed:N2 core 0.03797/vCPU-h + ram 0.005088/GiB-h (public page, D-026/D-027)"
+gcp,asia-south1,medium,n2-standard-4,4,16,0.233288,170.3002,"composed:N2 core 0.03797/vCPU-h + ram 0.005088/GiB-h (public page, D-026/D-027)"
+gcp,asia-south1,large,n2-standard-8,8,32,0.466576,340.6005,"composed:N2 core 0.03797/vCPU-h + ram 0.005088/GiB-h (public page, D-026/D-027)"
+gcp,asia-south1,xlarge,n2-standard-16,16,64,0.933152,681.201,"composed:N2 core 0.03797/vCPU-h + ram 0.005088/GiB-h (public page, D-026/D-027)"
+gcp,asia-southeast1,small,n2-standard-2,2,8,0.119806,87.4584,"composed:N2 core 0.038999/vCPU-h + ram 0.005226/GiB-h (public page, D-026/D-027)"
+gcp,asia-southeast1,medium,n2-standard-4,4,16,0.239612,174.9168,"composed:N2 core 0.038999/vCPU-h + ram 0.005226/GiB-h (public page, D-026/D-027)"
+gcp,asia-southeast1,large,n2-standard-8,8,32,0.479224,349.8335,"composed:N2 core 0.038999/vCPU-h + ram 0.005226/GiB-h (public page, D-026/D-027)"
+gcp,asia-southeast1,xlarge,n2-standard-16,16,64,0.958448,699.667,"composed:N2 core 0.038999/vCPU-h + ram 0.005226/GiB-h (public page, D-026/D-027)"
+gcp,us-west1,small,n2-standard-2,2,8,0.097118,70.8961,"composed:N2 core 0.031611/vCPU-h + ram 0.004237/GiB-h (public page, D-026/D-027)"
+gcp,us-west1,medium,n2-standard-4,4,16,0.194236,141.7923,"composed:N2 core 0.031611/vCPU-h + ram 0.004237/GiB-h (public page, D-026/D-027)"
+gcp,us-west1,large,n2-standard-8,8,32,0.388472,283.5846,"composed:N2 core 0.031611/vCPU-h + ram 0.004237/GiB-h (public page, D-026/D-027)"
+gcp,us-west1,xlarge,n2-standard-16,16,64,0.776944,567.1691,"composed:N2 core 0.031611/vCPU-h + ram 0.004237/GiB-h (public page, D-026/D-027)"
+gcp,europe-west3,small,n2-standard-2,2,8,0.125124,91.3405,"composed:N2 core 0.04073/vCPU-h + ram 0.005458/GiB-h (public page, D-026/D-027)"
+gcp,europe-west3,medium,n2-standard-4,4,16,0.250248,182.681,"composed:N2 core 0.04073/vCPU-h + ram 0.005458/GiB-h (public page, D-026/D-027)"
+gcp,europe-west3,large,n2-standard-8,8,32,0.500496,365.3621,"composed:N2 core 0.04073/vCPU-h + ram 0.005458/GiB-h (public page, D-026/D-027)"
+gcp,europe-west3,xlarge,n2-standard-16,16,64,1.000992,730.7242,"composed:N2 core 0.04073/vCPU-h + ram 0.005458/GiB-h (public page, D-026/D-027)"
+gcp,asia-northeast1,small,n2-standard-2,2,8,0.124588,90.9492,"composed:N2 core 0.040618/vCPU-h + ram 0.005419/GiB-h (public page, D-026/D-027)"
+gcp,asia-northeast1,medium,n2-standard-4,4,16,0.249176,181.8985,"composed:N2 core 0.040618/vCPU-h + ram 0.005419/GiB-h (public page, D-026/D-027)"
+gcp,asia-northeast1,large,n2-standard-8,8,32,0.498352,363.797,"composed:N2 core 0.040618/vCPU-h + ram 0.005419/GiB-h (public page, D-026/D-027)"
+gcp,asia-northeast1,xlarge,n2-standard-16,16,64,0.996704,727.5939,"composed:N2 core 0.040618/vCPU-h + ram 0.005419/GiB-h (public page, D-026/D-027)"
+gcp,southamerica-east1,small,n2-standard-2,2,8,0.15416,112.5368,"composed:N2 core 0.05018/vCPU-h + ram 0.006725/GiB-h (public page, D-026/D-027)"
+gcp,southamerica-east1,medium,n2-standard-4,4,16,0.30832,225.0736,"composed:N2 core 0.05018/vCPU-h + ram 0.006725/GiB-h (public page, D-026/D-027)"
+gcp,southamerica-east1,large,n2-standard-8,8,32,0.61664,450.1472,"composed:N2 core 0.05018/vCPU-h + ram 0.006725/GiB-h (public page, D-026/D-027)"
+gcp,southamerica-east1,xlarge,n2-standard-16,16,64,1.23328,900.2944,"composed:N2 core 0.05018/vCPU-h + ram 0.006725/GiB-h (public page, D-026/D-027)"

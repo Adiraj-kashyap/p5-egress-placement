@@ -1,0 +1,3 @@
+location_set,n_locations,frontier_n,largest_n_tested,frontier_reached,first_failing_n,finding,ilp_runtime_median_s_at_largest_n,ilp_runtime_max_s_overall
+core,12,40,40,False,,not reached within n <= 40 (CBC proves optimality on >= 4/5 at every n),4.48111,10.0408
+ext,24,40,40,False,,not reached within n <= 40 (CBC proves optimality on >= 4/5 at every n),41.8,46.2782

@@ -1,0 +1,40 @@
+Cbc0038I Solution found of 4942.61
+Cbc0038I Relaxing continuous gives 4942.61
+Cbc0038I Before mini branch and bound, 426 integers at bound fixed and 37525 continuous
+Cbc0038I Full problem 37645 rows 38120 columns, reduced to 870 rows 168 columns
+Cbc0038I Mini branch and bound did not improve solution (1.30 seconds)
+Cbc0038I Round again with cutoff of 4575.27
+Cbc0038I Pass   2: (1.45 seconds) suminf.    4.50367 (18) obj. 4575.27 iterations 114
+Cbc0038I Pass   3: (1.88 seconds) suminf.    0.96111 (227) obj. 4575.27 iterations 821
+Cbc0038I Pass   4: (4.23 seconds) suminf.    1.04510 (13) obj. 4575.27 iterations 4462
+Cbc0038I No solution found this major pass
+Cbc0038I After 4.23 seconds - Feasibility pump exiting with objective of 4942.61 - took 3.34 seconds
+Cbc0012I Integer solution of 4942.6103 found by feasibility pump after 0 iterations and 0 nodes (4.25 seconds)
+Cbc0030I Thread 0 used 0 times,  waiting to start 0, 0 cpu time, 0 locks, 0 locked, 0 waiting for locks
+Cbc0030I Main thread 0 waiting for threads,  1 locks, 0 locked, 0 waiting for locks
+Cbc0020I Exiting on maximum time
+Cbc0005I Partial search - best objective 4942.6103 (best possible 1269.196), took 0 iterations and 0 nodes (4.32 seconds)
+Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
+Cuts at root node changed objective from 1269.2 to 1269.2
+Probing was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+Gomory was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+Knapsack was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+Clique was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+MixedIntegerRounding2 was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+FlowCover was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+TwoMirCuts was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+ZeroHalf was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
+
+Result - Stopped on time limit
+
+Objective value:                4942.61033173
+Lower bound:                    1269.196
+Gap:                            2.89
+Enumerated nodes:               0
+Total iterations:               0
+Time (CPU seconds):             4.51
+Time (Wallclock seconds):       4.51
+
+Option for printingOptions changed from normal to all
+Total time (CPU seconds):       4.83   (Wallclock seconds):       4.83
+

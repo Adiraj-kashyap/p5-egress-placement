@@ -1,0 +1,28 @@
+{
+  "exp_id": "ablation",
+  "snapshot_date": "2026-09-21",
+  "location_set": "core",
+  "instances": [
+    {"topology": "topologies/t1_three_tier.json"},
+    {"topology": "topologies/t2_pipeline.json"},
+    {"topology": "topologies/t3_microservices.json"}
+  ],
+  "draws": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+            20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+  "scales": [1.0, 100.0],
+  "methods": ["ilp_full", "ilp_no_edge_egress", "ilp_no_internet", "ilp_undirected",
+              "ilp_single_provider", "ilp_mccormick", "b1", "b1_storage", "b2_best",
+              "sa", "sa_random_init", "sa_no_swap"],
+  "method_seeds": [0, 1, 2, 3, 4],
+  "time_limits": {"ilp_full": 600, "ilp_no_edge_egress": 600, "ilp_no_internet": 600,
+                  "ilp_undirected": 600, "ilp_single_provider": 600, "ilp_mccormick": 600},
+  "method_params": {},
+  "notes": {
+    "purpose": "M17 step 3: isolate the contribution of each ingredient (06 S12). Every variant changes only the objective or the feasible set used for CHOOSING; the runner always scores the returned assignment with the full, true evaluate().",
+    "scales": "s = 1 is the measured/stated traffic. The second point should be the crossover neighbourhood from M15, but M15 and M16 found NO crossover anywhere in [0.01, 100] on T1-T3, so there is no such neighbourhood; s = 100 is used instead as the egress-heaviest end of the frozen M15 range, where coupling has the best chance of mattering (D-072). The range itself is unchanged, so this is not a threshold change.",
+    "draws": "the same R = 30 draws as results/replicates (seed = 10,000 + draw_id, 05 S3), so every ablation is paired with the M16 rows draw by draw.",
+    "decomposition": "b1 -> b1_storage -> ilp_no_edge_egress -> ilp_full telescopes to C(B1) - C(ILP) per draw; asserted in tests/test_ablations.py (A1).",
+    "sa_variants": "sa_random_init drops the greedy start, sa_no_swap sets p_relocate = 1.0 so swap moves are never proposed (D-071). Both use the same 5 seeds as M16; the drawn value of a method is the median over its seeds (D-068).",
+    "ilp_mccormick": "included as the runtime-only ablation: the objective must be identical to ilp_full (asserted in tests)."
+  }
+}

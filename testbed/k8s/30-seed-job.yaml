@@ -1,0 +1,50 @@
+# Seeds db with 50,000 deterministic products and an empty orders table (idempotent).
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: seed-sql, namespace: p5}
+data:
+  seed.sql: |
+    DROP TABLE IF EXISTS orders;
+    DROP TABLE IF EXISTS products;
+    CREATE TABLE products (
+      id int PRIMARY KEY, name text NOT NULL, category text NOT NULL,
+      price numeric(8,2) NOT NULL, stock int NOT NULL, description text NOT NULL);
+    INSERT INTO products
+    SELECT g, 'Product ' || g || ' ' || substr(md5('n' || g), 1, 8),
+           'category-' || lpad((g % 40)::text, 2, '0'),
+           round((5 + (g * 37 % 9950) / 10.0)::numeric, 2), g * 7 % 500,
+           'Deterministic synthetic description for product ' || g || '. ' ||
+           repeat(md5(g::text) || ' ', 5)
+    FROM generate_series(1, 50000) AS g;
+    CREATE INDEX products_category_id ON products (category, id);
+    CREATE TABLE orders (
+      id bigserial PRIMARY KEY, product_id int NOT NULL REFERENCES products (id),
+      qty int NOT NULL, created_at timestamptz NOT NULL DEFAULT now());
+    ANALYZE products;
+    SELECT count(*) AS products_seeded FROM products;
+---
+apiVersion: batch/v1
+kind: Job
+metadata: {name: seed-db, namespace: p5}
+spec:
+  backoffLimit: 4
+  template:
+    spec:
+      restartPolicy: OnFailure
+      initContainers:
+        - name: wait-db
+          image: postgres:16-alpine
+          command: [sh, -c, "until pg_isready -h db -U p5 -d p5; do sleep 2; done"]
+          resources:
+            requests: {cpu: 50m, memory: 32Mi}
+            limits: {cpu: 200m, memory: 64Mi}
+      containers:
+        - name: seed
+          image: postgres:16-alpine
+          command: [psql, -h, db, -U, p5, -d, p5, -v, ON_ERROR_STOP=1, -f, /seed/seed.sql]
+          env: [{name: PGPASSWORD, value: p5}]
+          volumeMounts: [{name: seed, mountPath: /seed}]
+          resources:
+            requests: {cpu: 50m, memory: 32Mi}
+            limits: {cpu: 500m, memory: 128Mi}
+      volumes: [{name: seed, configMap: {name: seed-sql}}]

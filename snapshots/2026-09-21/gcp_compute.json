@@ -1,0 +1,242 @@
+{
+ "snapshot_date": "2026-09-21",
+ "pulled_at_utc": "2026-09-21T15:40:18Z",
+ "row_count": 16,
+ "meta": {
+  "source": "public_pricing_pages",
+  "waiver": "D-021 path (c): no API key; calculator price list returned HTTP 404",
+  "pages": [
+   {
+    "url": "https://cloud.google.com/products/compute/pricing/general-purpose",
+    "final_url": "https://cloud.google.com/products/compute/pricing/general-purpose",
+    "http_status": 200,
+    "bytes": 35795632,
+    "sha256": "7ad83c7f2683acddf695a5103941080e35482d505150d6aa6b99faea17225610",
+    "accessed_utc": "2026-09-21T15:40:07Z"
+   },
+   {
+    "url": "https://cloud.google.com/vpc/network-pricing",
+    "final_url": "https://cloud.google.com/vpc/network-pricing",
+    "http_status": 200,
+    "bytes": 3802835,
+    "sha256": "9abac4a4fa0b675c4f734bd454a7d534d2e4da2d9b17eba731e7533e3d60d468",
+    "accessed_utc": "2026-09-21T15:40:12Z"
+   },
+   {
+    "url": "https://cloud.google.com/storage/pricing",
+    "final_url": "https://cloud.google.com/storage/pricing",
+    "http_status": 200,
+    "bytes": 2678557,
+    "sha256": "daaed4e43e0849921a7710a7886b386feb0b11ddd2749f1966576e1e982b8ce4",
+    "accessed_utc": "2026-09-21T15:40:17Z"
+   }
+  ],
+  "network_tier": "premium",
+  "compute_family": "N2",
+  "regions": [
+   "us-east4",
+   "europe-west1",
+   "asia-south1",
+   "asia-southeast1",
+   "us-west1",
+   "europe-west3",
+   "asia-northeast1",
+   "southamerica-east1"
+  ],
+  "units": "compute USD per vCPU-hour / GiB-hour; egress usd_per_gib and usd_per_gb (1 GiB = 1.073741824 GB); storage usd_per_gib_month and usd_per_gb_month"
+ },
+ "rows": [
+  {
+   "provider": "gcp",
+   "region": "us-east4",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "core",
+   "usd_per_hour": 0.035605,
+   "unit": "vCPU-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "us-east4",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "ram",
+   "usd_per_hour": 0.004771,
+   "unit": "GiB-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "europe-west1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "core",
+   "usd_per_hour": 0.034773,
+   "unit": "vCPU-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "europe-west1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "ram",
+   "usd_per_hour": 0.004661,
+   "unit": "GiB-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "asia-south1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "core",
+   "usd_per_hour": 0.03797,
+   "unit": "vCPU-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "asia-south1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "ram",
+   "usd_per_hour": 0.005088,
+   "unit": "GiB-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "asia-southeast1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "core",
+   "usd_per_hour": 0.038999,
+   "unit": "vCPU-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "asia-southeast1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "ram",
+   "usd_per_hour": 0.005226,
+   "unit": "GiB-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "us-west1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "core",
+   "usd_per_hour": 0.031611,
+   "unit": "vCPU-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "us-west1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "ram",
+   "usd_per_hour": 0.004237,
+   "unit": "GiB-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "europe-west3",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "core",
+   "usd_per_hour": 0.04073,
+   "unit": "vCPU-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "europe-west3",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "ram",
+   "usd_per_hour": 0.005458,
+   "unit": "GiB-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "asia-northeast1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "core",
+   "usd_per_hour": 0.040618,
+   "unit": "vCPU-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "asia-northeast1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "ram",
+   "usd_per_hour": 0.005419,
+   "unit": "GiB-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "southamerica-east1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "core",
+   "usd_per_hour": 0.05018,
+   "unit": "vCPU-hour"
+  },
+  {
+   "provider": "gcp",
+   "region": "southamerica-east1",
+   "family": "N2",
+   "usage": "OnDemand",
+   "n_machine_types": 29,
+   "max_fit_residual_usd_per_hour": 0.0,
+   "source": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "resource": "ram",
+   "usd_per_hour": 0.006725,
+   "unit": "GiB-hour"
+  }
+ ]
+}

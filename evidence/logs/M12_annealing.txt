@@ -1,0 +1,19 @@
+M12 simulated annealing | snapshot 2026-09-21 | location set core | seeds [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | machine adi-laptop-win11 | git 540c55c
+
+t1_three_tier@core (4 components, 12 locations)  ILP 481.18 (proven True; M10 481.18)  greedy_1opt 483.57 (gap 0.497%)
+  SA x10: best 481.18 (gap 0.000%)  median 481.18 (gap 0.000%)  IQR [481.18, 481.18]  at optimum 10/10
+  runtime median 0.278 s [min 0.248, max 0.300]  temp steps median 862  T0 275.717  stops {'stale': 10}
+  A2 PASS: SA median 481.18 <= greedy_1opt 483.57
+
+t2_pipeline@core (7 components, 12 locations)  ILP 1028.79 (proven True; M10 1028.79)  greedy_1opt 1028.79 (gap 0.000%)
+  SA x10: best 1028.79 (gap 0.000%)  median 1028.79 (gap 0.000%)  IQR [1028.79, 1028.79]  at optimum 10/10
+  runtime median 0.623 s [min 0.561, max 0.720]  temp steps median 1273  T0 459.244  stops {'stale': 10}
+  A2 PASS: SA median 1028.79 <= greedy_1opt 1028.79
+
+t3_microservices@core (11 components, 12 locations)  ILP 1789.88 (proven True; M10 1789.88)  greedy_1opt 1822.60 (gap 1.828%)
+  SA x10: best 1789.88 (gap 0.000%)  median 1789.88 (gap 0.000%)  IQR [1789.88, 1789.88]  at optimum 8/10
+  runtime median 1.533 s [min 1.447, max 1.617]  temp steps median 1474  T0 210.643  stops {'stale': 10}
+  A2 PASS: SA median 1789.88 <= greedy_1opt 1822.60
+  trace of seed 0 -> figures/F0_sa_convergence.{png,csv} (1421 points)
+
+appended 30 rows to results/heuristics/runs.csv and results/heuristics/sa_detail.csv

@@ -1,0 +1,76 @@
+2026-09-22 01:43:25,664  aws           INFO     GET https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/region_index.json -> HTTP 200
+2026-09-22 01:43:26,517  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/us-east-1/index.csv -> HTTP 200
+2026-09-22 01:45:14,282  aws           INFO       ... us-east-1: 200000 lines in 109s
+2026-09-22 01:46:58,069  aws           INFO     compute: region=us-east-1  scanned=393635 lines  kept=4  download+scan=212.4s  peak_rss=33 MB
+2026-09-22 01:46:58,693  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/eu-west-1/index.csv -> HTTP 200
+2026-09-22 01:48:44,239  aws           INFO       ... eu-west-1: 200000 lines in 106s
+2026-09-22 01:50:13,034  aws           INFO     compute: region=eu-west-1  scanned=369036 lines  kept=4  download+scan=195.0s  peak_rss=33 MB
+2026-09-22 01:50:13,668  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/ap-south-1/index.csv -> HTTP 200
+2026-09-22 01:52:02,362  aws           INFO       ... ap-south-1: 200000 lines in 109s
+2026-09-22 01:52:39,739  aws           INFO     compute: region=ap-south-1  scanned=270296 lines  kept=4  download+scan=146.7s  peak_rss=33 MB
+2026-09-22 01:52:40,383  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/ap-southeast-1/index.csv -> HTTP 200
+2026-09-22 01:54:40,096  aws           INFO       ... ap-southeast-1: 200000 lines in 120s
+2026-09-22 01:55:46,872  aws           INFO     compute: region=ap-southeast-1  scanned=315456 lines  kept=4  download+scan=187.1s  peak_rss=33 MB
+2026-09-22 01:55:47,696  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/us-west-2/index.csv -> HTTP 200
+2026-09-22 01:57:34,541  aws           INFO       ... us-west-2: 200000 lines in 108s
+2026-09-22 01:59:16,788  aws           INFO     compute: region=us-west-2  scanned=389487 lines  kept=4  download+scan=209.9s  peak_rss=33 MB
+2026-09-22 01:59:17,544  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/eu-central-1/index.csv -> HTTP 200
+2026-09-22 02:02:04,725  aws           WARNING  compute eu-central-1: attempt 1 failed (ChunkedEncodingError: ('Connection broken: IncompleteRead(62513862 bytes read, 217588572 more expected)', IncompleteRead(62513862 bytes read, 217588572 more expected))); retrying in 10s
+2026-09-22 02:02:15,496  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/eu-central-1/index.csv -> HTTP 200
+2026-09-22 02:02:23,549  aws           INFO       ... eu-central-1: 200000 lines in 9s
+2026-09-22 02:02:32,143  aws           INFO     compute: region=eu-central-1  scanned=364176 lines  kept=4  download+scan=195.4s  peak_rss=34 MB
+2026-09-22 02:02:32,892  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/ap-northeast-1/index.csv -> HTTP 200
+2026-09-22 02:02:48,258  aws           INFO       ... ap-northeast-1: 200000 lines in 16s
+2026-09-22 02:03:03,533  aws           INFO     compute: region=ap-northeast-1  scanned=370802 lines  kept=4  download+scan=31.4s  peak_rss=34 MB
+2026-09-22 02:03:04,332  aws           INFO     GET /offers/v1.0/aws/AmazonEC2/20260918212757/sa-east-1/index.csv -> HTTP 200
+2026-09-22 02:03:16,136  aws           INFO       ... sa-east-1: 200000 lines in 13s
+2026-09-22 02:03:18,736  aws           INFO     compute: region=sa-east-1  scanned=260907 lines  kept=4  download+scan=15.1s  peak_rss=34 MB
+2026-09-22 02:03:18,822  aws           INFO     WROTE snapshots\2026-09-21\aws_compute.json  rows=32  size=0.01 MB
+2026-09-22 02:03:20,121  aws           INFO     GET https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/region_index.json -> HTTP 200
+2026-09-22 02:03:20,782  aws           INFO     GET /offers/v1.0/aws/AWSDataTransfer/20260916132208/us-east-1/index.csv -> HTTP 200
+2026-09-22 02:03:20,875  aws           INFO     egress: region=us-east-1  kept=12 (internet tiers=4, inter-region pairs=7)  0.8s
+2026-09-22 02:03:21,634  aws           INFO     GET /offers/v1.0/aws/AWSDataTransfer/20260916132208/eu-west-1/index.csv -> HTTP 200
+2026-09-22 02:03:22,373  aws           INFO     egress: region=eu-west-1  kept=12 (internet tiers=4, inter-region pairs=7)  1.5s
+2026-09-22 02:03:23,110  aws           INFO     GET /offers/v1.0/aws/AWSDataTransfer/20260916132208/ap-south-1/index.csv -> HTTP 200
+2026-09-22 02:03:23,844  aws           INFO     egress: region=ap-south-1  kept=12 (internet tiers=4, inter-region pairs=7)  1.5s
+2026-09-22 02:03:24,702  aws           INFO     GET /offers/v1.0/aws/AWSDataTransfer/20260916132208/ap-southeast-1/index.csv -> HTTP 200
+2026-09-22 02:03:25,347  aws           INFO     egress: region=ap-southeast-1  kept=12 (internet tiers=4, inter-region pairs=7)  1.5s
+2026-09-22 02:03:26,053  aws           INFO     GET /offers/v1.0/aws/AWSDataTransfer/20260916132208/us-west-2/index.csv -> HTTP 200
+2026-09-22 02:03:26,793  aws           INFO     egress: region=us-west-2  kept=12 (internet tiers=4, inter-region pairs=7)  1.4s
+2026-09-22 02:03:27,520  aws           INFO     GET /offers/v1.0/aws/AWSDataTransfer/20260916132208/eu-central-1/index.csv -> HTTP 200
+2026-09-22 02:03:28,276  aws           INFO     egress: region=eu-central-1  kept=12 (internet tiers=4, inter-region pairs=7)  1.5s
+2026-09-22 02:03:29,179  aws           INFO     GET /offers/v1.0/aws/AWSDataTransfer/20260916132208/ap-northeast-1/index.csv -> HTTP 200
+2026-09-22 02:03:29,777  aws           INFO     egress: region=ap-northeast-1  kept=12 (internet tiers=4, inter-region pairs=7)  1.5s
+2026-09-22 02:03:30,528  aws           INFO     GET /offers/v1.0/aws/AWSDataTransfer/20260916132208/sa-east-1/index.csv -> HTTP 200
+2026-09-22 02:03:31,513  aws           INFO     egress: region=sa-east-1  kept=12 (internet tiers=4, inter-region pairs=7)  1.7s
+2026-09-22 02:03:31,519  aws           INFO     WROTE snapshots\2026-09-21\aws_egress.json  rows=96  size=0.03 MB
+2026-09-22 02:03:32,386  aws           INFO     GET https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/region_index.json -> HTTP 200
+2026-09-22 02:03:33,068  aws           INFO     GET /offers/v1.0/aws/AmazonS3/20260918174747/us-east-1/index.csv -> HTTP 200
+2026-09-22 02:03:33,078  aws           INFO     storage: region=us-east-1  kept=3  0.7s
+2026-09-22 02:03:33,809  aws           INFO     GET /offers/v1.0/aws/AmazonS3/20260918174747/eu-west-1/index.csv -> HTTP 200
+2026-09-22 02:03:34,184  aws           INFO     storage: region=eu-west-1  kept=3  1.1s
+2026-09-22 02:03:34,892  aws           INFO     GET /offers/v1.0/aws/AmazonS3/20260918174747/ap-south-1/index.csv -> HTTP 200
+2026-09-22 02:03:34,960  aws           INFO     storage: region=ap-south-1  kept=3  0.8s
+2026-09-22 02:03:35,277  aws           INFO     GET /offers/v1.0/aws/AmazonS3/20260918174747/ap-southeast-1/index.csv -> HTTP 200
+2026-09-22 02:03:35,825  aws           INFO     storage: region=ap-southeast-1  kept=3  0.9s
+2026-09-22 02:03:36,503  aws           INFO     GET /offers/v1.0/aws/AmazonS3/20260918174747/us-west-2/index.csv -> HTTP 200
+2026-09-22 02:03:36,521  aws           INFO     storage: region=us-west-2  kept=3  0.7s
+2026-09-22 02:03:37,234  aws           INFO     GET /offers/v1.0/aws/AmazonS3/20260918174747/eu-central-1/index.csv -> HTTP 200
+2026-09-22 02:03:37,648  aws           INFO     storage: region=eu-central-1  kept=3  1.1s
+2026-09-22 02:03:38,393  aws           INFO     GET /offers/v1.0/aws/AmazonS3/20260918174747/ap-northeast-1/index.csv -> HTTP 200
+2026-09-22 02:03:38,809  aws           INFO     storage: region=ap-northeast-1  kept=3  1.2s
+2026-09-22 02:03:39,575  aws           INFO     GET /offers/v1.0/aws/AmazonS3/20260918174747/sa-east-1/index.csv -> HTTP 200
+2026-09-22 02:03:39,591  aws           INFO     storage: region=sa-east-1  kept=3  0.8s
+2026-09-22 02:03:39,595  aws           INFO     WROTE snapshots\2026-09-21\aws_storage.json  rows=24  size=0.01 MB
+2026-09-22 02:03:39,595  aws           INFO     SUMMARY rows: compute=32 egress=96 storage=24
+2026-09-22 02:03:39,596  aws           INFO     region           shapes   m5.large $/h           internet 1st tier    pairs  S3 $/GB-mo  
+2026-09-22 02:03:39,597  aws           INFO     us-east-1        4        0.0960                 0.0900 (>0GB)        7      0.0230      
+2026-09-22 02:03:39,597  aws           INFO     eu-west-1        4        0.1070                 0.0900 (>0GB)        7      0.0230      
+2026-09-22 02:03:39,598  aws           INFO     ap-south-1       4        0.1010                 0.1093 (>0GB)        7      0.0250      
+2026-09-22 02:03:39,598  aws           INFO     ap-southeast-1   4        0.1200                 0.1200 (>0GB)        7      0.0250      
+2026-09-22 02:03:39,599  aws           INFO     us-west-2        4        0.0960                 0.0900 (>0GB)        7      0.0230      
+2026-09-22 02:03:39,599  aws           INFO     eu-central-1     4        0.1150                 0.0900 (>0GB)        7      0.0245      
+2026-09-22 02:03:39,600  aws           INFO     ap-northeast-1   4        0.1240                 0.1140 (>0GB)        7      0.0250      
+2026-09-22 02:03:39,600  aws           INFO     sa-east-1        4        0.1530                 0.1500 (>0GB)        7      0.0405      
+2026-09-22 02:03:39,602  aws           INFO     PEAK_RSS_MB=34  total_time=1214s
+2026-09-22 02:03:39,603  aws           INFO     aws pull complete

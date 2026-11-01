@@ -1,0 +1,130 @@
+{
+ "snapshot_date": "2026-09-21",
+ "pulled_at_utc": "2026-09-21T15:40:18Z",
+ "row_count": 8,
+ "meta": {
+  "source": "public_pricing_pages",
+  "waiver": "D-021 path (c): no API key; calculator price list returned HTTP 404",
+  "pages": [
+   {
+    "url": "https://cloud.google.com/products/compute/pricing/general-purpose",
+    "final_url": "https://cloud.google.com/products/compute/pricing/general-purpose",
+    "http_status": 200,
+    "bytes": 35795632,
+    "sha256": "7ad83c7f2683acddf695a5103941080e35482d505150d6aa6b99faea17225610",
+    "accessed_utc": "2026-09-21T15:40:07Z"
+   },
+   {
+    "url": "https://cloud.google.com/vpc/network-pricing",
+    "final_url": "https://cloud.google.com/vpc/network-pricing",
+    "http_status": 200,
+    "bytes": 3802835,
+    "sha256": "9abac4a4fa0b675c4f734bd454a7d534d2e4da2d9b17eba731e7533e3d60d468",
+    "accessed_utc": "2026-09-21T15:40:12Z"
+   },
+   {
+    "url": "https://cloud.google.com/storage/pricing",
+    "final_url": "https://cloud.google.com/storage/pricing",
+    "http_status": 200,
+    "bytes": 2678557,
+    "sha256": "daaed4e43e0849921a7710a7886b386feb0b11ddd2749f1966576e1e982b8ce4",
+    "accessed_utc": "2026-09-21T15:40:17Z"
+   }
+  ],
+  "network_tier": "premium",
+  "compute_family": "N2",
+  "regions": [
+   "us-east4",
+   "europe-west1",
+   "asia-south1",
+   "asia-southeast1",
+   "us-west1",
+   "europe-west3",
+   "asia-northeast1",
+   "southamerica-east1"
+  ],
+  "units": "compute USD per vCPU-hour / GiB-hour; egress usd_per_gib and usd_per_gb (1 GiB = 1.073741824 GB); storage usd_per_gib_month and usd_per_gb_month"
+ },
+ "rows": [
+  {
+   "provider": "gcp",
+   "region": "asia-northeast1",
+   "storage_class": "STANDARD",
+   "location_type": "region",
+   "tier_min_gb": 0,
+   "usd_per_gib_month": 0.023,
+   "usd_per_gb_month": 0.021420419,
+   "source": "https://cloud.google.com/storage/pricing"
+  },
+  {
+   "provider": "gcp",
+   "region": "asia-south1",
+   "storage_class": "STANDARD",
+   "location_type": "region",
+   "tier_min_gb": 0,
+   "usd_per_gib_month": 0.02,
+   "usd_per_gb_month": 0.018626451,
+   "source": "https://cloud.google.com/storage/pricing"
+  },
+  {
+   "provider": "gcp",
+   "region": "asia-southeast1",
+   "storage_class": "STANDARD",
+   "location_type": "region",
+   "tier_min_gb": 0,
+   "usd_per_gib_month": 0.02,
+   "usd_per_gb_month": 0.018626451,
+   "source": "https://cloud.google.com/storage/pricing"
+  },
+  {
+   "provider": "gcp",
+   "region": "europe-west1",
+   "storage_class": "STANDARD",
+   "location_type": "region",
+   "tier_min_gb": 0,
+   "usd_per_gib_month": 0.02,
+   "usd_per_gb_month": 0.018626451,
+   "source": "https://cloud.google.com/storage/pricing"
+  },
+  {
+   "provider": "gcp",
+   "region": "europe-west3",
+   "storage_class": "STANDARD",
+   "location_type": "region",
+   "tier_min_gb": 0,
+   "usd_per_gib_month": 0.023,
+   "usd_per_gb_month": 0.021420419,
+   "source": "https://cloud.google.com/storage/pricing"
+  },
+  {
+   "provider": "gcp",
+   "region": "southamerica-east1",
+   "storage_class": "STANDARD",
+   "location_type": "region",
+   "tier_min_gb": 0,
+   "usd_per_gib_month": 0.035,
+   "usd_per_gb_month": 0.03259629,
+   "source": "https://cloud.google.com/storage/pricing"
+  },
+  {
+   "provider": "gcp",
+   "region": "us-east4",
+   "storage_class": "STANDARD",
+   "location_type": "region",
+   "tier_min_gb": 0,
+   "usd_per_gib_month": 0.023,
+   "usd_per_gb_month": 0.021420419,
+   "source": "https://cloud.google.com/storage/pricing"
+  },
+  {
+   "provider": "gcp",
+   "region": "us-west1",
+   "storage_class": "STANDARD",
+   "location_type": "region",
+   "tier_min_gb": 0,
+   "usd_per_gib_month": 0.02,
+   "usd_per_gb_month": 0.018626451,
+   "source": "https://cloud.google.com/storage/pricing"
+  }
+ ]
+}

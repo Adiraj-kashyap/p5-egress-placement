@@ -1,0 +1,21 @@
+M10 exact ILP | snapshot 2026-09-21 | location set core | repeats 5 | time limit 600 s | threads 1 | machine adi-laptop-win11 | git 89cb6a3
+
+t1_three_tier@core  (4 components, 12 locations)   B1 497.58   B2-best 481.18 (azure)
+  form        vars   cons   total_usd      egress  internet proven prov    median_s  placement
+  tight        480     76      481.18        0.00     56.54   True    1      0.0627  all @ azure:eastus
+  mccormick    480    436      481.18        0.00     56.54   True    1      0.0793  all @ azure:eastus
+  ILP vs min(B1, B2-best): 481.18 vs 481.18
+
+t2_pipeline@core  (7 components, 12 locations)   B1 1303.65   B2-best 1028.79 (azure)
+  form        vars   cons   total_usd      egress  internet proven prov    median_s  placement
+  tight       1092    175     1028.79        0.00      0.87   True    1      0.0768  all @ azure:eastus
+  mccormick   1092   1015     1028.79        0.00      0.87   True    1      0.1066  all @ azure:eastus
+  ILP vs min(B1, B2-best): 1028.79 vs 1028.79
+
+t3_microservices@core  (11 components, 12 locations)   B1 1822.60   B2-best 1789.88 (azure)
+  form        vars   cons   total_usd      egress  internet proven prov    median_s  placement
+  tight       2292    371     1789.88        0.00    948.92   True    1      0.1213  all @ azure:eastus
+  mccormick   2292   2171     1789.88        0.00    948.92   True    1      0.1597  all @ azure:eastus
+  ILP vs min(B1, B2-best): 1789.88 vs 1789.88
+
+appended 30 rows to results/exact/runs.csv; CBC logs in results/exact/cbc/

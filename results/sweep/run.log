@@ -1,0 +1,264 @@
+2026-09-22 19:59:43,895 runner INFO M15 sweep | part main | exp sweep | config experiments/configs/sweep.json (sha256 683ce79f0792) | snapshot 2026-09-21 | machine adi-laptop-win11 | git 575a3a7 | run 2026-09-22T14:29:43Z | 750 jobs
+2026-09-22 19:59:43,988 placement.ilp INFO ILP t1_three_tier@core@s=0.01 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.069 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.01__ilp_tight.log
+2026-09-22 19:59:43,991 runner INFO job 1/750 t1_three_tier@core@s=0.01          ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 19:59:45,304 placement.ilp INFO ILP t1_three_tier@core@s=0.014678 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.051 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.014678__ilp_tight.log
+2026-09-22 19:59:45,307 runner INFO job 11/750 t1_three_tier@core@s=0.014678      ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 19:59:56,036 placement.ilp INFO ILP t1_three_tier@core@s=0.0215443 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 9.510 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.0215443__ilp_tight.log
+2026-09-22 19:59:56,041 runner INFO job 21/750 t1_three_tier@core@s=0.0215443     ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 19:59:58,325 placement.ilp INFO ILP t1_three_tier@core@s=0.0316228 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.065 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.0316228__ilp_tight.log
+2026-09-22 19:59:58,328 runner INFO job 31/750 t1_three_tier@core@s=0.0316228     ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:00,490 placement.ilp INFO ILP t1_three_tier@core@s=0.0464159 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.062 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.0464159__ilp_tight.log
+2026-09-22 20:00:00,492 runner INFO job 41/750 t1_three_tier@core@s=0.0464159     ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:02,396 runner INFO job 50/750 t1_three_tier@core@s=0.0464159     sa          seed=4  ok       total=      481.18 prov=1
+2026-09-22 20:00:02,476 placement.ilp INFO ILP t1_three_tier@core@s=0.0681292 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.057 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.0681292__ilp_tight.log
+2026-09-22 20:00:02,479 runner INFO job 51/750 t1_three_tier@core@s=0.0681292     ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:04,356 placement.ilp INFO ILP t1_three_tier@core@s=0.1 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.058 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.1__ilp_tight.log
+2026-09-22 20:00:04,359 runner INFO job 61/750 t1_three_tier@core@s=0.1           ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:06,575 placement.ilp INFO ILP t1_three_tier@core@s=0.14678 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.099 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.14678__ilp_tight.log
+2026-09-22 20:00:06,577 runner INFO job 71/750 t1_three_tier@core@s=0.14678       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:08,299 placement.ilp INFO ILP t1_three_tier@core@s=0.215443 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.059 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.215443__ilp_tight.log
+2026-09-22 20:00:08,301 runner INFO job 81/750 t1_three_tier@core@s=0.215443      ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:09,279 placement.ilp INFO ILP t1_three_tier@core@s=0.316228 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.057 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.316228__ilp_tight.log
+2026-09-22 20:00:09,281 runner INFO job 91/750 t1_three_tier@core@s=0.316228      ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:10,323 runner INFO job 100/750 t1_three_tier@core@s=0.316228      sa          seed=4  ok       total=      481.18 prov=1
+2026-09-22 20:00:10,400 placement.ilp INFO ILP t1_three_tier@core@s=0.464159 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.057 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.464159__ilp_tight.log
+2026-09-22 20:00:10,402 runner INFO job 101/750 t1_three_tier@core@s=0.464159      ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:11,402 placement.ilp INFO ILP t1_three_tier@core@s=0.681292 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.066 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s0.681292__ilp_tight.log
+2026-09-22 20:00:11,404 runner INFO job 111/750 t1_three_tier@core@s=0.681292      ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:12,544 placement.ilp INFO ILP t1_three_tier@core@s=1 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.064 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s1__ilp_tight.log
+2026-09-22 20:00:12,546 runner INFO job 121/750 t1_three_tier@core@s=1             ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:13,569 placement.ilp INFO ILP t1_three_tier@core@s=1.4678 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.059 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s1.4678__ilp_tight.log
+2026-09-22 20:00:13,571 runner INFO job 131/750 t1_three_tier@core@s=1.4678        ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:14,624 placement.ilp INFO ILP t1_three_tier@core@s=2.15443 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.064 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s2.15443__ilp_tight.log
+2026-09-22 20:00:14,626 runner INFO job 141/750 t1_three_tier@core@s=2.15443       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:15,562 runner INFO job 150/750 t1_three_tier@core@s=2.15443       sa          seed=4  ok       total=      481.18 prov=1
+2026-09-22 20:00:15,652 placement.ilp INFO ILP t1_three_tier@core@s=3.16228 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.073 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s3.16228__ilp_tight.log
+2026-09-22 20:00:15,655 runner INFO job 151/750 t1_three_tier@core@s=3.16228       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:16,750 placement.ilp INFO ILP t1_three_tier@core@s=4.64159 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.060 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s4.64159__ilp_tight.log
+2026-09-22 20:00:16,753 runner INFO job 161/750 t1_three_tier@core@s=4.64159       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:17,980 placement.ilp INFO ILP t1_three_tier@core@s=6.81292 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.065 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s6.81292__ilp_tight.log
+2026-09-22 20:00:17,981 runner INFO job 171/750 t1_three_tier@core@s=6.81292       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:19,060 placement.ilp INFO ILP t1_three_tier@core@s=10 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.052 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s10__ilp_tight.log
+2026-09-22 20:00:19,062 runner INFO job 181/750 t1_three_tier@core@s=10            ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:20,171 placement.ilp INFO ILP t1_three_tier@core@s=14.678 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.063 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s14.678__ilp_tight.log
+2026-09-22 20:00:20,174 runner INFO job 191/750 t1_three_tier@core@s=14.678        ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:21,271 runner INFO job 200/750 t1_three_tier@core@s=14.678        sa          seed=4  ok       total=      481.18 prov=1
+2026-09-22 20:00:21,344 placement.ilp INFO ILP t1_three_tier@core@s=21.5443 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.057 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s21.5443__ilp_tight.log
+2026-09-22 20:00:21,347 runner INFO job 201/750 t1_three_tier@core@s=21.5443       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:22,593 placement.ilp INFO ILP t1_three_tier@core@s=31.6228 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.072 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s31.6228__ilp_tight.log
+2026-09-22 20:00:22,596 runner INFO job 211/750 t1_three_tier@core@s=31.6228       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:23,864 placement.ilp INFO ILP t1_three_tier@core@s=46.4159 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.062 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s46.4159__ilp_tight.log
+2026-09-22 20:00:23,867 runner INFO job 221/750 t1_three_tier@core@s=46.4159       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:25,026 placement.ilp INFO ILP t1_three_tier@core@s=68.1292 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.067 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s68.1292__ilp_tight.log
+2026-09-22 20:00:25,029 runner INFO job 231/750 t1_three_tier@core@s=68.1292       ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:26,126 placement.ilp INFO ILP t1_three_tier@core@s=100 | tight | n=4 L=12 | vars=480 cons=76 | Optimal (Optimal solution found) | obj=481.184954 bound=481.184954 | 0.056 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t1_three_tier_core_s100__ilp_tight.log
+2026-09-22 20:00:26,128 runner INFO job 241/750 t1_three_tier@core@s=100           ilp_tight   seed=   optimal  total=      481.18 prov=1
+2026-09-22 20:00:27,225 runner INFO job 250/750 t1_three_tier@core@s=100           sa          seed=4  ok       total=      481.18 prov=1
+2026-09-22 20:00:27,329 placement.ilp INFO ILP t2_pipeline@core@s=0.01 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.079 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.01__ilp_tight.log
+2026-09-22 20:00:27,330 runner INFO job 251/750 t2_pipeline@core@s=0.01            ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:30,498 placement.ilp INFO ILP t2_pipeline@core@s=0.014678 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.076 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.014678__ilp_tight.log
+2026-09-22 20:00:30,502 runner INFO job 261/750 t2_pipeline@core@s=0.014678        ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:33,418 placement.ilp INFO ILP t2_pipeline@core@s=0.0215443 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.088 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.0215443__ilp_tight.log
+2026-09-22 20:00:33,421 runner INFO job 271/750 t2_pipeline@core@s=0.0215443       ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:36,207 placement.ilp INFO ILP t2_pipeline@core@s=0.0316228 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.079 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.0316228__ilp_tight.log
+2026-09-22 20:00:36,211 runner INFO job 281/750 t2_pipeline@core@s=0.0316228       ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:39,000 placement.ilp INFO ILP t2_pipeline@core@s=0.0464159 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.080 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.0464159__ilp_tight.log
+2026-09-22 20:00:39,005 runner INFO job 291/750 t2_pipeline@core@s=0.0464159       ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:41,697 runner INFO job 300/750 t2_pipeline@core@s=0.0464159       sa          seed=4  ok       total=     1028.79 prov=1
+2026-09-22 20:00:41,788 placement.ilp INFO ILP t2_pipeline@core@s=0.0681292 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.067 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.0681292__ilp_tight.log
+2026-09-22 20:00:41,791 runner INFO job 301/750 t2_pipeline@core@s=0.0681292       ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:44,414 placement.ilp INFO ILP t2_pipeline@core@s=0.1 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.073 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.1__ilp_tight.log
+2026-09-22 20:00:44,421 runner INFO job 311/750 t2_pipeline@core@s=0.1             ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:46,902 placement.ilp INFO ILP t2_pipeline@core@s=0.14678 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.083 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.14678__ilp_tight.log
+2026-09-22 20:00:46,906 runner INFO job 321/750 t2_pipeline@core@s=0.14678         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:49,460 placement.ilp INFO ILP t2_pipeline@core@s=0.215443 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.093 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.215443__ilp_tight.log
+2026-09-22 20:00:49,462 runner INFO job 331/750 t2_pipeline@core@s=0.215443        ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:51,882 placement.ilp INFO ILP t2_pipeline@core@s=0.316228 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.069 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.316228__ilp_tight.log
+2026-09-22 20:00:51,885 runner INFO job 341/750 t2_pipeline@core@s=0.316228        ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:54,116 runner INFO job 350/750 t2_pipeline@core@s=0.316228        sa          seed=4  ok       total=     1028.79 prov=1
+2026-09-22 20:00:54,216 placement.ilp INFO ILP t2_pipeline@core@s=0.464159 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.079 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.464159__ilp_tight.log
+2026-09-22 20:00:54,219 runner INFO job 351/750 t2_pipeline@core@s=0.464159        ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:56,553 placement.ilp INFO ILP t2_pipeline@core@s=0.681292 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.069 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s0.681292__ilp_tight.log
+2026-09-22 20:00:56,561 runner INFO job 361/750 t2_pipeline@core@s=0.681292        ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:00:58,852 placement.ilp INFO ILP t2_pipeline@core@s=1 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.073 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s1__ilp_tight.log
+2026-09-22 20:00:58,855 runner INFO job 371/750 t2_pipeline@core@s=1               ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:01,106 placement.ilp INFO ILP t2_pipeline@core@s=1.4678 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.067 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s1.4678__ilp_tight.log
+2026-09-22 20:01:01,110 runner INFO job 381/750 t2_pipeline@core@s=1.4678          ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:03,411 placement.ilp INFO ILP t2_pipeline@core@s=2.15443 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.066 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s2.15443__ilp_tight.log
+2026-09-22 20:01:03,413 runner INFO job 391/750 t2_pipeline@core@s=2.15443         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:05,617 runner INFO job 400/750 t2_pipeline@core@s=2.15443         sa          seed=4  ok       total=     1028.79 prov=1
+2026-09-22 20:01:05,729 placement.ilp INFO ILP t2_pipeline@core@s=3.16228 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.080 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s3.16228__ilp_tight.log
+2026-09-22 20:01:05,731 runner INFO job 401/750 t2_pipeline@core@s=3.16228         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:08,227 placement.ilp INFO ILP t2_pipeline@core@s=4.64159 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.069 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s4.64159__ilp_tight.log
+2026-09-22 20:01:08,230 runner INFO job 411/750 t2_pipeline@core@s=4.64159         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:10,652 placement.ilp INFO ILP t2_pipeline@core@s=6.81292 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.087 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s6.81292__ilp_tight.log
+2026-09-22 20:01:10,654 runner INFO job 421/750 t2_pipeline@core@s=6.81292         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:13,326 placement.ilp INFO ILP t2_pipeline@core@s=10 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.078 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s10__ilp_tight.log
+2026-09-22 20:01:13,331 runner INFO job 431/750 t2_pipeline@core@s=10              ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:16,027 placement.ilp INFO ILP t2_pipeline@core@s=14.678 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.071 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s14.678__ilp_tight.log
+2026-09-22 20:01:16,101 runner INFO job 441/750 t2_pipeline@core@s=14.678          ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:19,041 runner INFO job 450/750 t2_pipeline@core@s=14.678          sa          seed=4  ok       total=     1028.79 prov=1
+2026-09-22 20:01:19,137 placement.ilp INFO ILP t2_pipeline@core@s=21.5443 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.075 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s21.5443__ilp_tight.log
+2026-09-22 20:01:19,142 runner INFO job 451/750 t2_pipeline@core@s=21.5443         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:21,921 placement.ilp INFO ILP t2_pipeline@core@s=31.6228 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.077 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s31.6228__ilp_tight.log
+2026-09-22 20:01:21,924 runner INFO job 461/750 t2_pipeline@core@s=31.6228         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:24,687 placement.ilp INFO ILP t2_pipeline@core@s=46.4159 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.072 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s46.4159__ilp_tight.log
+2026-09-22 20:01:24,690 runner INFO job 471/750 t2_pipeline@core@s=46.4159         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:27,314 placement.ilp INFO ILP t2_pipeline@core@s=68.1292 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.075 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s68.1292__ilp_tight.log
+2026-09-22 20:01:27,329 runner INFO job 481/750 t2_pipeline@core@s=68.1292         ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:29,935 placement.ilp INFO ILP t2_pipeline@core@s=100 | tight | n=7 L=12 | vars=1092 cons=175 | Optimal (Optimal solution found) | obj=1028.790000 bound=1028.790000 | 0.081 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t2_pipeline_core_s100__ilp_tight.log
+2026-09-22 20:01:29,944 runner INFO job 491/750 t2_pipeline@core@s=100             ilp_tight   seed=   optimal  total=     1028.79 prov=1
+2026-09-22 20:01:32,486 runner INFO job 500/750 t2_pipeline@core@s=100             sa          seed=4  ok       total=     1028.79 prov=1
+2026-09-22 20:01:32,627 placement.ilp INFO ILP t3_microservices@core@s=0.01 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.101 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.01__ilp_tight.log
+2026-09-22 20:01:32,630 runner INFO job 501/750 t3_microservices@core@s=0.01       ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:01:39,290 placement.ilp INFO ILP t3_microservices@core@s=0.014678 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.101 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.014678__ilp_tight.log
+2026-09-22 20:01:39,290 runner INFO job 511/750 t3_microservices@core@s=0.014678   ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:01:45,810 placement.ilp INFO ILP t3_microservices@core@s=0.0215443 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.105 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.0215443__ilp_tight.log
+2026-09-22 20:01:45,814 runner INFO job 521/750 t3_microservices@core@s=0.0215443  ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:01:52,361 placement.ilp INFO ILP t3_microservices@core@s=0.0316228 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.118 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.0316228__ilp_tight.log
+2026-09-22 20:01:52,374 runner INFO job 531/750 t3_microservices@core@s=0.0316228  ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:01:59,025 placement.ilp INFO ILP t3_microservices@core@s=0.0464159 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.123 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.0464159__ilp_tight.log
+2026-09-22 20:01:59,028 runner INFO job 541/750 t3_microservices@core@s=0.0464159  ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:02:05,704 runner INFO job 550/750 t3_microservices@core@s=0.0464159  sa          seed=4  ok       total=     1789.88 prov=1
+2026-09-22 20:02:05,855 placement.ilp INFO ILP t3_microservices@core@s=0.0681292 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.114 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.0681292__ilp_tight.log
+2026-09-22 20:02:05,859 runner INFO job 551/750 t3_microservices@core@s=0.0681292  ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:02:12,462 placement.ilp INFO ILP t3_microservices@core@s=0.1 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.154 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.1__ilp_tight.log
+2026-09-22 20:02:12,469 runner INFO job 561/750 t3_microservices@core@s=0.1        ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:02:18,753 placement.ilp INFO ILP t3_microservices@core@s=0.14678 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.113 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.14678__ilp_tight.log
+2026-09-22 20:02:18,755 runner INFO job 571/750 t3_microservices@core@s=0.14678    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:02:25,042 placement.ilp INFO ILP t3_microservices@core@s=0.215443 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.120 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.215443__ilp_tight.log
+2026-09-22 20:02:25,046 runner INFO job 581/750 t3_microservices@core@s=0.215443   ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:02:31,139 placement.ilp INFO ILP t3_microservices@core@s=0.316228 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.109 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.316228__ilp_tight.log
+2026-09-22 20:02:31,142 runner INFO job 591/750 t3_microservices@core@s=0.316228   ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:02:36,868 runner INFO job 600/750 t3_microservices@core@s=0.316228   sa          seed=4  ok       total=     1789.88 prov=1
+2026-09-22 20:02:37,062 placement.ilp INFO ILP t3_microservices@core@s=0.464159 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.145 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.464159__ilp_tight.log
+2026-09-22 20:02:37,065 runner INFO job 601/750 t3_microservices@core@s=0.464159   ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:02:42,654 placement.ilp INFO ILP t3_microservices@core@s=0.681292 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.115 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s0.681292__ilp_tight.log
+2026-09-22 20:02:42,654 runner INFO job 611/750 t3_microservices@core@s=0.681292   ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:02:58,052 placement.ilp INFO ILP t3_microservices@core@s=1 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 9.747 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s1__ilp_tight.log
+2026-09-22 20:02:58,056 runner INFO job 621/750 t3_microservices@core@s=1          ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:03,595 placement.ilp INFO ILP t3_microservices@core@s=1.4678 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.119 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s1.4678__ilp_tight.log
+2026-09-22 20:03:03,595 runner INFO job 631/750 t3_microservices@core@s=1.4678     ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:19,054 placement.ilp INFO ILP t3_microservices@core@s=2.15443 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 10.077 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s2.15443__ilp_tight.log
+2026-09-22 20:03:19,055 runner INFO job 641/750 t3_microservices@core@s=2.15443    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:24,340 runner INFO job 650/750 t3_microservices@core@s=2.15443    sa          seed=4  ok       total=     1789.88 prov=1
+2026-09-22 20:03:24,523 placement.ilp INFO ILP t3_microservices@core@s=3.16228 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.121 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s3.16228__ilp_tight.log
+2026-09-22 20:03:24,523 runner INFO job 651/750 t3_microservices@core@s=3.16228    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:29,880 placement.ilp INFO ILP t3_microservices@core@s=4.64159 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.101 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s4.64159__ilp_tight.log
+2026-09-22 20:03:29,883 runner INFO job 661/750 t3_microservices@core@s=4.64159    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:36,100 placement.ilp INFO ILP t3_microservices@core@s=6.81292 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.119 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s6.81292__ilp_tight.log
+2026-09-22 20:03:36,104 runner INFO job 671/750 t3_microservices@core@s=6.81292    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:41,528 placement.ilp INFO ILP t3_microservices@core@s=10 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.135 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s10__ilp_tight.log
+2026-09-22 20:03:41,531 runner INFO job 681/750 t3_microservices@core@s=10         ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:47,204 placement.ilp INFO ILP t3_microservices@core@s=14.678 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.116 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s14.678__ilp_tight.log
+2026-09-22 20:03:47,206 runner INFO job 691/750 t3_microservices@core@s=14.678     ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:53,313 runner INFO job 700/750 t3_microservices@core@s=14.678     sa          seed=4  ok       total=     1822.60 prov=1
+2026-09-22 20:03:53,486 placement.ilp INFO ILP t3_microservices@core@s=21.5443 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.136 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s21.5443__ilp_tight.log
+2026-09-22 20:03:53,489 runner INFO job 701/750 t3_microservices@core@s=21.5443    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:03:59,566 placement.ilp INFO ILP t3_microservices@core@s=31.6228 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.141 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s31.6228__ilp_tight.log
+2026-09-22 20:03:59,568 runner INFO job 711/750 t3_microservices@core@s=31.6228    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:04:05,391 placement.ilp INFO ILP t3_microservices@core@s=46.4159 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.129 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s46.4159__ilp_tight.log
+2026-09-22 20:04:05,393 runner INFO job 721/750 t3_microservices@core@s=46.4159    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:04:11,347 placement.ilp INFO ILP t3_microservices@core@s=68.1292 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.116 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s68.1292__ilp_tight.log
+2026-09-22 20:04:11,351 runner INFO job 731/750 t3_microservices@core@s=68.1292    ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:04:17,393 placement.ilp INFO ILP t3_microservices@core@s=100 | tight | n=11 L=12 | vars=2292 cons=371 | Optimal (Optimal solution found) | obj=1789.880832 bound=1789.880832 | 0.125 s | log D:\Workspace\cloud_project\p5-egress-placement\results\sweep\cbc\t3_microservices_core_s100__ilp_tight.log
+2026-09-22 20:04:17,397 runner INFO job 741/750 t3_microservices@core@s=100        ilp_tight   seed=   optimal  total=     1789.88 prov=1
+2026-09-22 20:04:23,122 runner INFO job 750/750 t3_microservices@core@s=100        sa          seed=4  ok       total=     1822.60 prov=1
+2026-09-22 20:04:23,125 runner INFO jobs 750 | skipped 0 | run 750 | failed 0 | wall 279.2 s
+2026-09-22 20:05:34,880 runner INFO == sweep: 750 rows -> summary.csv (75 points), crossover.csv (12 rows)
+2026-09-22 20:05:34,881 runner INFO   A1 t1_three_tier    r=1.0   b1           scales=25 rows= 25
+2026-09-22 20:05:34,882 runner INFO   A1 t1_three_tier    r=1.0   b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,882 runner INFO   A1 t1_three_tier    r=1.0   b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,882 runner INFO   A1 t1_three_tier    r=1.0   greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,883 runner INFO   A1 t1_three_tier    r=1.0   ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,883 runner INFO   A1 t1_three_tier    r=1.0   sa           scales=25 rows=125
+2026-09-22 20:05:34,883 runner INFO   A1 t2_pipeline      r=1.0   b1           scales=25 rows= 25
+2026-09-22 20:05:34,883 runner INFO   A1 t2_pipeline      r=1.0   b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,884 runner INFO   A1 t2_pipeline      r=1.0   b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,884 runner INFO   A1 t2_pipeline      r=1.0   greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,885 runner INFO   A1 t2_pipeline      r=1.0   ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,886 runner INFO   A1 t2_pipeline      r=1.0   sa           scales=25 rows=125
+2026-09-22 20:05:34,886 runner INFO   A1 t3_microservices r=1.0   b1           scales=25 rows= 25
+2026-09-22 20:05:34,886 runner INFO   A1 t3_microservices r=1.0   b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,887 runner INFO   A1 t3_microservices r=1.0   b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,887 runner INFO   A1 t3_microservices r=1.0   greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,887 runner INFO   A1 t3_microservices r=1.0   ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,887 runner INFO   A1 t3_microservices r=1.0   sa           scales=25 rows=125
+2026-09-22 20:05:34,887 runner INFO   A2 violations (method below ILP, ILP not optimal, missing points): 0
+2026-09-22 20:05:34,888 runner INFO   s=1 t1_three_tier    r=1.0   ILP     481.18 prov=1 | B1     497.58 pen 0.0341 red 0.0329 | B1-alt     481.18 pen 0.0000 red 0.0000 | B2     481.18 pen 0.0000
+2026-09-22 20:05:34,888 runner INFO   s=1 t2_pipeline      r=1.0   ILP    1028.79 prov=1 | B1    1303.65 pen 0.2672 red 0.2108 | B1-alt    1028.79 pen 0.0000 red 0.0000 | B2    1028.79 pen 0.0000
+2026-09-22 20:05:34,888 runner INFO   s=1 t3_microservices r=1.0   ILP    1789.88 prov=1 | B1    1822.60 pen 0.0183 red 0.0180 | B1-alt    1789.88 pen 0.0000 red 0.0000 | B2    1789.88 pen 0.0000
+2026-09-22 20:05:34,888 runner INFO   X t1_three_tier    r=1.0   ilp_providers_used       b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t1_three_tier    r=1.0   ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t1_three_tier    r=1.0   single_provider_optimal  b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t1_three_tier    r=1.0   single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t2_pipeline      r=1.0   ilp_providers_used       b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t2_pipeline      r=1.0   ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t2_pipeline      r=1.0   single_provider_optimal  b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t2_pipeline      r=1.0   single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t3_microservices r=1.0   ilp_providers_used       b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t3_microservices r=1.0   ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,888 runner INFO   X t3_microservices r=1.0   single_provider_optimal  b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,889 runner INFO   X t3_microservices r=1.0   single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,904 runner INFO == sweep_sensitivity: 750 rows -> summary.csv (150 points), crossover.csv (24 rows)
+2026-09-22 20:05:34,905 runner INFO   A1 t1_three_tier    r=0.75  b1           scales=25 rows= 25
+2026-09-22 20:05:34,905 runner INFO   A1 t1_three_tier    r=0.75  b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,905 runner INFO   A1 t1_three_tier    r=0.75  b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,905 runner INFO   A1 t1_three_tier    r=0.75  greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,905 runner INFO   A1 t1_three_tier    r=0.75  ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,905 runner INFO   A1 t1_three_tier    r=1.25  b1           scales=25 rows= 25
+2026-09-22 20:05:34,907 runner INFO   A1 t1_three_tier    r=1.25  b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,907 runner INFO   A1 t1_three_tier    r=1.25  b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,907 runner INFO   A1 t1_three_tier    r=1.25  greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,907 runner INFO   A1 t1_three_tier    r=1.25  ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,907 runner INFO   A1 t2_pipeline      r=0.75  b1           scales=25 rows= 25
+2026-09-22 20:05:34,907 runner INFO   A1 t2_pipeline      r=0.75  b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,907 runner INFO   A1 t2_pipeline      r=0.75  b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,908 runner INFO   A1 t2_pipeline      r=0.75  greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,908 runner INFO   A1 t2_pipeline      r=0.75  ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,908 runner INFO   A1 t2_pipeline      r=1.25  b1           scales=25 rows= 25
+2026-09-22 20:05:34,908 runner INFO   A1 t2_pipeline      r=1.25  b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,908 runner INFO   A1 t2_pipeline      r=1.25  b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,908 runner INFO   A1 t2_pipeline      r=1.25  greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,909 runner INFO   A1 t2_pipeline      r=1.25  ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,909 runner INFO   A1 t3_microservices r=0.75  b1           scales=25 rows= 25
+2026-09-22 20:05:34,909 runner INFO   A1 t3_microservices r=0.75  b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,909 runner INFO   A1 t3_microservices r=0.75  b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,909 runner INFO   A1 t3_microservices r=0.75  greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,909 runner INFO   A1 t3_microservices r=0.75  ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,910 runner INFO   A1 t3_microservices r=1.25  b1           scales=25 rows= 25
+2026-09-22 20:05:34,910 runner INFO   A1 t3_microservices r=1.25  b1_alt       scales=25 rows= 25
+2026-09-22 20:05:34,910 runner INFO   A1 t3_microservices r=1.25  b2_best      scales=25 rows= 25
+2026-09-22 20:05:34,910 runner INFO   A1 t3_microservices r=1.25  greedy_1opt  scales=25 rows= 25
+2026-09-22 20:05:34,910 runner INFO   A1 t3_microservices r=1.25  ilp_tight    scales=25 rows= 25
+2026-09-22 20:05:34,910 runner INFO   A2 violations (method below ILP, ILP not optimal, missing points): 0
+2026-09-22 20:05:34,910 runner INFO   s=1 t1_three_tier    r=0.75  ILP     481.18 prov=1 | B1     493.97 pen 0.0266 red 0.0259 | B1-alt     481.18 pen 0.0000 red 0.0000 | B2     481.18 pen 0.0000
+2026-09-22 20:05:34,910 runner INFO   s=1 t1_three_tier    r=1.25  ILP     481.18 prov=1 | B1     501.19 pen 0.0416 red 0.0399 | B1-alt     481.18 pen 0.0000 red 0.0000 | B2     481.18 pen 0.0000
+2026-09-22 20:05:34,911 runner INFO   s=1 t2_pipeline      r=0.75  ILP    1028.79 prov=1 | B1    1234.94 pen 0.2004 red 0.1669 | B1-alt    1028.79 pen 0.0000 red 0.0000 | B2    1028.79 pen 0.0000
+2026-09-22 20:05:34,911 runner INFO   s=1 t2_pipeline      r=1.25  ILP    1028.79 prov=1 | B1    1372.36 pen 0.3340 red 0.2503 | B1-alt    1028.79 pen 0.0000 red 0.0000 | B2    1028.79 pen 0.0000
+2026-09-22 20:05:34,911 runner INFO   s=1 t3_microservices r=0.75  ILP    1789.88 prov=1 | B1    1822.60 pen 0.0183 red 0.0180 | B1-alt    1789.88 pen 0.0000 red 0.0000 | B2    1789.88 pen 0.0000
+2026-09-22 20:05:34,911 runner INFO   s=1 t3_microservices r=1.25  ILP    1789.88 prov=1 | B1    1822.60 pen 0.0183 red 0.0180 | B1-alt    1789.88 pen 0.0000 red 0.0000 | B2    1789.88 pen 0.0000
+2026-09-22 20:05:34,911 runner INFO   X t1_three_tier    r=0.75  ilp_providers_used       b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t1_three_tier    r=0.75  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t1_three_tier    r=0.75  single_provider_optimal  b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t1_three_tier    r=0.75  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t1_three_tier    r=1.25  ilp_providers_used       b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t1_three_tier    r=1.25  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t1_three_tier    r=1.25  single_provider_optimal  b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t1_three_tier    r=1.25  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t2_pipeline      r=0.75  ilp_providers_used       b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,911 runner INFO   X t2_pipeline      r=0.75  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t2_pipeline      r=0.75  single_provider_optimal  b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t2_pipeline      r=0.75  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t2_pipeline      r=1.25  ilp_providers_used       b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t2_pipeline      r=1.25  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t2_pipeline      r=1.25  single_provider_optimal  b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t2_pipeline      r=1.25  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t3_microservices r=0.75  ilp_providers_used       b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t3_microservices r=0.75  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t3_microservices r=0.75  single_provider_optimal  b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t3_microservices r=0.75  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t3_microservices r=1.25  ilp_providers_used       b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t3_microservices r=1.25  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t3_microservices r=1.25  single_provider_optimal  b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+2026-09-22 20:05:34,912 runner INFO   X t3_microservices r=1.25  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))

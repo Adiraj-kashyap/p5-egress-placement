@@ -1,0 +1,13 @@
+{
+  "exp_id": "smoke",
+  "description": "M13 smoke test of the runner: 2 sizes x 2 instance seeds x all methods (SA x 2 seeds), core location set. Must finish in under 2 minutes.",
+  "snapshot_date": "2026-09-21",
+  "location_set": "core",
+  "instances": [
+    {"synthetic": {"n": [6, 12], "seeds": [1, 2], "density": 0.25, "volume_dist": "lognormal", "median_gb": 200, "pin_fraction": 0.0}}
+  ],
+  "methods": ["ilp_tight", "ilp_mccormick", "greedy", "greedy_1opt", "sa", "b1", "b2_best"],
+  "method_seeds": [0, 1],
+  "time_limits": {"ilp_tight": 600, "ilp_mccormick": 600, "sa": null},
+  "method_params": {"greedy_1opt": {"max_passes": 50}, "sa": {"alpha": 0.995}}
+}

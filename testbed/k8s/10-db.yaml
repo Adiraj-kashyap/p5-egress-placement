@@ -1,0 +1,33 @@
+# db: postgres 16, data in emptyDir (the testbed is disposable; seed-job reloads it).
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: db, namespace: p5, labels: {app: db}}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: db}}
+  template:
+    metadata: {labels: {app: db}}
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:16-alpine
+          env:
+            - {name: POSTGRES_USER, value: p5}
+            - {name: POSTGRES_PASSWORD, value: p5}
+            - {name: POSTGRES_DB, value: p5}
+          ports: [{containerPort: 5432}]
+          readinessProbe:
+            exec: {command: [pg_isready, -U, p5, -d, p5]}
+            periodSeconds: 10
+          resources:
+            requests: {cpu: 250m, memory: 256Mi}
+            limits: {cpu: "1", memory: 512Mi}
+          volumeMounts: [{name: data, mountPath: /var/lib/postgresql/data}]
+      volumes: [{name: data, emptyDir: {}}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: db, namespace: p5}
+spec:
+  selector: {app: db}
+  ports: [{port: 5432, targetPort: 5432}]

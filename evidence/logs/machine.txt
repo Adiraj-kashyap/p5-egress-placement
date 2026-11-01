@@ -1,0 +1,11 @@
+﻿P5 machine record (evidence for runtime comparisons, 02 §1 I9)
+captured       : 2026-09-21 16:36 local
+machine_tag    : adi-laptop-win11
+cpu_model      : AMD Ryzen 9 6900HS with Radeon Graphics
+cpu_cores      : 8 physical / 16 logical
+cpu_max_clock  : 3301 MHz
+ram_gb         : 15.2
+os             : Microsoft Windows 11 Home Single Language 10.0.22631 (build 22631)
+arch           : 64-bit
+python         : Python 3.12.10 (venv at .venv, native Windows - see D-010)
+git            : git version 2.53.0.windows.4 (bundled with GitHub Desktop - see D-011)

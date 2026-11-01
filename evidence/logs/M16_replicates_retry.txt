@@ -1,0 +1,16 @@
+M13 runner | exp replicates | config experiments/configs/replicates.json (sha256 3a826f563999) | snapshot 2026-09-21 | machine adi-laptop-win11 | git eb243fa | run 2026-09-22T20:08:40Z
+job 6751/8100 t3_microservices@core@d=15@s=0.01 ilp_tight     seed=    optimal  total= 1484.279749  0.1472 s
+job 7041/8100 t3_microservices@core@d=18@s=0.1 ilp_tight     seed=    optimal  total= 2763.105095  0.2177 s
+job 7181/8100 t3_microservices@core@d=19@s=31.6228 ilp_tight     seed=    optimal  total= 1628.083206  0.1399 s
+job 7641/8100 t3_microservices@core@d=24@s=100 ilp_tight     seed=    optimal  total= 1462.187304  0.1473 s
+job 7811/8100 t3_microservices@core@d=26@s=31.6228 ilp_tight     seed=    optimal  total=  1689.85134  0.1391 s
+job 8081/8100 t3_microservices@core@d=29@s=31.6228 ilp_tight     seed=    optimal  total=  1546.09883  10.1446 s
+
+jobs 8100 | skipped (already present) 8094 | run 6 | failed 0 | runs.csv rows 8100 | wall 16.5 s
+  method          rows  statuses median_runtime_s
+  ilp_tight        810   optimal         0.0961
+  b1               810        ok         0.0004
+  b1_alt           810        ok         0.0004
+  b2_best          810        ok         0.0003
+  greedy_1opt      810        ok         0.0004
+  sa              4050        ok         0.6788

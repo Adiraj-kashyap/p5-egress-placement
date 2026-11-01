@@ -1,0 +1,242 @@
+kind,region,from_group,to_group,item,tier_min_gib,tier_max_gib,unit,usd,source_url,accessed_utc
+compute,us-east4,,,N2 core (derived),,,USD per vCPU-hour,0.035605,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,us-east4,,,N2 ram (derived),,,USD per GiB-hour,0.004771,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,europe-west1,,,N2 core (derived),,,USD per vCPU-hour,0.034773,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,europe-west1,,,N2 ram (derived),,,USD per GiB-hour,0.004661,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,asia-south1,,,N2 core (derived),,,USD per vCPU-hour,0.03797,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,asia-south1,,,N2 ram (derived),,,USD per GiB-hour,0.005088,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,asia-southeast1,,,N2 core (derived),,,USD per vCPU-hour,0.038999,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,asia-southeast1,,,N2 ram (derived),,,USD per GiB-hour,0.005226,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,us-west1,,,N2 core (derived),,,USD per vCPU-hour,0.031611,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,us-west1,,,N2 ram (derived),,,USD per GiB-hour,0.004237,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,europe-west3,,,N2 core (derived),,,USD per vCPU-hour,0.04073,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,europe-west3,,,N2 ram (derived),,,USD per GiB-hour,0.005458,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,asia-northeast1,,,N2 core (derived),,,USD per vCPU-hour,0.040618,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,asia-northeast1,,,N2 ram (derived),,,USD per GiB-hour,0.005419,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,southamerica-east1,,,N2 core (derived),,,USD per vCPU-hour,0.05018,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+compute,southamerica-east1,,,N2 ram (derived),,,USD per GiB-hour,0.006725,https://cloud.google.com/products/compute/pricing/general-purpose,2026-09-21T15:40:07Z
+internet,asia-northeast1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,0.0,1024.0,USD per GiB,0.23,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,1024.0,10240.0,USD per GiB,0.22,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,10240.0,,USD per GiB,0.2,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,Europe,premium tier data transfer out,0.0,10240.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,Europe,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,0.0,10240.0,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,10240.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,North America,premium tier data transfer out,0.0,10240.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-northeast1,APAC,North America,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,0.0,1024.0,USD per GiB,0.23,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,1024.0,10240.0,USD per GiB,0.22,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,10240.0,,USD per GiB,0.2,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,Europe,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,Europe,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,Europe,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,0.0,1024.0,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.13,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,10240.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,North America,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,North America,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-south1,APAC,North America,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Asia Excl Korea, Indonesia",premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,0.0,1024.0,USD per GiB,0.23,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,1024.0,10240.0,USD per GiB,0.22,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,China destinations (excluding Hong Kong),premium tier data transfer out,10240.0,,USD per GiB,0.2,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,Europe,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,Europe,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,Europe,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,0.0,1024.0,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.13,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,10240.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,North America,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,North America,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,asia-southeast1,APAC,North America,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Asia Excl Korea, Indonesia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Asia Excl Korea, Indonesia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Asia Excl Korea, Indonesia",premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,China destinations (excluding Hong Kong),premium tier data transfer out,0.0,1024.0,USD per GiB,0.23,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,China destinations (excluding Hong Kong),premium tier data transfer out,1024.0,10240.0,USD per GiB,0.22,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,China destinations (excluding Hong Kong),premium tier data transfer out,10240.0,,USD per GiB,0.2,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,Europe,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,Europe,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,Europe,premium tier data transfer out,10240.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,0.0,1024.0,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.13,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,10240.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,North America,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,North America,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west1,EMEA,North America,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Asia Excl Korea, Indonesia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Asia Excl Korea, Indonesia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Asia Excl Korea, Indonesia",premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,China destinations (excluding Hong Kong),premium tier data transfer out,0.0,1024.0,USD per GiB,0.23,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,China destinations (excluding Hong Kong),premium tier data transfer out,1024.0,10240.0,USD per GiB,0.22,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,China destinations (excluding Hong Kong),premium tier data transfer out,10240.0,,USD per GiB,0.2,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,Europe,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,Europe,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,Europe,premium tier data transfer out,10240.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,0.0,1024.0,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.13,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,10240.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,North America,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,North America,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,europe-west3,EMEA,North America,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,0.0,1024.0,USD per GiB,0.23,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,1024.0,10240.0,USD per GiB,0.22,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,10240.0,,USD per GiB,0.2,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,Europe,premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,Europe,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,Europe,premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,North America,premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,North America,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,southamerica-east1,Americas,North America,premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,0.0,1.0,USD per GiB,0.0,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,1.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,0.0,1024.0,USD per GiB,0.23,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,1024.0,10240.0,USD per GiB,0.22,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,10240.0,,USD per GiB,0.2,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,Europe,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,Europe,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,Europe,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,0.0,1024.0,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.13,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,10240.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,North America,premium tier data transfer out,0.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,North America,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-east4,Americas,North America,premium tier data transfer out,10240.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,0.0,1.0,USD per GiB,0.0,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,1.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Asia Excl Korea, Indonesia",premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,0.0,1024.0,USD per GiB,0.19,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Australia, Indonesia, Korea, South America, Saudi Arabia",premium tier data transfer out,10240.0,,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,0.0,1024.0,USD per GiB,0.23,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,1024.0,10240.0,USD per GiB,0.22,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,China destinations (excluding Hong Kong),premium tier data transfer out,10240.0,,USD per GiB,0.2,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,Europe,premium tier data transfer out,0.0,1.0,USD per GiB,0.0,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,Europe,premium tier data transfer out,1.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,Europe,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,Europe,premium tier data transfer out,10240.0,,USD per GiB,0.085,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,0.0,1.0,USD per GiB,0.0,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,1.0,1024.0,USD per GiB,0.15,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,1024.0,10240.0,USD per GiB,0.13,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,"Middle East excl Saudi Arabia, Africa",premium tier data transfer out,10240.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,North America,premium tier data transfer out,0.0,1.0,USD per GiB,0.0,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,North America,premium tier data transfer out,1.0,1024.0,USD per GiB,0.12,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,North America,premium tier data transfer out,1024.0,10240.0,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+internet,us-west1,Americas,North America,premium tier data transfer out,10240.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,North America,North America,premium tier data transfer out,0.0,,USD per GiB,0.02,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,North America,Europe,premium tier data transfer out,0.0,,USD per GiB,0.05,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,North America,Asia,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,North America,Indonesia,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,North America,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,North America,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,North America,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,North America,Africa,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Europe,North America,premium tier data transfer out,0.0,,USD per GiB,0.05,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Europe,Europe,premium tier data transfer out,0.0,,USD per GiB,0.02,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Europe,Asia,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Europe,Indonesia,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Europe,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Europe,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Europe,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Europe,Africa,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Asia,North America,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Asia,Europe,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Asia,Asia,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Asia,Indonesia,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Asia,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Asia,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Asia,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Asia,Africa,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Indonesia,North America,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Indonesia,Europe,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Indonesia,Asia,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Indonesia,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Indonesia,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Indonesia,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Indonesia,Africa,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Bangkok,North America,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Bangkok,Europe,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Bangkok,Asia,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Bangkok,Indonesia,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Bangkok,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Bangkok,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Bangkok,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Bangkok,Africa,premium tier data transfer out,0.0,,USD per GiB,0.18,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Oceania,North America,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Oceania,Europe,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Oceania,Asia,premium tier data transfer out,0.0,,USD per GiB,0.1,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Oceania,Indonesia,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Oceania,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Oceania,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Oceania,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Oceania,Africa,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Middle East,North America,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Middle East,Europe,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Middle East,Asia,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Middle East,Indonesia,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Middle East,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Middle East,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Middle East,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Middle East,Africa,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,South America,North America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,South America,Europe,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,South America,Asia,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,South America,Indonesia,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,South America,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,South America,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,South America,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,South America,Africa,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Africa,North America,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Africa,Europe,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Africa,Asia,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Africa,Indonesia,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Africa,Oceania,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Africa,Middle East,premium tier data transfer out,0.0,,USD per GiB,0.11,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Africa,South America,premium tier data transfer out,0.0,,USD per GiB,0.14,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+inter_region,,Africa,Africa,premium tier data transfer out,0.0,,USD per GiB,0.08,https://cloud.google.com/vpc/network-pricing,2026-09-21T15:40:12Z
+storage,asia-northeast1,,,"Standard storage, region",,,USD per GiB-month,0.023,https://cloud.google.com/storage/pricing,2026-09-21T15:40:17Z
+storage,asia-south1,,,"Standard storage, region",,,USD per GiB-month,0.02,https://cloud.google.com/storage/pricing,2026-09-21T15:40:17Z
+storage,asia-southeast1,,,"Standard storage, region",,,USD per GiB-month,0.02,https://cloud.google.com/storage/pricing,2026-09-21T15:40:17Z
+storage,europe-west1,,,"Standard storage, region",,,USD per GiB-month,0.02,https://cloud.google.com/storage/pricing,2026-09-21T15:40:17Z
+storage,europe-west3,,,"Standard storage, region",,,USD per GiB-month,0.023,https://cloud.google.com/storage/pricing,2026-09-21T15:40:17Z
+storage,southamerica-east1,,,"Standard storage, region",,,USD per GiB-month,0.035,https://cloud.google.com/storage/pricing,2026-09-21T15:40:17Z
+storage,us-east4,,,"Standard storage, region",,,USD per GiB-month,0.023,https://cloud.google.com/storage/pricing,2026-09-21T15:40:17Z
+storage,us-west1,,,"Standard storage, region",,,USD per GiB-month,0.02,https://cloud.google.com/storage/pricing,2026-09-21T15:40:17Z

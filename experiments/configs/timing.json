@@ -1,0 +1,19 @@
+{
+  "exp_id": "timing",
+  "snapshot_date": "2026-09-21",
+  "location_sets": ["core", "ext"],
+  "instances": [
+    {"synthetic": {"n": [8, 15, 25], "seeds": [1, 2, 3], "density": 0.25}}
+  ],
+  "methods": ["ilp_tight", "greedy_1opt", "sa"],
+  "method_seeds": [0],
+  "timing_repeats": 3,
+  "time_limits": {"ilp_tight": 600},
+  "method_params": {},
+  "notes": {
+    "purpose": "M16 step 5: runtime error bars (05 §2, timing repeats). Only the runtime differs between repeats; the assignment and cost are identical by construction, which is the point of D-064.",
+    "location_sets": "core = 12 locations, ext = 24 (L in {12, 24} of the module spec).",
+    "instances": "3 synthetic instances per n, the same generator and density 0.25 as M14, so the runtimes are comparable with the scaling experiment.",
+    "sa_seeds": "one seed: the repeats measure timing variation of an identical job, not seed variation."
+  }
+}

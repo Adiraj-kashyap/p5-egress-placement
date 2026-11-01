@@ -1,0 +1,45 @@
+M06 - Online Boutique source facts used for T3 (fetched 2026-09-21, session S-007)
+Repository: https://github.com/GoogleCloudPlatform/microservices-demo  (main branch)
+README title: "Sample cloud-first microservices demo application" (Online Boutique).
+Services (README "Service architecture" table): frontend (Go), cartservice (C#), productcatalogservice (Go),
+currencyservice (Node.js), paymentservice (Node.js), shippingservice (Go), emailservice (Python),
+checkoutservice (Go), recommendationservice (Python), adservice (Java), loadgenerator (Python/Locust).
+Cart data is kept in Redis ("Stores the items in the user's shopping cart in Redis and retrieves it") -> redis-cart.
+
+src/frontend/handlers.go (quoted calls per handler):
+  homeHandler:      fe.getCurrencies, fe.getProducts, fe.getCart, fe.convertCurrency (in a loop over products),
+                    fe.chooseAd(r.Context(), []string{}, log)
+  productHandler:   fe.getProduct, fe.getCurrencies, fe.getCart, fe.convertCurrency,
+                    fe.getRecommendations(r.Context(), sessionID(r), []string{id}), fe.chooseAd(..., p.Categories, ...)
+  addToCartHandler: fe.getProduct, fe.insertCart
+  emptyCartHandler: fe.emptyCart            (not used by the load generator)
+  viewCartHandler:  fe.getCurrencies, fe.getCart, fe.getRecommendations(..., cartIDs(cart)), fe.getShippingQuote,
+                    fe.getProduct per cart item, fe.convertCurrency per cart item
+  placeOrderHandler: pb.NewCheckoutServiceClient(...).PlaceOrder, fe.getRecommendations(..., nil), fe.getCurrencies
+  setCurrencyHandler, logoutHandler: no RPC calls
+
+src/frontend/rpc.go:
+  getRecommendations calls fe.getProduct(ctx, v) for each recommended id, then "if len(out) > 4 { out = out[:4] }"
+  getShippingQuote calls shipping GetQuote, then fe.convertCurrency on quote.GetCostUsd()
+  getAd calls GetAds(&pb.AdRequest{ContextKeys: ctxKeys})
+
+src/checkoutservice/main.go (PlaceOrder):
+  cart GetCart x1; productcatalog GetProduct x (one per cart item, prepOrderItems);
+  currency Convert x (n items + 1 for shipping); shipping GetQuote x1; payment Charge x1;
+  shipping ShipOrder x1; cart EmptyCart x1; email SendOrderConfirmation x1
+
+src/recommendationservice/recommendation_server.py:
+  cat_response = product_catalog_stub.ListProducts(demo_pb2.Empty())
+  max_responses = 5 ; num_return = min(max_responses, num_products)
+
+src/loadgenerator/locustfile.py:
+  tasks = {index: 1, setCurrency: 2, browseProduct: 10, addToCart: 2, viewCart: 3, checkout: 1}
+  index -> GET /; setCurrency -> POST /setCurrency; browseProduct -> GET /product/<id>;
+  addToCart -> GET /product/<id> then POST /cart; viewCart -> GET /cart; checkout -> POST /cart/checkout
+
+src/productcatalogservice/products.json: 9 products, about 500-550 bytes per entry (about 4.5-5 kB total).
+
+Stated assumptions layered on top of these facts (not from the repository), see topologies/build.py and D-031:
+  100 frontend HTTP requests/s; the HTTP client follows 302 redirects (setCurrency -> GET /, POST /cart -> GET /cart);
+  average cart of 2 items; protobuf payload size estimates; 150 B gRPC/HTTP2 framing per message;
+  50 kB per rendered page to users, 500 B per redirect.

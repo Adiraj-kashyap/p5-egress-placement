@@ -1,0 +1,21 @@
+{
+  "exp_id": "sweep",
+  "snapshot_date": "2026-09-21",
+  "location_set": "core",
+  "topologies": [
+    "topologies/t1_three_tier.json",
+    "topologies/t2_pipeline.json",
+    "topologies/t3_microservices.json"
+  ],
+  "scales": {"logspace": [-2, 2, 25]},
+  "methods": ["ilp_tight", "b1", "b1_alt", "b2_best", "greedy_1opt", "sa"],
+  "method_seeds": [0, 1, 2, 3, 4],
+  "time_limits": {"ilp_tight": 600},
+  "method_params": {},
+  "sensitivity": {
+    "exp_id": "sweep_sensitivity",
+    "rate_factors": [0.75, 1.25],
+    "scales": "all",
+    "methods": ["ilp_tight", "b1", "b1_alt", "b2_best", "greedy_1opt"]
+  }
+}

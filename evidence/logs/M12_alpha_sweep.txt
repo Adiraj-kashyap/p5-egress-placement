@@ -1,0 +1,24 @@
+M12 SA sanity sweep | alphas (0.99, 0.995, 0.999) | seeds (0, 1, 2, 3, 4) | snapshot 2026-09-21 | machine adi-laptop-win11 | git 5bc9b51
+
+t3_microservices@core (11 components, 30 edges)  ILP 1789.88 (proven True)  greedy_1opt 1822.60 (gap 1.828%)
+  alpha  stale     median_usd    best_usd  med_gap% best_gap% at_opt med_step  median_s  stop reasons
+  0.99   descent      1789.88     1789.88     0.000     0.000    5/5      762      0.84  {'stale': 5}
+  0.995  descent      1789.88     1789.88     0.000     0.000    4/5     1467      1.58  {'stale': 5}
+  0.999  descent      1789.88     1789.88     0.000     0.000    5/5     7203      7.54  {'stale': 5}
+  0.995  best         1822.60     1822.60     1.828     1.828    0/5       20      0.02  {'stale': 5}
+
+syn20_s101@core (20 components, 52 edges)  ILP 3587.13 (proven True)  greedy_1opt 3878.77 (gap 8.130%)
+  alpha  stale     median_usd    best_usd  med_gap% best_gap% at_opt med_step  median_s  stop reasons
+  0.99   descent      3601.70     3594.35     0.406     0.201    0/5      523      1.01  {'stale': 5}
+  0.995  descent      3635.95     3608.05     1.361     0.583    0/5     1019      1.93  {'stale': 5}
+  0.999  descent      3601.70     3594.35     0.406     0.201    0/5     4953      9.42  {'stale': 5}
+  0.995  best         3878.77     3878.77     8.130     8.130    0/5       20      0.04  {'stale': 5}
+
+syn20_s102@core (20 components, 50 edges)  ILP 3989.16 (proven True)  greedy_1opt 3989.16 (gap 0.000%)
+  alpha  stale     median_usd    best_usd  med_gap% best_gap% at_opt med_step  median_s  stop reasons
+  0.99   descent      3989.16     3989.16     0.000     0.000    5/5      652      1.20  {'stale': 5}
+  0.995  descent      3989.16     3989.16     0.000     0.000    5/5     1211      2.26  {'stale': 5}
+  0.999  descent      3989.16     3989.16     0.000     0.000    5/5     5759     10.68  {'stale': 5}
+  0.995  best         3989.16     3989.16     0.000     0.000    5/5       20      0.04  {'stale': 5}
+
+appended 60 rows to results/sa_sweep/runs.csv

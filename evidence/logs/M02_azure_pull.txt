@@ -1,0 +1,66 @@
+2026-09-21 18:54:46,489  azure         INFO     compute: region=eastus
+2026-09-21 18:54:47,050  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:54:47,051  azure         INFO     compute: region=eastus  fetched=24  kept=4
+2026-09-21 18:54:47,052  azure         INFO     compute: region=westeurope
+2026-09-21 18:54:52,005  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:54:52,009  azure         INFO     compute: region=westeurope  fetched=24  kept=4
+2026-09-21 18:54:52,009  azure         INFO     compute: region=centralindia
+2026-09-21 18:54:55,857  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:54:55,862  azure         INFO     compute: region=centralindia  fetched=24  kept=4
+2026-09-21 18:54:55,862  azure         INFO     compute: region=southeastasia
+2026-09-21 18:55:01,595  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:01,596  azure         INFO     compute: region=southeastasia  fetched=24  kept=4
+2026-09-21 18:55:01,596  azure         INFO     compute: region=westus2
+2026-09-21 18:55:02,533  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:02,536  azure         INFO     compute: region=westus2  fetched=24  kept=4
+2026-09-21 18:55:02,536  azure         INFO     compute: region=germanywestcentral
+2026-09-21 18:55:04,042  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:04,044  azure         INFO     compute: region=germanywestcentral  fetched=24  kept=4
+2026-09-21 18:55:04,044  azure         INFO     compute: region=japaneast
+2026-09-21 18:55:04,705  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:04,708  azure         INFO     compute: region=japaneast  fetched=24  kept=4
+2026-09-21 18:55:04,708  azure         INFO     compute: region=brazilsouth
+2026-09-21 18:55:07,054  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:07,055  azure         INFO     compute: region=brazilsouth  fetched=24  kept=4
+2026-09-21 18:55:07,057  azure         INFO     WROTE snapshots\2026-09-21\azure_compute.json  rows=32  size=0.01 MB
+2026-09-21 18:55:07,058  azure         INFO     egress: serviceName eq 'Bandwidth'
+2026-09-21 18:55:08,081  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:10,662  azure         INFO     GET https://prices.azure.com:443/api/retail/prices -> HTTP 200
+2026-09-21 18:55:10,669  azure         INFO     egress: fetched=1368  kept=120
+2026-09-21 18:55:10,673  azure         INFO     WROTE snapshots\2026-09-21\azure_egress.json  rows=120  size=0.05 MB
+2026-09-21 18:55:10,673  azure         INFO     storage: region=eastus
+2026-09-21 18:55:16,109  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:16,112  azure         INFO     storage: region=eastus  fetched=8  kept=3
+2026-09-21 18:55:16,112  azure         INFO     storage: region=westeurope
+2026-09-21 18:55:16,912  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:16,914  azure         INFO     storage: region=westeurope  fetched=8  kept=3
+2026-09-21 18:55:16,914  azure         INFO     storage: region=centralindia
+2026-09-21 18:55:17,594  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:17,596  azure         INFO     storage: region=centralindia  fetched=8  kept=3
+2026-09-21 18:55:17,596  azure         INFO     storage: region=southeastasia
+2026-09-21 18:55:21,126  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:21,127  azure         INFO     storage: region=southeastasia  fetched=8  kept=3
+2026-09-21 18:55:21,127  azure         INFO     storage: region=westus2
+2026-09-21 18:55:22,282  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:22,285  azure         INFO     storage: region=westus2  fetched=8  kept=3
+2026-09-21 18:55:22,285  azure         INFO     storage: region=germanywestcentral
+2026-09-21 18:55:22,984  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:22,986  azure         INFO     storage: region=germanywestcentral  fetched=8  kept=3
+2026-09-21 18:55:22,987  azure         INFO     storage: region=japaneast
+2026-09-21 18:55:23,884  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:23,886  azure         INFO     storage: region=japaneast  fetched=8  kept=3
+2026-09-21 18:55:23,886  azure         INFO     storage: region=brazilsouth
+2026-09-21 18:55:24,464  azure         INFO     GET https://prices.azure.com/api/retail/prices -> HTTP 200
+2026-09-21 18:55:24,466  azure         INFO     storage: region=brazilsouth  fetched=8  kept=3
+2026-09-21 18:55:24,468  azure         INFO     WROTE snapshots\2026-09-21\azure_storage.json  rows=24  size=0.01 MB
+2026-09-21 18:55:24,468  azure         INFO     SUMMARY rows: compute=32 egress=120 storage=24
+2026-09-21 18:55:24,468  azure         INFO     region               compute  egress storage  small(D2s_v5) $/h        internet 1st paid  inter-region
+2026-09-21 18:55:24,468  azure         INFO     eastus                     4      12       3  0.0960                   0.0870 (>100GB)    0.0200      
+2026-09-21 18:55:24,468  azure         INFO     westeurope                 4      12       3  0.1150                   0.0870 (>100GB)    0.0200      
+2026-09-21 18:55:24,468  azure         INFO     centralindia               4      12       3  0.1010                   0.1200 (>100GB)    0.0800      
+2026-09-21 18:55:24,469  azure         INFO     southeastasia              4      12       3  0.1200                   0.1200 (>100GB)    0.0800      
+2026-09-21 18:55:24,469  azure         INFO     westus2                    4      12       3  0.0960                   0.0870 (>100GB)    0.0200      
+2026-09-21 18:55:24,469  azure         INFO     germanywestcentral         4      12       3  0.1150                   0.0870 (>100GB)    0.0200      
+2026-09-21 18:55:24,469  azure         INFO     japaneast                  4      12       3  0.1240                   0.1200 (>100GB)    0.0800      
+2026-09-21 18:55:24,469  azure         INFO     brazilsouth                4      12       3  0.1530                   0.1810 (>100GB)    0.1600      
+2026-09-21 18:55:24,469  azure         INFO     azure pull complete

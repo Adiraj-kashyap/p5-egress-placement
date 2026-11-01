@@ -1,0 +1,25 @@
+# run_measurement (3 chunks)
+2026-09-22 11:27:48,988 run_measurement INFO run r1 seed 7: D:\Workspace\cloud_project\p5-egress-placement\.venv\Scripts\locust -f testbed/load/locustfile.py --headless -u 20 -r 5 -t 600s --host http://127.0.0.1:30080 --csv logs\M07_locust\r1 --only-summary --loglevel WARNING
+2026-09-22 11:37:51,672 run_measurement INFO run r1 done: locust rc=0 requests=11688 failures=0 served=11701 in 602.7 s
+2026-09-22 11:37:51,734 run_measurement INFO wrote 8 edge rows and 4 interface rows to testbed\measurements
+2026-09-22 11:43:17,905 run_measurement INFO run r2 seed 8: D:\Workspace\cloud_project\p5-egress-placement\.venv\Scripts\locust -f testbed/load/locustfile.py --headless -u 20 -r 5 -t 600s --host http://127.0.0.1:30080 --csv logs\M07_locust\r2 --only-summary --loglevel WARNING
+2026-09-22 11:53:20,495 run_measurement INFO run r2 done: locust rc=0 requests=11680 failures=0 served=11695 in 602.6 s
+2026-09-22 11:53:20,562 run_measurement INFO wrote 8 edge rows and 4 interface rows to testbed\measurements
+2026-09-22 11:58:37,307 run_measurement INFO run r3 seed 9: D:\Workspace\cloud_project\p5-egress-placement\.venv\Scripts\locust -f testbed/load/locustfile.py --headless -u 20 -r 5 -t 600s --host http://127.0.0.1:30080 --csv logs\M07_locust\r3 --only-summary --loglevel WARNING
+2026-09-22 12:08:40,578 run_measurement INFO run r3 done: locust rc=0 requests=11706 failures=0 served=11719 in 603.3 s
+2026-09-22 12:08:40,638 run_measurement INFO wrote 8 edge rows and 4 interface rows to testbed\measurements
+
+# summarize
+2026-09-22 12:09:04,458 summarize INFO web->api: 83.3 B/request, CV 0.06% over 3 runs
+2026-09-22 12:09:04,458 summarize INFO api->web: 4217.0 B/request, CV 0.65% over 3 runs
+2026-09-22 12:09:04,458 summarize INFO api->cache: 1220.6 B/request, CV 0.27% over 3 runs
+2026-09-22 12:09:04,458 summarize INFO cache->api: 2967.3 B/request, CV 0.87% over 3 runs
+2026-09-22 12:09:04,458 summarize INFO api->db: 132.2 B/request, CV 0.80% over 3 runs
+2026-09-22 12:09:04,458 summarize INFO db->api: 1144.3 B/request, CV 0.24% over 3 runs
+2026-09-22 12:09:04,458 summarize INFO web->internet: 5015.0 B/request, CV 0.39% over 3 runs
+2026-09-22 12:09:04,458 summarize INFO internet->web: 169.5 B/request, CV 0.04% over 3 runs
+2026-09-22 12:09:04,458 summarize INFO pod web: app/interface ratio 0.938 (0.938-0.938)
+2026-09-22 12:09:04,458 summarize INFO pod api: app/interface ratio 0.888 (0.887-0.889)
+2026-09-22 12:09:04,458 summarize INFO pod cache: app/interface ratio 0.941 (0.941-0.942)
+2026-09-22 12:09:04,458 summarize INFO pod db: app/interface ratio 0.649 (0.648-0.651)
+2026-09-22 12:09:04,458 summarize INFO max CV over edges = 0.87%

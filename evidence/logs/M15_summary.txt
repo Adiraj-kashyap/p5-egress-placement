@@ -1,0 +1,97 @@
+== sweep: 750 rows -> summary.csv (75 points), crossover.csv (12 rows)
+  A1 t1_three_tier    r=1.0   b1           scales=25 rows= 25
+  A1 t1_three_tier    r=1.0   b1_alt       scales=25 rows= 25
+  A1 t1_three_tier    r=1.0   b2_best      scales=25 rows= 25
+  A1 t1_three_tier    r=1.0   greedy_1opt  scales=25 rows= 25
+  A1 t1_three_tier    r=1.0   ilp_tight    scales=25 rows= 25
+  A1 t1_three_tier    r=1.0   sa           scales=25 rows=125
+  A1 t2_pipeline      r=1.0   b1           scales=25 rows= 25
+  A1 t2_pipeline      r=1.0   b1_alt       scales=25 rows= 25
+  A1 t2_pipeline      r=1.0   b2_best      scales=25 rows= 25
+  A1 t2_pipeline      r=1.0   greedy_1opt  scales=25 rows= 25
+  A1 t2_pipeline      r=1.0   ilp_tight    scales=25 rows= 25
+  A1 t2_pipeline      r=1.0   sa           scales=25 rows=125
+  A1 t3_microservices r=1.0   b1           scales=25 rows= 25
+  A1 t3_microservices r=1.0   b1_alt       scales=25 rows= 25
+  A1 t3_microservices r=1.0   b2_best      scales=25 rows= 25
+  A1 t3_microservices r=1.0   greedy_1opt  scales=25 rows= 25
+  A1 t3_microservices r=1.0   ilp_tight    scales=25 rows= 25
+  A1 t3_microservices r=1.0   sa           scales=25 rows=125
+  A2 violations (method below ILP, ILP not optimal, missing points): 0
+  s=1 t1_three_tier    r=1.0   ILP     481.18 prov=1 | B1     497.58 pen 0.0341 red 0.0329 | B1-alt     481.18 pen 0.0000 red 0.0000 | B2     481.18 pen 0.0000
+  s=1 t2_pipeline      r=1.0   ILP    1028.79 prov=1 | B1    1303.65 pen 0.2672 red 0.2108 | B1-alt    1028.79 pen 0.0000 red 0.0000 | B2    1028.79 pen 0.0000
+  s=1 t3_microservices r=1.0   ILP    1789.88 prov=1 | B1    1822.60 pen 0.0183 red 0.0180 | B1-alt    1789.88 pen 0.0000 red 0.0000 | B2    1789.88 pen 0.0000
+  X t1_three_tier    r=1.0   ilp_providers_used       b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=1.0   ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=1.0   single_provider_optimal  b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=1.0   single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=1.0   ilp_providers_used       b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=1.0   ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=1.0   single_provider_optimal  b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=1.0   single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=1.0   ilp_providers_used       b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=1.0   ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=1.0   single_provider_optimal  b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=1.0   single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+== sweep_sensitivity: 750 rows -> summary.csv (150 points), crossover.csv (24 rows)
+  A1 t1_three_tier    r=0.75  b1           scales=25 rows= 25
+  A1 t1_three_tier    r=0.75  b1_alt       scales=25 rows= 25
+  A1 t1_three_tier    r=0.75  b2_best      scales=25 rows= 25
+  A1 t1_three_tier    r=0.75  greedy_1opt  scales=25 rows= 25
+  A1 t1_three_tier    r=0.75  ilp_tight    scales=25 rows= 25
+  A1 t1_three_tier    r=1.25  b1           scales=25 rows= 25
+  A1 t1_three_tier    r=1.25  b1_alt       scales=25 rows= 25
+  A1 t1_three_tier    r=1.25  b2_best      scales=25 rows= 25
+  A1 t1_three_tier    r=1.25  greedy_1opt  scales=25 rows= 25
+  A1 t1_three_tier    r=1.25  ilp_tight    scales=25 rows= 25
+  A1 t2_pipeline      r=0.75  b1           scales=25 rows= 25
+  A1 t2_pipeline      r=0.75  b1_alt       scales=25 rows= 25
+  A1 t2_pipeline      r=0.75  b2_best      scales=25 rows= 25
+  A1 t2_pipeline      r=0.75  greedy_1opt  scales=25 rows= 25
+  A1 t2_pipeline      r=0.75  ilp_tight    scales=25 rows= 25
+  A1 t2_pipeline      r=1.25  b1           scales=25 rows= 25
+  A1 t2_pipeline      r=1.25  b1_alt       scales=25 rows= 25
+  A1 t2_pipeline      r=1.25  b2_best      scales=25 rows= 25
+  A1 t2_pipeline      r=1.25  greedy_1opt  scales=25 rows= 25
+  A1 t2_pipeline      r=1.25  ilp_tight    scales=25 rows= 25
+  A1 t3_microservices r=0.75  b1           scales=25 rows= 25
+  A1 t3_microservices r=0.75  b1_alt       scales=25 rows= 25
+  A1 t3_microservices r=0.75  b2_best      scales=25 rows= 25
+  A1 t3_microservices r=0.75  greedy_1opt  scales=25 rows= 25
+  A1 t3_microservices r=0.75  ilp_tight    scales=25 rows= 25
+  A1 t3_microservices r=1.25  b1           scales=25 rows= 25
+  A1 t3_microservices r=1.25  b1_alt       scales=25 rows= 25
+  A1 t3_microservices r=1.25  b2_best      scales=25 rows= 25
+  A1 t3_microservices r=1.25  greedy_1opt  scales=25 rows= 25
+  A1 t3_microservices r=1.25  ilp_tight    scales=25 rows= 25
+  A2 violations (method below ILP, ILP not optimal, missing points): 0
+  s=1 t1_three_tier    r=0.75  ILP     481.18 prov=1 | B1     493.97 pen 0.0266 red 0.0259 | B1-alt     481.18 pen 0.0000 red 0.0000 | B2     481.18 pen 0.0000
+  s=1 t1_three_tier    r=1.25  ILP     481.18 prov=1 | B1     501.19 pen 0.0416 red 0.0399 | B1-alt     481.18 pen 0.0000 red 0.0000 | B2     481.18 pen 0.0000
+  s=1 t2_pipeline      r=0.75  ILP    1028.79 prov=1 | B1    1234.94 pen 0.2004 red 0.1669 | B1-alt    1028.79 pen 0.0000 red 0.0000 | B2    1028.79 pen 0.0000
+  s=1 t2_pipeline      r=1.25  ILP    1028.79 prov=1 | B1    1372.36 pen 0.3340 red 0.2503 | B1-alt    1028.79 pen 0.0000 red 0.0000 | B2    1028.79 pen 0.0000
+  s=1 t3_microservices r=0.75  ILP    1789.88 prov=1 | B1    1822.60 pen 0.0183 red 0.0180 | B1-alt    1789.88 pen 0.0000 red 0.0000 | B2    1789.88 pen 0.0000
+  s=1 t3_microservices r=1.25  ILP    1789.88 prov=1 | B1    1822.60 pen 0.0183 red 0.0180 | B1-alt    1789.88 pen 0.0000 red 0.0000 | B2    1789.88 pen 0.0000
+  X t1_three_tier    r=0.75  ilp_providers_used       b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=0.75  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=0.75  single_provider_optimal  b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=0.75  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=1.25  ilp_providers_used       b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=1.25  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=1.25  single_provider_optimal  b1      B1prov=2 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t1_three_tier    r=1.25  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=12.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=0.75  ilp_providers_used       b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=0.75  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=0.75  single_provider_optimal  b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=0.75  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=1.25  ilp_providers_used       b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=1.25  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=1.25  single_provider_optimal  b1      B1prov=2 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t2_pipeline      r=1.25  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=36.2 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=0.75  ilp_providers_used       b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=0.75  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=0.75  single_provider_optimal  b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=0.75  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=1.25  ilp_providers_used       b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=1.25  ilp_providers_used       b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=1.25  single_provider_optimal  b1      B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))
+  X t3_microservices r=1.25  single_provider_optimal  b1_alt  B1prov=1 s*=0.01 T=27.7 GB/mo crossover=no (optimum single-provider at every scale (no inversion in range))

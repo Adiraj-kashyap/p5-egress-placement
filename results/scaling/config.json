@@ -1,0 +1,923 @@
+{
+  "exp_id": "scaling",
+  "created_utc": "2026-09-22T13:03:26Z",
+  "config_path": "experiments/configs/scaling.json",
+  "config_sha256": "bce813430cd3310a141fcd2a378855efaddac8d179fbc25d56a80d996c7cad66",
+  "config": {
+    "exp_id": "scaling",
+    "description": "M14 scaling and optimality-gap experiment (O3, H2): n in {4..40} x L in {core 12, ext 24} x 5 synthetic instances per cell (seeds 1-5, density 0.25 fixed before any result, D-052); ILP tight (600 s, threads=1), greedy_1opt, SA x 10 seeds (sa_seeds.json); McCormick ablation for n <= 12 only.",
+    "snapshot_date": "2026-09-21",
+    "location_sets": [
+      "core",
+      "ext"
+    ],
+    "instances": [
+      {
+        "synthetic": {
+          "n": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20,
+            25,
+            30,
+            40
+          ],
+          "seeds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "density": 0.25,
+          "volume_dist": "lognormal",
+          "median_gb": 200,
+          "pin_fraction": 0.0
+        }
+      }
+    ],
+    "methods": [
+      "ilp_tight",
+      "ilp_mccormick",
+      "greedy_1opt",
+      "sa"
+    ],
+    "method_max_n": {
+      "ilp_mccormick": 12
+    },
+    "method_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "time_limits": {
+      "ilp_tight": 600,
+      "ilp_mccormick": 600,
+      "sa": null
+    },
+    "method_params": {
+      "greedy_1opt": {
+        "max_passes": 50
+      },
+      "sa": {
+        "alpha": 0.995
+      }
+    }
+  },
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "hours_per_month": 730,
+  "method_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "time_limits": {
+    "ilp_tight": 600,
+    "ilp_mccormick": 600,
+    "sa": null
+  },
+  "ilp_default_time_limit_s": 600.0,
+  "threads": 1,
+  "machine_tag": "adi-laptop-win11",
+  "git_commit": "7b187d3-dirty",
+  "python": "3.12.10",
+  "instances": {
+    "syn_n4_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "06441060a7e0bfe602e619eb281e7ccc75f8498b28debd6597908fa89588ed58",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "syn_n4_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "5dba3b5cb5ae2a1bfa9db8478445d5aa5cffb3e815a2d087a27f2ebd683a7dc2",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "syn_n4_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "80fb6313754690a2bdd8305b1c06b5436ea37195efd17cbbe73f3655bfb1c0de",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "syn_n4_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "3d46a66033e94289a659f3bac0125409486bb10f8a0398d48ddf9f364c802ab4",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "syn_n4_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "3602f417167a4c6a68861de2efc2ed243081cee0263e5519baf8487ffd1c8a67",
+      "n_components": 4,
+      "n_locations": 12,
+      "n_edges": 6
+    },
+    "syn_n6_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "c31f45f866a8cb8441f1aa94f3d48090626c44c3c32f863f39cfdcb4ff2ec1af",
+      "n_components": 6,
+      "n_locations": 12,
+      "n_edges": 10
+    },
+    "syn_n6_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "9a1c69fdd148174d06c8f5ce766d2e2c7e397412bd0e365eabbd6814bb0f4b3f",
+      "n_components": 6,
+      "n_locations": 12,
+      "n_edges": 10
+    },
+    "syn_n6_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "92ea1ee92d25d7ebe4eeaee099af50d0af679908207f2df5c76352d150ae3c44",
+      "n_components": 6,
+      "n_locations": 12,
+      "n_edges": 10
+    },
+    "syn_n6_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "965476da1e780de849ada6cb9a78d4b1003f16c21c7b922c48cece55ab7bd497",
+      "n_components": 6,
+      "n_locations": 12,
+      "n_edges": 10
+    },
+    "syn_n6_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "a6899ca9670cdc0ae05e96b0f13bf1aedee0ed6ea589bd3bdde5a1d36e1cbc37",
+      "n_components": 6,
+      "n_locations": 12,
+      "n_edges": 10
+    },
+    "syn_n8_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "8ca4ab64c4369222cc3a8c066220b3d5b5f6574c3f7e0c8433e48550942baa25",
+      "n_components": 8,
+      "n_locations": 12,
+      "n_edges": 14
+    },
+    "syn_n8_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "ca074d77749836cfbdf7161945df93469c7836f0abd4e2bcd5b8bd5a5f8e7f60",
+      "n_components": 8,
+      "n_locations": 12,
+      "n_edges": 14
+    },
+    "syn_n8_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "a575b6751107070679a6d92e8a4b2c2ec107f01b4bcbcf994a7ea888eb00680d",
+      "n_components": 8,
+      "n_locations": 12,
+      "n_edges": 14
+    },
+    "syn_n8_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "f1ffbb8ac3d79eec515e0e17b5c991cc3d85e18ab74aea1c7ea3ee0acf2501ea",
+      "n_components": 8,
+      "n_locations": 12,
+      "n_edges": 14
+    },
+    "syn_n8_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "67535995a52bda09e1f70688534195cd8500e40ca1b799a12d30c96d65fd2c8a",
+      "n_components": 8,
+      "n_locations": 12,
+      "n_edges": 14
+    },
+    "syn_n10_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "bc92dec423d55267a7412f52eadefe9ae1f8a2d712904e98e0c72299ec87ca0c",
+      "n_components": 10,
+      "n_locations": 12,
+      "n_edges": 22
+    },
+    "syn_n10_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "bb6dc6d5b22dfe84084bd75e129a6b32b07fba9bbe1edf7d3dee24810e74cebd",
+      "n_components": 10,
+      "n_locations": 12,
+      "n_edges": 22
+    },
+    "syn_n10_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "23e5a3f9173e23521c0d0299c9dce989da183d1d4a7db4285588207e8d04b2c0",
+      "n_components": 10,
+      "n_locations": 12,
+      "n_edges": 22
+    },
+    "syn_n10_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "2d86989afba649319fd62e2316594167b071f3d1cf35d8ea63f33ba1df083f8b",
+      "n_components": 10,
+      "n_locations": 12,
+      "n_edges": 22
+    },
+    "syn_n10_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "f60055136e364a599fa0b25322ad356b74b83c322926379a4e53d37775119fdf",
+      "n_components": 10,
+      "n_locations": 12,
+      "n_edges": 22
+    },
+    "syn_n12_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "ed676a1723beea6d762aa80e0c2274f64a431b0c579b9ec2406a4d04dd61e25d",
+      "n_components": 12,
+      "n_locations": 12,
+      "n_edges": 32
+    },
+    "syn_n12_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "5ea81ef9ed148acd7a85a5889013943da8118326abde7feb035f7c6da6495fc0",
+      "n_components": 12,
+      "n_locations": 12,
+      "n_edges": 32
+    },
+    "syn_n12_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "26c21935bf8fe39819a78ae27e2213d7a6698a515aeb34714cbd951a7c72cf82",
+      "n_components": 12,
+      "n_locations": 12,
+      "n_edges": 32
+    },
+    "syn_n12_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "bce5c5eeae15cafa1605dd51e4f9a193f6db3db34ca8451d56091e14c40ec4d2",
+      "n_components": 12,
+      "n_locations": 12,
+      "n_edges": 32
+    },
+    "syn_n12_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "53e0858274d9599cc7ee709a3cf1252ef0eb64c2f58a21ab84e82f36edec8a48",
+      "n_components": 12,
+      "n_locations": 12,
+      "n_edges": 32
+    },
+    "syn_n15_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "b1ad1bc2d386ea5025621124fe107c6efe8699ba0d7397c88afa6beee96a00b4",
+      "n_components": 15,
+      "n_locations": 12,
+      "n_edges": 52
+    },
+    "syn_n15_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "62f396f37c6d7e330fe38958e92af391cc0eab2c59036dccf073f4f66836ee65",
+      "n_components": 15,
+      "n_locations": 12,
+      "n_edges": 52
+    },
+    "syn_n15_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "d7d9f2662fc9adf10cfe9b7141e5414169bbb128939e2e8513c67c514408d12b",
+      "n_components": 15,
+      "n_locations": 12,
+      "n_edges": 52
+    },
+    "syn_n15_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "cc6e62858faa3a37f21cff1812be618280a1ab612eb40013c525b792007d72e0",
+      "n_components": 15,
+      "n_locations": 12,
+      "n_edges": 52
+    },
+    "syn_n15_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "ea8ff27e41ce1b487660520e5cb3bd875d572778ddc4fd0a8546c81ec905d760",
+      "n_components": 15,
+      "n_locations": 12,
+      "n_edges": 52
+    },
+    "syn_n20_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "00c89cf9891f11e8b370d9ff54333ffa7c5c5ea820be6b1186a8232103467a5b",
+      "n_components": 20,
+      "n_locations": 12,
+      "n_edges": 96
+    },
+    "syn_n20_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "a4d7c18ef8396394192d6456ec687b276ac4a89cb034764296e566a4607acc74",
+      "n_components": 20,
+      "n_locations": 12,
+      "n_edges": 96
+    },
+    "syn_n20_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "fd4259260b0479ae5e1ba6c7757c073a7beb613de1d88f88768bc5e53a409cd2",
+      "n_components": 20,
+      "n_locations": 12,
+      "n_edges": 96
+    },
+    "syn_n20_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "7c85bd99f2dd7322b811f7c2ced176ce84a8270c669d2a6f4e7e5409fa770fc6",
+      "n_components": 20,
+      "n_locations": 12,
+      "n_edges": 96
+    },
+    "syn_n20_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "bb4c55955f028e98f6f373366f9bd6782d564ec61f997f0b9baa21d9efad1941",
+      "n_components": 20,
+      "n_locations": 12,
+      "n_edges": 96
+    },
+    "syn_n25_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "3a935e62e61dc4abca23221dc357875c680754557981b927f6edbaa951922065",
+      "n_components": 25,
+      "n_locations": 12,
+      "n_edges": 150
+    },
+    "syn_n25_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "6ab34c4a3a3b4217cf01fd642d4a7bb55efce421605bb0298774be25bd5fe6ac",
+      "n_components": 25,
+      "n_locations": 12,
+      "n_edges": 150
+    },
+    "syn_n25_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "274f7d822ff17945fee5c66db7117cca4fa0ca381fdd5f72cdb1c15f33fe0800",
+      "n_components": 25,
+      "n_locations": 12,
+      "n_edges": 150
+    },
+    "syn_n25_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "27d34164a30195d3f43c46396e81cbaec256470f4bb54ee56f0d77375603a5db",
+      "n_components": 25,
+      "n_locations": 12,
+      "n_edges": 150
+    },
+    "syn_n25_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "a7afacfb7b8c5e4f02b44b491824de5d7aa1614212f4c04f393b7b8e3f55344b",
+      "n_components": 25,
+      "n_locations": 12,
+      "n_edges": 150
+    },
+    "syn_n30_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "2e95e5f910a262e25735729290be454eca822c7d93db52697aad2270479bb00d",
+      "n_components": 30,
+      "n_locations": 12,
+      "n_edges": 218
+    },
+    "syn_n30_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "344bfb50ba781c17179b8558005a8b98046f0c1b4c8d54e07fcf3c43564b5b2a",
+      "n_components": 30,
+      "n_locations": 12,
+      "n_edges": 218
+    },
+    "syn_n30_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "56edef8e970b9030c3656f68cd350f2c177e3a8cbd9192ced99c40aea33cca4c",
+      "n_components": 30,
+      "n_locations": 12,
+      "n_edges": 218
+    },
+    "syn_n30_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "4848cffc81f56a7a0d0dd56cf51e363ebce62faa41c5ad9077ecf16a375c5e79",
+      "n_components": 30,
+      "n_locations": 12,
+      "n_edges": 218
+    },
+    "syn_n30_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "a57466f921200abd5eef46f083f77adcab6b9341db9a58c5bb7d6045480cca17",
+      "n_components": 30,
+      "n_locations": 12,
+      "n_edges": 218
+    },
+    "syn_n40_s1@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "bd5ff49cedeecacb8e51f6afc4947e342c3066a919b9b3e0143fe35b37b6948d",
+      "n_components": 40,
+      "n_locations": 12,
+      "n_edges": 390
+    },
+    "syn_n40_s2@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "cba748450c15795cd33fbb47c8f6655cf9f750a03c2c2f1b6c0201a9e6c89390",
+      "n_components": 40,
+      "n_locations": 12,
+      "n_edges": 390
+    },
+    "syn_n40_s3@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "4ba460a6621f12538c6aff0439a3f72fbc2e07e7926eb626d3ef0e95d016bcfe",
+      "n_components": 40,
+      "n_locations": 12,
+      "n_edges": 390
+    },
+    "syn_n40_s4@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "021fbb14d6405f2b7e84d24fce16bfa71d58de908dd497ced93f76c8ccb8c330",
+      "n_components": 40,
+      "n_locations": 12,
+      "n_edges": 390
+    },
+    "syn_n40_s5@core": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "core",
+      "sha256": "863d334bc871248fe30aaa953ba9b8c47daa149909f0d6aa465cf45f52e10d82",
+      "n_components": 40,
+      "n_locations": 12,
+      "n_edges": 390
+    },
+    "syn_n4_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "39f6af25858ba30f3e120c68c00773d88e461730ba1d62cfcebcb86648639404",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "syn_n4_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "3bb9d98c27b7d5825caa3028e8649d77d32752a62d3ef0033b5101a72de16570",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "syn_n4_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "1080b9de4bf5c4e4820eaad92593683fed8253249e4bd6339858202c0fbcf7c6",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "syn_n4_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "7e3965d598da583b11881cf6450a9e65e1ce7358820d381a37a786422dabd0b3",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "syn_n4_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 4, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "52929652697d5c4999cdea6ef13a86176e6d14b6330f6d5b258bad5943c8d60f",
+      "n_components": 4,
+      "n_locations": 24,
+      "n_edges": 6
+    },
+    "syn_n6_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "fe52b44df7be5ef26dc49a858a3de6993ea2f749f723ddb5d6def5855dd0060b",
+      "n_components": 6,
+      "n_locations": 24,
+      "n_edges": 10
+    },
+    "syn_n6_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "86dda6bef986eed4bbf0f838693f1ef6a563de79d3cff3a12fde9f4e93460a6e",
+      "n_components": 6,
+      "n_locations": 24,
+      "n_edges": 10
+    },
+    "syn_n6_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "eff0bf1286a86ec9b4017b1fe7d3f54fcc6534b8860c9536e46ae1f0e62acfcb",
+      "n_components": 6,
+      "n_locations": 24,
+      "n_edges": 10
+    },
+    "syn_n6_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "949279a72ceaf2c3a124785ab0e8c5e15fdb0c76bc8ca239332664fa7e4a910d",
+      "n_components": 6,
+      "n_locations": 24,
+      "n_edges": 10
+    },
+    "syn_n6_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 6, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "8857d30fbf593ef3901e02c58c43cbcca0823aed0324e155a32ae45f94c61a29",
+      "n_components": 6,
+      "n_locations": 24,
+      "n_edges": 10
+    },
+    "syn_n8_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "5bc2959f5d3cf3555804476c0337dff09405eab4a5d00927f012e216893906a8",
+      "n_components": 8,
+      "n_locations": 24,
+      "n_edges": 14
+    },
+    "syn_n8_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "d1330580de9173313f7938f8f052dbf7357735b4408326f7a02153496390282e",
+      "n_components": 8,
+      "n_locations": 24,
+      "n_edges": 14
+    },
+    "syn_n8_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "75845e803348a49538344d8e0aeb6f955a7fdc999cab2b5617bb4b960f0d1135",
+      "n_components": 8,
+      "n_locations": 24,
+      "n_edges": 14
+    },
+    "syn_n8_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "2c43f5463f5c17d43fd36a89e8c7ca1602a1b98fd8d5cd04199328c0e3b81adb",
+      "n_components": 8,
+      "n_locations": 24,
+      "n_edges": 14
+    },
+    "syn_n8_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 8, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "e6d1fb4e9a906df550e7ffddfdec10aec9cac1f98112b9e3a35c3c750c62fb51",
+      "n_components": 8,
+      "n_locations": 24,
+      "n_edges": 14
+    },
+    "syn_n10_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "58c0102bba9b3f33e2f2fbe4ec131c86e605b0ff9701d72dbac72353633645fd",
+      "n_components": 10,
+      "n_locations": 24,
+      "n_edges": 22
+    },
+    "syn_n10_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "232e5fde855b789240250ff0d75c4e52feccd45645b3fe7e87ab242493bf7edd",
+      "n_components": 10,
+      "n_locations": 24,
+      "n_edges": 22
+    },
+    "syn_n10_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "a8cb4f5548b10fcd911c50331fb2c3f298f5b6b353ee997cbbe855c8ec578d8e",
+      "n_components": 10,
+      "n_locations": 24,
+      "n_edges": 22
+    },
+    "syn_n10_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "245cc65eb81056ee7e14c7366532bc3d7b8daff70cb8054dd0bc374076168586",
+      "n_components": 10,
+      "n_locations": 24,
+      "n_edges": 22
+    },
+    "syn_n10_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 10, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "daf3409ffa55ba50e971cf3eade0a166bc064f6f880fc69b4b68523f8c81b9b3",
+      "n_components": 10,
+      "n_locations": 24,
+      "n_edges": 22
+    },
+    "syn_n12_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "bb3a0d73b58de64ec71295e5671c69e3afd0588045ccc2042b9c4ceb917dfe28",
+      "n_components": 12,
+      "n_locations": 24,
+      "n_edges": 32
+    },
+    "syn_n12_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "4b6768be5423dcb5d81f59df06118035a4364d20a3994b8350f75c17fda11ad9",
+      "n_components": 12,
+      "n_locations": 24,
+      "n_edges": 32
+    },
+    "syn_n12_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "63872154340c31e347a7468197563583cb94132a473d026816bb3854d0643b9b",
+      "n_components": 12,
+      "n_locations": 24,
+      "n_edges": 32
+    },
+    "syn_n12_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "2c7aebf8e972c59d39e14f907c435e5bb4f905dd0d351146a50ae55f6a50307b",
+      "n_components": 12,
+      "n_locations": 24,
+      "n_edges": 32
+    },
+    "syn_n12_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 12, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "520af3658f137b1cebf429c89d9bdd790ace1d522a3fcff3871fd73e1349baa4",
+      "n_components": 12,
+      "n_locations": 24,
+      "n_edges": 32
+    },
+    "syn_n15_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "2eb2c279fdec11bfdd822117466a3f4fd1cc57cc17f74d11f58100bdf815b27b",
+      "n_components": 15,
+      "n_locations": 24,
+      "n_edges": 52
+    },
+    "syn_n15_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "e2305628d9f6ea8a2c62b7b09aae3c911dfc9c7fb066964045859739e39990e6",
+      "n_components": 15,
+      "n_locations": 24,
+      "n_edges": 52
+    },
+    "syn_n15_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "467a0b5622c5573f16759660c7255fe47bbfd22728e71556f7e2764a44b94a9d",
+      "n_components": 15,
+      "n_locations": 24,
+      "n_edges": 52
+    },
+    "syn_n15_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "2e2e382d0b2b805111937e03a8fbce481222322ccd8fbae41e73d13078179ef6",
+      "n_components": 15,
+      "n_locations": 24,
+      "n_edges": 52
+    },
+    "syn_n15_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 15, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "08392bed5540f2e41b91ae4ea4bb171e6f4d939b282c8de0ac812b387033e01d",
+      "n_components": 15,
+      "n_locations": 24,
+      "n_edges": 52
+    },
+    "syn_n20_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "875c5f0db56570b357a5712fe0a5518126c8406da0e3dd1d7f21e37e5de64ea1",
+      "n_components": 20,
+      "n_locations": 24,
+      "n_edges": 96
+    },
+    "syn_n20_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "ccfa1f46ecb509ed0f9df581a0e37ac596173fcadff90e74e0ea8693619fe4a2",
+      "n_components": 20,
+      "n_locations": 24,
+      "n_edges": 96
+    },
+    "syn_n20_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "ff467427cf5131782c82e69c6bca96033443f15624833657a038ae506ea105e6",
+      "n_components": 20,
+      "n_locations": 24,
+      "n_edges": 96
+    },
+    "syn_n20_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "20be3a2f43499b1b25843f1677ed58b59c767f8d432a7349b5acf2f2863b1c30",
+      "n_components": 20,
+      "n_locations": 24,
+      "n_edges": 96
+    },
+    "syn_n20_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 20, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "49fec3151ebe7184be7072b50ad35e227ab177d001baafc9dd41c456602ead44",
+      "n_components": 20,
+      "n_locations": 24,
+      "n_edges": 96
+    },
+    "syn_n25_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "bdd97be7befb2baf67538830eb6cce20a8567e9af504cc2c81f0e2b6252d03fe",
+      "n_components": 25,
+      "n_locations": 24,
+      "n_edges": 150
+    },
+    "syn_n25_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "777c153594a4d343dddac770ae293cb51be847673fffeb11d6dececdcb437839",
+      "n_components": 25,
+      "n_locations": 24,
+      "n_edges": 150
+    },
+    "syn_n25_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "73b4caca3fcb9dea68314df34264c2d5a37809a69e0bedd39e674c03a8b71ce2",
+      "n_components": 25,
+      "n_locations": 24,
+      "n_edges": 150
+    },
+    "syn_n25_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "0760bda2ecfde8821fee4b6794528aa4e41e3ebfa62f6f84a773ef3588200fab",
+      "n_components": 25,
+      "n_locations": 24,
+      "n_edges": 150
+    },
+    "syn_n25_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 25, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "d8b709de340043c991ea257bd80aec33ecd19a0b6f78acddd567766896efb144",
+      "n_components": 25,
+      "n_locations": 24,
+      "n_edges": 150
+    },
+    "syn_n30_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "dedc3fdbbab85cc56c7de876ac9c2df89136c65cffb4bfc9336f9e988ef5a535",
+      "n_components": 30,
+      "n_locations": 24,
+      "n_edges": 218
+    },
+    "syn_n30_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "3dae6bb3b82a52cc8f16e6820a30229f5bfd3cd64e60c864e7392f90361e2a1a",
+      "n_components": 30,
+      "n_locations": 24,
+      "n_edges": 218
+    },
+    "syn_n30_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "b972fe8f5e99d5cfc264802d73d4a7d013a27b3a9855ec466980a92f36166381",
+      "n_components": 30,
+      "n_locations": 24,
+      "n_edges": 218
+    },
+    "syn_n30_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "8c369f4dcdbff85a9f8614516ddfebda3c3be4d24184a3bcd70f61bf1aa1c462",
+      "n_components": 30,
+      "n_locations": 24,
+      "n_edges": 218
+    },
+    "syn_n30_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 30, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "b289d1da1bb83a4ed5d64553163eace0347fc4d7e7a0775ef55fefc86567ccf8",
+      "n_components": 30,
+      "n_locations": 24,
+      "n_edges": 218
+    },
+    "syn_n40_s1@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 1, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "82c2c2bfc1f7de6012ee2640bab2447cd3dbca9f10675d8d66cd14ff9679a40e",
+      "n_components": 40,
+      "n_locations": 24,
+      "n_edges": 390
+    },
+    "syn_n40_s2@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 2, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "eefd0cc88a8884e738f2088518de4f76f7e8d8c87eee681de06710ffc9056aa5",
+      "n_components": 40,
+      "n_locations": 24,
+      "n_edges": 390
+    },
+    "syn_n40_s3@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 3, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "5a35533fff09e8baeea3f61166388012e5e568511c8335738062d1f4bca1afc0",
+      "n_components": 40,
+      "n_locations": 24,
+      "n_edges": 390
+    },
+    "syn_n40_s4@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 4, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "41af2ca97a95aa85f2cda066c82df16210bb9b5b1efbc099e6a4d0b401b9f202",
+      "n_components": 40,
+      "n_locations": 24,
+      "n_edges": 390
+    },
+    "syn_n40_s5@ext": {
+      "source": "experiments.generate.synthetic{\"density\": 0.25, \"median_gb\": 200, \"n\": 40, \"pin_fraction\": 0.0, \"seed\": 5, \"volume_dist\": \"lognormal\"}",
+      "location_set": "ext",
+      "sha256": "c92aacde6668f99022c8ddec0989cf01c25208ab6332efe5603f2d49faf3c811",
+      "n_components": 40,
+      "n_locations": 24,
+      "n_edges": 390
+    }
+  },
+  "sessions": [
+    {
+      "run_utc": "2026-09-22T13:03:26Z",
+      "git_commit": "7b187d3-dirty",
+      "machine_tag": "adi-laptop-win11",
+      "jobs_total": 1250,
+      "jobs_skipped": 0,
+      "jobs_run": 1250,
+      "jobs_failed": 0,
+      "wall_s": 2930.189,
+      "finished": true
+    }
+  ],
+  "notes": {
+    "runs.csv": "one row per (instance, method, seed); standard columns (01 \u00a74) first; appended as each job finishes; resume skips present keys.",
+    "runtime_s": "method wall time; ILP = build + CBC; greedy_1opt includes greedy.",
+    "status": "optimal (ILP proven) | feasible (ILP incumbent, not proven) | no_solution | ok (heuristic or baseline)"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "exp_id": "heuristics",
+  "module": "M11",
+  "created_utc": "2026-09-22T07:53:18Z",
+  "git_commit": "175b3e5",
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "location_set": "core",
+  "hours_per_month": 730,
+  "methods": [
+    "greedy",
+    "greedy_1opt"
+  ],
+  "repeats": 5,
+  "max_passes": 50,
+  "tie_rel_tol": 1e-09,
+  "machine_tag": "adi-laptop-win11",
+  "seeds": [],
+  "reference": "tight ILP (placement.ilp.solve_ilp, CBC threads=1, time limit 600 s)",
+  "topologies": {
+    "topologies/t1_three_tier.json": {
+      "sha256": "25fa9003d9dab68115b80e55458dc8ec159dab990aa9a146936267d522676f0f"
+    },
+    "topologies/t2_pipeline.json": {
+      "sha256": "8d31603266e4093a33481188ffe11499526d037fc408417e4f8d98cc2cd9de29"
+    },
+    "topologies/t3_microservices.json": {
+      "sha256": "a9ccd871eb33459f5b854480853a8a5e5d209415cea8b796d95d1c73d65daddb"
+    }
+  },
+  "notes": {
+    "runtime_s": "wall time of the method; greedy_1opt includes its greedy start.",
+    "gap_vs_ilp_pct": "100 * (total - ILP optimum) / ILP optimum, both from evaluate().",
+    "runs.csv": "append-only; one row per (topology, method, repeat); run_utc groups a run."
+  }
+}

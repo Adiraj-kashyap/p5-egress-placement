@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.lock.txt
+
+      - name: Show solver
+        run: python -c "import pulp; print(pulp.__version__, pulp.listSolvers(onlyAvailable=True))"
+
+      - name: Run the CI subset of the test suite
+        run: pytest -q -m "not live and not testbed"

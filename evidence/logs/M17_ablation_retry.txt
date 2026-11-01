@@ -1,0 +1,1 @@
+refusing to run: git 30542d5, 1 changed path(s) outside results/ablation (e.g. ['evidence/logs/M17_ablation_retry.txt']). Commit first, put git on PATH, or pass --allow-dirty.

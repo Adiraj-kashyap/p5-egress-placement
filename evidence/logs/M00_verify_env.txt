@@ -1,0 +1,21 @@
+﻿====================================================================
+P5 ENVIRONMENT VERIFICATION
+====================================================================
+timestamp   : 2026-09-21 16:44:49 India Standard Time
+python      : 3.12.10
+platform    : Windows-11-10.0.22631-SP0
+git commit  : (not a git repo yet - run 'git init && git commit')
+pulp        : 3.3.2
+solvers     : ['PULP_CBC_CMD']
+--------------------------------------------------------------------
+SOLVER SMOKE TEST: 3 components, 3 locations, egress-coupled objective
+--------------------------------------------------------------------
+status              : Optimal
+solve time          : 0.616 s
+variables / constr. : 27 / 57
+egress-aware optimum: 273.00   {'A': 'L2', 'B': 'L2', 'C': 'L2'}
+egress-blind greedy : 325.00   {'A': 'L0', 'B': 'L2', 'C': 'L2'}
+penalty of ignoring egress: 19.0%
+====================================================================
+ENVIRONMENT OK
+====================================================================

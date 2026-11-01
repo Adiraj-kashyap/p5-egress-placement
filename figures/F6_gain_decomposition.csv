@@ -1,0 +1,19 @@
+topology_id,traffic_scale,step,from_method,to_method,buys,n,mean,sd,sem,median,ci_lo,ci_hi,ci_method,total_gain_usd_mean,share_of_gain_pct_mean
+t1_three_tier,1.0,1,b1,b1_storage,pricing storage alongside compute,30,0.0,,,,0.0,0.0,bootstrap,16.4975927,0.0
+t1_three_tier,1.0,2,b1_storage,ilp_no_edge_egress,also pricing user-facing internet egress,30,-96.4438859,,,,-105.28167851,-88.06505772,bootstrap,16.4975927,-584.733737
+t1_three_tier,1.0,3,ilp_no_edge_egress,ilp_full,modelling inter-component egress,30,112.9414786,,,,103.12004525,123.29236333,bootstrap,16.4975927,684.733737
+t1_three_tier,100.0,1,b1,b1_storage,pricing storage alongside compute,30,0.0,,,,0.0,0.0,bootstrap,1455.6509296,0.0
+t1_three_tier,100.0,2,b1_storage,ilp_no_edge_egress,also pricing user-facing internet egress,30,-9838.49692313,,,,-10740.26109779,-8983.67204739,bootstrap,1455.6509296,-676.021303
+t1_three_tier,100.0,3,ilp_no_edge_egress,ilp_full,modelling inter-component egress,30,11294.14785273,,,,10312.00452328,12329.23632685,bootstrap,1455.6509296,776.021303
+t2_pipeline,1.0,1,b1,b1_storage,pricing storage alongside compute,30,0.0,,,,0.0,0.0,bootstrap,306.9285042,0.0
+t2_pipeline,1.0,2,b1_storage,ilp_no_edge_egress,also pricing user-facing internet egress,30,107.5756081,,,,91.69920675,124.36654185,bootstrap,306.9285042,34.609784
+t2_pipeline,1.0,3,ilp_no_edge_egress,ilp_full,modelling inter-component egress,30,199.3528961,,,,176.27712245,223.89420693,bootstrap,306.9285042,65.390216
+t2_pipeline,100.0,1,b1,b1_storage,pricing storage alongside compute,30,0.0,,,,0.0,0.0,bootstrap,30689.57975163,0.0
+t2_pipeline,100.0,2,b1_storage,ilp_no_edge_egress,also pricing user-facing internet egress,30,10754.29014567,,,,9166.72111837,12433.02822678,bootstrap,30689.57975163,34.60274
+t2_pipeline,100.0,3,ilp_no_edge_egress,ilp_full,modelling inter-component egress,30,19935.28960597,,,,17627.7122607,22389.42069874,bootstrap,30689.57975163,65.39726
+t3_microservices,1.0,1,b1,b1_storage,pricing storage alongside compute,30,0.0,,,,0.0,0.0,bootstrap,33.92007987,0.0
+t3_microservices,1.0,2,b1_storage,ilp_no_edge_egress,also pricing user-facing internet egress,30,-91.9522666,,,,-108.61350232,-77.07078939,bootstrap,33.92007987,-293.129616
+t3_microservices,1.0,3,ilp_no_edge_egress,ilp_full,modelling inter-component egress,30,125.87234647,,,,108.53611897,144.98461306,bootstrap,33.92007987,393.129616
+t3_microservices,100.0,1,b1,b1_storage,pricing storage alongside compute,30,0.0,,,,0.0,0.0,bootstrap,33.92007987,0.0
+t3_microservices,100.0,2,b1_storage,ilp_no_edge_egress,also pricing user-facing internet egress,30,-12553.3145652,,,,-14462.13396194,-10823.60222896,bootstrap,33.92007987,-39212.961605
+t3_microservices,100.0,3,ilp_no_edge_egress,ilp_full,modelling inter-component egress,30,12587.23464507,,,,10853.61188883,14498.46130257,bootstrap,33.92007987,39312.961605

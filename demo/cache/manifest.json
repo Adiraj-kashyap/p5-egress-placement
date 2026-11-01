@@ -1,0 +1,59 @@
+{
+  "built_utc": "2026-10-26T16:11:04Z",
+  "files": {
+    "R2-1_cost_vs_scale.csv": {
+      "source": "figures/R2-1_cost_vs_scale.csv",
+      "purpose": "cost vs traffic scale per method, with 95% CI (R2-1)",
+      "sha256": "2aeafcab8223d33a146da3a6f607ca77a417911c4d8caf5fd8ff2f91a21e0b16",
+      "rows": 135
+    },
+    "F2_egress_penalty.csv": {
+      "source": "figures/F2_egress_penalty.csv",
+      "purpose": "egress penalty of B1/B2-best vs ILP across the scale sweep (F2)",
+      "sha256": "d6555538f268e9def5c703d008e2b2960bd95efc4614a8a9f263bbb2c412be82",
+      "rows": 135
+    },
+    "F3_providers_used.csv": {
+      "source": "figures/F3_providers_used.csv",
+      "purpose": "providers used by the ILP vs traffic scale (F3)",
+      "sha256": "9c5be380dd995cb63a7ace3ca9ebf532438b76d7e46e5b61781dad277c1a922d",
+      "rows": 87
+    },
+    "F0_sa_convergence.csv": {
+      "source": "figures/F0_sa_convergence.csv",
+      "purpose": "SA best/current cost per temperature step over seeds (F0)",
+      "sha256": "7b66d2b358be27ea87ad69b73584cc4b52090f1b2229756ffa10af14e3d850fe",
+      "rows": 5932
+    },
+    "F1_cost_breakdown.csv": {
+      "source": "figures/F1_cost_breakdown.csv",
+      "purpose": "cost breakdown per method at s = 1, with 95% CI (F1)",
+      "sha256": "0dae0440d76d3251feddbb676e2f3f3d599048c2a70666978b5ebdff2551edca",
+      "rows": 90
+    },
+    "F4_runtime_vs_n.csv": {
+      "source": "figures/F4_runtime_vs_n.csv",
+      "purpose": "solver runtime vs component count (F4)",
+      "sha256": "6af9e2e8e5b5ad979e1125ea55baaac7561d6a990d36d6960f1d5bff737e6b07",
+      "rows": 18
+    },
+    "F5_gap_boxplots.csv": {
+      "source": "figures/F5_gap_boxplots.csv",
+      "purpose": "heuristic optimality gap vs component count (F5)",
+      "sha256": "e15ea571fb77b69ec9623e7da630a7616ae364d8457c405e4b12988983c60584",
+      "rows": 40
+    },
+    "F6_gain_decomposition.csv": {
+      "source": "figures/F6_gain_decomposition.csv",
+      "purpose": "ablation: which ingredient causes the gain (F6)",
+      "sha256": "d3812b9f101ccae710f243c91b644ee99e6fd4378f10f012bf457ebc284893f3",
+      "rows": 18
+    },
+    "F7_sensitivity.csv": {
+      "source": "figures/F7_sensitivity.csv",
+      "purpose": "ILP saving vs egress price x locations per provider (F7)",
+      "sha256": "fdc9fdd21a20d4e95f0e208c7d53cc295c4338226d53515718499144f47a27c5",
+      "rows": 60
+    }
+  }
+}

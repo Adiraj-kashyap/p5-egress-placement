@@ -1,0 +1,37 @@
+# M07 step 4 evidence, 2026-09-22 10:59:20 (S-011)
+
+$ kubectl get nodes -o wide
+NAME               STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION                              CONTAINER-RUNTIME
+p5-control-plane   Ready    control-plane   7m55s   v1.37.0   172.18.0.2    <none>        Debian GNU/Linux 13 (trixie)   6.18.33.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.4
+
+$ kubectl get pods -n p5 -o wide
+NAME                    READY   STATUS      RESTARTS   AGE     IP            NODE               NOMINATED NODE   READINESS GATES
+api-7df7c79885-69kwp    1/1     Running     0          59s     10.244.0.10   p5-control-plane   <none>           <none>
+cache-bd7d64666-6gszh   1/1     Running     0          6m47s   10.244.0.6    p5-control-plane   <none>           <none>
+db-5578cc5dfb-rdsjk     1/1     Running     0          6m47s   10.244.0.5    p5-control-plane   <none>           <none>
+seed-db-74snn           0/1     Completed   0          6m47s   10.244.0.7    p5-control-plane   <none>           <none>
+web-6c67d6f4cc-24rtb    1/1     Running     0          59s     10.244.0.11   p5-control-plane   <none>           <none>
+
+$ kubectl get svc -n p5
+NAME    TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+api     ClusterIP   10.96.229.74    <none>        8000/TCP         6m47s
+cache   ClusterIP   10.96.164.106   <none>        6379/TCP         6m47s
+db      ClusterIP   10.96.237.129   <none>        5432/TCP         6m47s
+web     NodePort    10.96.138.162   <none>        8000:30080/TCP   6m47s
+
+$ kubectl logs -n p5 job/seed-db -c seed (tail)
+           50000
+(1 row)
+
+
+# Re-captured S-012 2026-09-22 12:09 after the 3 measurement runs (pods restarted once when Docker moved to D:, H-12)
+$ kubectl get nodes -o wide
+NAME               STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION                              CONTAINER-RUNTIME
+p5-control-plane   Ready    control-plane   78m   v1.37.0   172.18.0.2    <none>        Debian GNU/Linux 13 (trixie)   6.18.33.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.4
+$ kubectl get pods -n p5 -o wide
+NAME                    READY   STATUS      RESTARTS      AGE   IP           NODE               NOMINATED NODE   READINESS GATES
+api-7df7c79885-69kwp    1/1     Running     4 (50m ago)   71m   10.244.0.3   p5-control-plane   <none>           <none>
+cache-bd7d64666-6gszh   1/1     Running     4 (50m ago)   76m   10.244.0.2   p5-control-plane   <none>           <none>
+db-5578cc5dfb-rdsjk     1/1     Running     4 (50m ago)   76m   10.244.0.4   p5-control-plane   <none>           <none>
+seed-db-74snn           0/1     Completed   0             76m   <none>       p5-control-plane   <none>           <none>
+web-6c67d6f4cc-24rtb    1/1     Running     4 (50m ago)   71m   10.244.0.5   p5-control-plane   <none>           <none>

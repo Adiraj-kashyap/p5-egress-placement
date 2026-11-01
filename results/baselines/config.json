@@ -1,0 +1,35 @@
+{
+  "exp_id": "baselines",
+  "module": "M08",
+  "created_utc": "2026-09-22T07:21:12Z",
+  "git_commit": "d51adf8",
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "location_set": "core",
+  "hours_per_month": 730,
+  "methods": [
+    "B1",
+    "B2-aws",
+    "B2-azure",
+    "B2-gcp",
+    "B2-best"
+  ],
+  "topologies": {
+    "topologies/t1_three_tier.json": {
+      "sha256": "25fa9003d9dab68115b80e55458dc8ec159dab990aa9a146936267d522676f0f"
+    },
+    "topologies/t2_pipeline.json": {
+      "sha256": "8d31603266e4093a33481188ffe11499526d037fc408417e4f8d98cc2cd9de29"
+    },
+    "topologies/t3_microservices.json": {
+      "sha256": "a9ccd871eb33459f5b854480853a8a5e5d209415cea8b796d95d1c73d65daddb"
+    }
+  },
+  "rules": {
+    "B1": "per component, min usd_per_hour/vcpu of its fixed shape; ties -> lower compute+storage monthly bill -> smallest location id (D-039). Egress ignored when choosing, charged when scored.",
+    "B2": "per provider, the single region minimising total compute+storage; ties -> smallest location id.",
+    "B2-best": "B2 provider with the lowest evaluated total; ties -> aws, azure, gcp order.",
+    "egress_share": "inter-component egress_usd / total_usd; internet egress reported separately (D-040).",
+    "seed": "empty: all M08 methods are deterministic."
+  }
+}

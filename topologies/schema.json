@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://p5-egress-placement/topologies/schema.json",
+  "title": "P5 application topology",
+  "description": "A multi-component application whose components are placed on provider:region locations. Edges are directed (a request/response pair is two edges); the sender pays egress (D-005). Volumes are GB (1e9 bytes) per month (30 days, 2,592,000 s). Referential checks (edge endpoints exist, no self-edges, unique ids, no duplicate edges) are done by topologies/validate.py, not by this schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "description", "provenance", "components", "edges", "internet_egress"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "description": {"type": "string", "minLength": 1},
+    "provenance": {
+      "description": "Overall origin of the edge volumes. 'placeholder' = stand-in values that a later module replaces (T1 until M07 measures it).",
+      "enum": ["measured", "stated", "synthetic", "placeholder"]
+    },
+    "assumptions": {
+      "description": "Free-form stated parameters the volumes were derived from (request rate, payload sizes, ...).",
+      "type": "object"
+    },
+    "references": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "components": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/component"}
+    },
+    "edges": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/edge"}
+    },
+    "internet_egress": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/internet_egress"}
+    }
+  },
+  "$defs": {
+    "provenance_tag": {
+      "description": "Kind of origin, optionally followed by ':' and a pointer, e.g. 'measured:M07 run 2' or 'stated:payload estimate'.",
+      "type": "string",
+      "pattern": "^(measured|stated|synthetic|placeholder)(:.+)?$"
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "vcpu", "ram_gb", "storage_gb", "pinned_to"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9_-]+$"},
+        "vcpu": {"type": "integer", "minimum": 1},
+        "ram_gb": {"type": "number", "exclusiveMinimum": 0},
+        "storage_gb": {"type": "number", "minimum": 0},
+        "pinned_to": {"enum": ["aws", "gcp", "azure", null]},
+        "rationale": {"type": "string"}
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["src", "dst", "gb_per_month", "provenance", "rationale"],
+      "properties": {
+        "src": {"type": "string", "minLength": 1},
+        "dst": {"type": "string", "minLength": 1},
+        "gb_per_month": {"type": "number", "minimum": 0},
+        "provenance": {"$ref": "#/$defs/provenance_tag"},
+        "rationale": {"type": "string", "minLength": 1}
+      }
+    },
+    "internet_egress": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["src", "gb_per_month", "provenance", "rationale"],
+      "properties": {
+        "src": {"type": "string", "minLength": 1},
+        "gb_per_month": {"type": "number", "minimum": 0},
+        "provenance": {"$ref": "#/$defs/provenance_tag"},
+        "rationale": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

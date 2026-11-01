@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+.env
+logs/*.log
+*.pyc
+.pytest_cache/
+# M07 local tools and kubeconfig kept on D: (D-036), not committed
+.tools/
+# review/*.bat demo runs write here, never into results/ (D-095)
+logs/review_runs/
+# Agent / build-tooling material lives outside the repo (../claude_workspace); never re-add it
+CLAUDE.md
+.claude/
+agent/
+state/
+seed/
+archive/
+logs/*
+!logs/.gitkeep

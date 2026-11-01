@@ -1,0 +1,731 @@
+{
+  "exp_id": "sweep",
+  "part": "main",
+  "created_utc": "2026-09-22T14:29:43Z",
+  "config_path": "experiments/configs/sweep.json",
+  "config_sha256": "683ce79f0792a03f2e1020d61d96e626a3c08b963f4e0ef21cb8054ab72f0112",
+  "config": {
+    "exp_id": "sweep",
+    "snapshot_date": "2026-09-21",
+    "location_set": "core",
+    "topologies": [
+      "topologies/t1_three_tier.json",
+      "topologies/t2_pipeline.json",
+      "topologies/t3_microservices.json"
+    ],
+    "scales": {
+      "logspace": [
+        -2,
+        2,
+        25
+      ]
+    },
+    "methods": [
+      "ilp_tight",
+      "b1",
+      "b1_alt",
+      "b2_best",
+      "greedy_1opt",
+      "sa"
+    ],
+    "method_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "time_limits": {
+      "ilp_tight": 600
+    },
+    "method_params": {},
+    "sensitivity": {
+      "exp_id": "sweep_sensitivity",
+      "rate_factors": [
+        0.75,
+        1.25
+      ],
+      "scales": "all",
+      "methods": [
+        "ilp_tight",
+        "b1",
+        "b1_alt",
+        "b2_best",
+        "greedy_1opt"
+      ]
+    }
+  },
+  "snapshot_date": "2026-09-21",
+  "cost_model_dir": "cost_model/2026-09-21",
+  "location_set": "core",
+  "hours_per_month": 730,
+  "scales": [
+    0.01,
+    0.014677992676220698,
+    0.021544346900318832,
+    0.03162277660168379,
+    0.046415888336127774,
+    0.06812920690579616,
+    0.1,
+    0.14677992676220697,
+    0.21544346900318834,
+    0.31622776601683794,
+    0.464158883361278,
+    0.6812920690579611,
+    1.0,
+    1.467799267622069,
+    2.1544346900318843,
+    3.1622776601683795,
+    4.6415888336127775,
+    6.812920690579615,
+    10.0,
+    14.67799267622069,
+    21.544346900318846,
+    31.622776601683793,
+    46.41588833612777,
+    68.12920690579615,
+    100.0
+  ],
+  "rate_factors": [
+    1.0
+  ],
+  "methods": [
+    "ilp_tight",
+    "b1",
+    "b1_alt",
+    "b2_best",
+    "greedy_1opt",
+    "sa"
+  ],
+  "method_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "threads": 1,
+  "machine_tag": "adi-laptop-win11",
+  "git_commit": "575a3a7",
+  "instances": {
+    "t1_three_tier@core@s=0.01": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.01,
+      "rate_factor": 1.0,
+      "sha256": "ae863b7ff784391f9a00eb078eeb465da9227b9ca98754972ab9a44cc1d133ce",
+      "edge_gb": 12.65504
+    },
+    "t1_three_tier@core@s=0.014678": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.014677992676220698,
+      "rate_factor": 1.0,
+      "sha256": "255aa685eac19aef68a927a35b2bcfff5ffb532c91dcea171bb3471ac56e52af",
+      "edge_gb": 18.575058443727997
+    },
+    "t1_three_tier@core@s=0.0215443": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.021544346900318832,
+      "rate_factor": 1.0,
+      "sha256": "c3d52a8ac4b419c8f784f690c89e0abbcfc07ad0c107ae51af76169cbe2ea24b",
+      "edge_gb": 27.264457179741083
+    },
+    "t1_three_tier@core@s=0.0316228": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.03162277660168379,
+      "rate_factor": 1.0,
+      "sha256": "4365c5571f9c52d03fe0e2daabe22c7886d75da379ed4c1f03c8c60e48527469",
+      "edge_gb": 40.01875028053724
+    },
+    "t1_three_tier@core@s=0.0464159": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.046415888336127774,
+      "rate_factor": 1.0,
+      "sha256": "5196fd286a3229432857c439a8f4b6d89c34f64afe172d258ce637662e949f43",
+      "edge_gb": 58.73949235292304
+    },
+    "t1_three_tier@core@s=0.0681292": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.06812920690579616,
+      "rate_factor": 1.0,
+      "sha256": "4b40543accf0202f800bce742b83472ddef299c023ed3fa74839eef54bcf2855",
+      "edge_gb": 86.21778385611266
+    },
+    "t1_three_tier@core@s=0.1": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.1,
+      "rate_factor": 1.0,
+      "sha256": "661088210a1bb1172ed4c0334a672943662d2d3dd805f1c09bac11bafcd53858",
+      "edge_gb": 126.5504
+    },
+    "t1_three_tier@core@s=0.14678": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.14677992676220697,
+      "rate_factor": 1.0,
+      "sha256": "01874b131a20597020bf5fbf3cf371941fc96d8680d7397bcfe758375e2dda06",
+      "edge_gb": 185.75058443727997
+    },
+    "t1_three_tier@core@s=0.215443": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.21544346900318834,
+      "rate_factor": 1.0,
+      "sha256": "16973765f5bea64e56aec29b33c32a1037bb00b37160f214102ed8f5cc1c2f63",
+      "edge_gb": 272.64457179741083
+    },
+    "t1_three_tier@core@s=0.316228": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.31622776601683794,
+      "rate_factor": 1.0,
+      "sha256": "f4ab83a5dbfd0079db458a203652edaa563156943fd0178cd4a732354b806bbb",
+      "edge_gb": 400.18750280537245
+    },
+    "t1_three_tier@core@s=0.464159": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.464158883361278,
+      "rate_factor": 1.0,
+      "sha256": "ca81618e10989df49275ba76d9b0af34ca6eb48efb848e76eda205cc891b0888",
+      "edge_gb": 587.3949235292307
+    },
+    "t1_three_tier@core@s=0.681292": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 0.6812920690579611,
+      "rate_factor": 1.0,
+      "sha256": "866ce732f6515e9a81937bba1c5ed9a57ede603b7aadabd9ec2d4b1036626492",
+      "edge_gb": 862.177838561126
+    },
+    "t1_three_tier@core@s=1": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 1.0,
+      "rate_factor": 1.0,
+      "sha256": "685eb02280df4a58c02a95a0eb5f7264a18e205257a08625fd19513b90927b17",
+      "edge_gb": 1265.504
+    },
+    "t1_three_tier@core@s=1.4678": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 1.467799267622069,
+      "rate_factor": 1.0,
+      "sha256": "81e97481e092904a60886cf53e40c663931d3a0c3f5d9d8161579f68d14d49b5",
+      "edge_gb": 1857.5058443727987
+    },
+    "t1_three_tier@core@s=2.15443": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 2.1544346900318843,
+      "rate_factor": 1.0,
+      "sha256": "57baa95f9c052a77e3c2e9aba47e637a2be5fdeed4eab6ef7bbffb203d8e35d2",
+      "edge_gb": 2726.4457179741094
+    },
+    "t1_three_tier@core@s=3.16228": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 3.1622776601683795,
+      "rate_factor": 1.0,
+      "sha256": "ed18d8bcd4e20ec37a91164674537cc0a7d6be76aaa1bcb8b1d6cd4b77a251a1",
+      "edge_gb": 4001.8750280537247
+    },
+    "t1_three_tier@core@s=4.64159": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 4.6415888336127775,
+      "rate_factor": 1.0,
+      "sha256": "776b80d87f0b76bfd782af905570eab354803a465a64445be90aa0059c8ea061",
+      "edge_gb": 5873.949235292304
+    },
+    "t1_three_tier@core@s=6.81292": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 6.812920690579615,
+      "rate_factor": 1.0,
+      "sha256": "9166d0ede0185108d46f87d524424f0f0ec0e07799d8450a188a9c500889b6ac",
+      "edge_gb": 8621.778385611264
+    },
+    "t1_three_tier@core@s=10": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 10.0,
+      "rate_factor": 1.0,
+      "sha256": "062bac1b8b0580e2f0755bdadee6673563750f54829a590ae4c045d2c46a2906",
+      "edge_gb": 12655.039999999999
+    },
+    "t1_three_tier@core@s=14.678": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 14.67799267622069,
+      "rate_factor": 1.0,
+      "sha256": "e273f2988b89a8988354cada82147d7df7d1ba30ca203a745d81316cf2e19b78",
+      "edge_gb": 18575.058443727987
+    },
+    "t1_three_tier@core@s=21.5443": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 21.544346900318846,
+      "rate_factor": 1.0,
+      "sha256": "95a1dde75b8d81b7e211e2caeb7cc9aeadf045f435ccda221dd7ac307d16f747",
+      "edge_gb": 27264.4571797411
+    },
+    "t1_three_tier@core@s=31.6228": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 31.622776601683793,
+      "rate_factor": 1.0,
+      "sha256": "ea632c047a9466e5ad05a19fd4871c1d504157788ee2fc2a5f0d03141b4f5098",
+      "edge_gb": 40018.75028053724
+    },
+    "t1_three_tier@core@s=46.4159": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 46.41588833612777,
+      "rate_factor": 1.0,
+      "sha256": "70473db5c93e3116ef994eb33dda86edb1c58b69eec379c268d5e28f0e86002c",
+      "edge_gb": 58739.49235292304
+    },
+    "t1_three_tier@core@s=68.1292": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 68.12920690579615,
+      "rate_factor": 1.0,
+      "sha256": "b7532212792b8e2415afe0f8b9a78ec30a19e4a3bbb19e06f39fd674accd7554",
+      "edge_gb": 86217.78385611264
+    },
+    "t1_three_tier@core@s=100": {
+      "source": "topologies/t1_three_tier.json",
+      "topology_sha256": "d428e8f7858c92064077e27a32f9be9a81553cd6b5071409761b810c0386ce8c",
+      "scale": 100.0,
+      "rate_factor": 1.0,
+      "sha256": "84eb97bb1298466072fafd1ca924f0b4c2d55135a787c6400d4ad842984b9844",
+      "edge_gb": 126550.4
+    },
+    "t2_pipeline@core@s=0.01": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.01,
+      "rate_factor": 1.0,
+      "sha256": "ba03084bd5ff445c30476aeea5bcfbb785fcc861a4125bc05fc99b58fa6dc1b4",
+      "edge_gb": 36.21
+    },
+    "t2_pipeline@core@s=0.014678": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.014677992676220698,
+      "rate_factor": 1.0,
+      "sha256": "a590b693fa9c3f2ed872bd62751832437b8a778765bc43bad7c59cce83c4ed24",
+      "edge_gb": 53.14901148059515
+    },
+    "t2_pipeline@core@s=0.0215443": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.021544346900318832,
+      "rate_factor": 1.0,
+      "sha256": "5eb965b0003535cb3ea5c891f4a6f8d93a604442b9f76beac849728d3ad0801e",
+      "edge_gb": 78.01208012605449
+    },
+    "t2_pipeline@core@s=0.0316228": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.03162277660168379,
+      "rate_factor": 1.0,
+      "sha256": "fe942245abb9e470b1742d315a83606215586ed50b8e6d98279d290673f1ef94",
+      "edge_gb": 114.50607407469701
+    },
+    "t2_pipeline@core@s=0.0464159": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.046415888336127774,
+      "rate_factor": 1.0,
+      "sha256": "ee9896c598b36b79284a47dc373f00b9e75d8f705724d7e1c6f3c7dc6e74edb9",
+      "edge_gb": 168.07193166511868
+    },
+    "t2_pipeline@core@s=0.0681292": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.06812920690579616,
+      "rate_factor": 1.0,
+      "sha256": "6a182e7230dea16089254017f3ab6b3f4430753166fc92f9852b8117769f2044",
+      "edge_gb": 246.6958582058879
+    },
+    "t2_pipeline@core@s=0.1": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.1,
+      "rate_factor": 1.0,
+      "sha256": "12d9113f91f1bf5ebbe9918428e5c2f8bdf8c38ba0a1cede4056a8e12eed7be6",
+      "edge_gb": 362.1
+    },
+    "t2_pipeline@core@s=0.14678": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.14677992676220697,
+      "rate_factor": 1.0,
+      "sha256": "2aa76d2e4f21e75da0474303d470c2bf7b4838c1d9350ecfbd38c78c7c709791",
+      "edge_gb": 531.4901148059514
+    },
+    "t2_pipeline@core@s=0.215443": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.21544346900318834,
+      "rate_factor": 1.0,
+      "sha256": "7b57049214201d114bea654165fc390403275cb97e96b6875000d7ba0d99603c",
+      "edge_gb": 780.120801260545
+    },
+    "t2_pipeline@core@s=0.316228": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.31622776601683794,
+      "rate_factor": 1.0,
+      "sha256": "2f5981adf6ce73047b12a68167ec28d7e7316f8d73ec9444d02ccfbf0a24622e",
+      "edge_gb": 1145.0607407469702
+    },
+    "t2_pipeline@core@s=0.464159": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.464158883361278,
+      "rate_factor": 1.0,
+      "sha256": "2a1d5ab21232bddffe6cfcd2f669350c6acb3de8a1b52749dfdc718ec573aa3e",
+      "edge_gb": 1680.7193166511875
+    },
+    "t2_pipeline@core@s=0.681292": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 0.6812920690579611,
+      "rate_factor": 1.0,
+      "sha256": "bfd15d1e35cd3651108731ca16a5676032cdc7a62b877e1a57fb6e94bfd52754",
+      "edge_gb": 2466.9585820588773
+    },
+    "t2_pipeline@core@s=1": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 1.0,
+      "rate_factor": 1.0,
+      "sha256": "8296f6028d5ca09c67c2ce0555e66607296772dd802c752d2861104385e8114b",
+      "edge_gb": 3621.0
+    },
+    "t2_pipeline@core@s=1.4678": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 1.467799267622069,
+      "rate_factor": 1.0,
+      "sha256": "a623d6198c3030ca059ee510ab8ba0782c8ecf939a10c88e6aa7edec1753dcfb",
+      "edge_gb": 5314.901148059512
+    },
+    "t2_pipeline@core@s=2.15443": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 2.1544346900318843,
+      "rate_factor": 1.0,
+      "sha256": "17bd3ec7b6a3f45a2d79cdbf544cdaa3d4da301652cce11092e4afb38fc92052",
+      "edge_gb": 7801.2080126054525
+    },
+    "t2_pipeline@core@s=3.16228": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 3.1622776601683795,
+      "rate_factor": 1.0,
+      "sha256": "5d8291ff2e4f830a72f387d8142ac4344696b251d588c87cf733e3e116e7d90a",
+      "edge_gb": 11450.607407469703
+    },
+    "t2_pipeline@core@s=4.64159": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 4.6415888336127775,
+      "rate_factor": 1.0,
+      "sha256": "7a8cd497cf99798381c79fac4be34d3109bea633c15969483e2337d84a142bfc",
+      "edge_gb": 16807.19316651187
+    },
+    "t2_pipeline@core@s=6.81292": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 6.812920690579615,
+      "rate_factor": 1.0,
+      "sha256": "98125d96708cf14d992da0831d99d1da2411c2e3294643040547a960b5f15859",
+      "edge_gb": 24669.585820588785
+    },
+    "t2_pipeline@core@s=10": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 10.0,
+      "rate_factor": 1.0,
+      "sha256": "958d4e938e025e5722b316296e70597d00bcf4f6f0d980f97c7b1fa15bd28c04",
+      "edge_gb": 36210.0
+    },
+    "t2_pipeline@core@s=14.678": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 14.67799267622069,
+      "rate_factor": 1.0,
+      "sha256": "d2eedec9f48289dfad89a94e55eff9d47bff17fca2a14575939a951165760dc8",
+      "edge_gb": 53149.011480595116
+    },
+    "t2_pipeline@core@s=21.5443": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 21.544346900318846,
+      "rate_factor": 1.0,
+      "sha256": "a596e775da5176f7852cf2079b648bb4d2842f0862b4d44ea43a5dcb72d708a4",
+      "edge_gb": 78012.08012605454
+    },
+    "t2_pipeline@core@s=31.6228": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 31.622776601683793,
+      "rate_factor": 1.0,
+      "sha256": "51c511c9311a9b2fe071e745f4f33b669900281938ea992ea0b8aae6b24243c2",
+      "edge_gb": 114506.07407469701
+    },
+    "t2_pipeline@core@s=46.4159": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 46.41588833612777,
+      "rate_factor": 1.0,
+      "sha256": "173bbb212219600216026e4de130731495fc7ffb45d737ff9f8007f9ff5967f8",
+      "edge_gb": 168071.93166511867
+    },
+    "t2_pipeline@core@s=68.1292": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 68.12920690579615,
+      "rate_factor": 1.0,
+      "sha256": "5676a49d9f3264aa29542d4befe5311c5d9766631e3ae97e41800780666ff7a3",
+      "edge_gb": 246695.85820588787
+    },
+    "t2_pipeline@core@s=100": {
+      "source": "topologies/t2_pipeline.json",
+      "topology_sha256": "fe511d7be514f88c962a2c20fa34419ea4722d685f809c19ed7298886fa5125b",
+      "scale": 100.0,
+      "rate_factor": 1.0,
+      "sha256": "25c052b5f79e99200ddca4a4f6758ab3daf8486cffe94f7f8a8dd8b2cae39f14",
+      "edge_gb": 362100.0
+    },
+    "t3_microservices@core@s=0.01": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.01,
+      "rate_factor": 1.0,
+      "sha256": "6c67d2b8b7802d1846649a6ac85489e1e74e25747b7ee40256d347d45609954a",
+      "edge_gb": 27.68938
+    },
+    "t3_microservices@core@s=0.014678": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.014677992676220698,
+      "rate_factor": 1.0,
+      "sha256": "de6337dd9bfd064a00abb41b74d486613ba010b06084940f6b2ef0766abaae76",
+      "edge_gb": 40.64245168490919
+    },
+    "t3_microservices@core@s=0.0215443": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.021544346900318832,
+      "rate_factor": 1.0,
+      "sha256": "b057216e8208e0665b520c48c7aa0b83d14ded0e40df8e81cc1f2b256eeeefbb",
+      "edge_gb": 59.65496081747503
+    },
+    "t3_microservices@core@s=0.0316228": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.03162277660168379,
+      "rate_factor": 1.0,
+      "sha256": "45fd47cbde2bea595e24ef009633aea2ba9b08c3d84c6230aaf0d78526d3ce65",
+      "edge_gb": 87.56150779791312
+    },
+    "t3_microservices@core@s=0.0464159": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.046415888336127774,
+      "rate_factor": 1.0,
+      "sha256": "d926b57f4fd454136b5e5f0fccf146d1e5fed3d39cca81642beb30b8e772b1c6",
+      "edge_gb": 128.52271701766097
+    },
+    "t3_microservices@core@s=0.0681292": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.06812920690579616,
+      "rate_factor": 1.0,
+      "sha256": "3043b403cedf4e82267cdf7c1e6a5e151e6a7c3299fc3b61210834bd22a47562",
+      "edge_gb": 188.6455499113214
+    },
+    "t3_microservices@core@s=0.1": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.1,
+      "rate_factor": 1.0,
+      "sha256": "9cb7eedb357996ee2fd83ae3bdc0a79de9dcd05ab0a5fb00582c70b7598389c0",
+      "edge_gb": 276.8938
+    },
+    "t3_microservices@core@s=0.14678": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.14677992676220697,
+      "rate_factor": 1.0,
+      "sha256": "4c24332897084bac8ceafddafc7e70aaa2e1ba396f0e1b217b603c50a7a510a6",
+      "edge_gb": 406.42451684909184
+    },
+    "t3_microservices@core@s=0.215443": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.21544346900318834,
+      "rate_factor": 1.0,
+      "sha256": "bb32173653345221642f648dfd3d8070fedff84c4c69791f0cd5519e2d120db4",
+      "edge_gb": 596.5496081747503
+    },
+    "t3_microservices@core@s=0.316228": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.31622776601683794,
+      "rate_factor": 1.0,
+      "sha256": "c6c6c5247a6d7488bc89de8449e9ac0fbc1aaa75f2a8f201f773403b01f77232",
+      "edge_gb": 875.6150779791312
+    },
+    "t3_microservices@core@s=0.464159": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.464158883361278,
+      "rate_factor": 1.0,
+      "sha256": "f1f1387f5425a480efc1ae7d57fe6ebc711559e8598d9c3b41d78043888139b1",
+      "edge_gb": 1285.2271701766103
+    },
+    "t3_microservices@core@s=0.681292": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 0.6812920690579611,
+      "rate_factor": 1.0,
+      "sha256": "3d20dad54f036ad508584328d8fe3744cf9a0d415f270f29b641a87b7737f911",
+      "edge_gb": 1886.455499113213
+    },
+    "t3_microservices@core@s=1": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 1.0,
+      "rate_factor": 1.0,
+      "sha256": "aebc755402e9de0e68a50f5487608808fc0df6a2644bd3c44e311f005b8c33c4",
+      "edge_gb": 2768.938
+    },
+    "t3_microservices@core@s=1.4678": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 1.467799267622069,
+      "rate_factor": 1.0,
+      "sha256": "0c793db7a2d6bd75d4b16fd926cef3b167e4c2ab78e36d4ccd05ef4f7ee4ec61",
+      "edge_gb": 4064.2451684909165
+    },
+    "t3_microservices@core@s=2.15443": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 2.1544346900318843,
+      "rate_factor": 1.0,
+      "sha256": "06c26b9ee54d893c7bfe1a7868bee8c556e276fb867d1bb1f45ba48849623255",
+      "edge_gb": 5965.496081747506
+    },
+    "t3_microservices@core@s=3.16228": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 3.1622776601683795,
+      "rate_factor": 1.0,
+      "sha256": "cfd1263016a86f7ca7ec2e30209f9bd62a42919089528f35c0549bf3c910d300",
+      "edge_gb": 8756.150779791313
+    },
+    "t3_microservices@core@s=4.64159": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 4.6415888336127775,
+      "rate_factor": 1.0,
+      "sha256": "980f616df666864b8bc78f879645dad4078287e74f1f7a2a6abcdf692eafb89b",
+      "edge_gb": 12852.271701766098
+    },
+    "t3_microservices@core@s=6.81292": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 6.812920690579615,
+      "rate_factor": 1.0,
+      "sha256": "dc9df06f0db20fc0d255054c4dafe7de326d0b1166e7764ba6bc9778d3760ecc",
+      "edge_gb": 18864.55499113214
+    },
+    "t3_microservices@core@s=10": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 10.0,
+      "rate_factor": 1.0,
+      "sha256": "0072c114e900fa018dc2a8da5a378b7652498133e44a5e1d8103c4645eb29fa4",
+      "edge_gb": 27689.38
+    },
+    "t3_microservices@core@s=14.678": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 14.67799267622069,
+      "rate_factor": 1.0,
+      "sha256": "aa1035337909fc1451fff8a7515ab9584554f6c662c96c8771e8b4995fa8d3fe",
+      "edge_gb": 40642.45168490917
+    },
+    "t3_microservices@core@s=21.5443": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 21.544346900318846,
+      "rate_factor": 1.0,
+      "sha256": "856a5b5b564335525eb3dd4edc5f656458c9ee395c00709ff014699780bf2380",
+      "edge_gb": 59654.96081747507
+    },
+    "t3_microservices@core@s=31.6228": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 31.622776601683793,
+      "rate_factor": 1.0,
+      "sha256": "9cecd8e1de17f989129496cbbaa8507e996cca4dc6abcfe11d2d919e6e4d1c5d",
+      "edge_gb": 87561.50779791312
+    },
+    "t3_microservices@core@s=46.4159": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 46.41588833612777,
+      "rate_factor": 1.0,
+      "sha256": "b33c0fdb978bcba560ec31269e5925d7b96c0539745c12cd3990094fbf6b1ca4",
+      "edge_gb": 128522.71701766097
+    },
+    "t3_microservices@core@s=68.1292": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 68.12920690579615,
+      "rate_factor": 1.0,
+      "sha256": "4f9c8f8a2df0fcad49519b096969be084228b3fa7affeddc51e89246a36cbbbd",
+      "edge_gb": 188645.5499113214
+    },
+    "t3_microservices@core@s=100": {
+      "source": "topologies/t3_microservices.json",
+      "topology_sha256": "412a183d9ba8f51126b863336c4f9d7402d1013fbc45a75b98fd92847c947ae1",
+      "scale": 100.0,
+      "rate_factor": 1.0,
+      "sha256": "db05fb859ed1f040d79bc98ac30f39dacf238c18326c85e5206ed3c55c34d2f5",
+      "edge_gb": 276893.8
+    }
+  },
+  "sessions": [
+    {
+      "run_utc": "2026-09-22T14:29:43Z",
+      "git_commit": "575a3a7",
+      "machine_tag": "adi-laptop-win11",
+      "other_dirty_paths": 6,
+      "jobs_run": 750,
+      "jobs_skipped": 0,
+      "jobs_failed": 0,
+      "wall_s": 279.225,
+      "finished": true
+    }
+  ],
+  "notes": {
+    "scale": "multiplies every inter-component edge volume; internet egress unchanged",
+    "rate_factor": "multiplies every inter-region egress USD/GB (intra- and cross-provider)",
+    "b1_alt": "B1 with the opposite final tie-break (last location id), D-039",
+    "runtime_s": "not a reported metric in M15; M14 may run in parallel on the same machine"
+  }
+}

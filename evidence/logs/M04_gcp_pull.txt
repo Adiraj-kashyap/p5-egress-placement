@@ -1,0 +1,26 @@
+2026-09-21 21:09:26,570  gcp     INFO     snapshot_date=2026-09-21  regions=['us-east4', 'europe-west1', 'asia-south1', 'asia-southeast1', 'us-west1', 'europe-west3', 'asia-northeast1', 'southamerica-east1']
+2026-09-21 21:09:26,570  gcp     INFO     GCP_API_KEY present: False
+2026-09-21 21:09:26,571  gcp     INFO     using key-free public pricing pages (D-021 path c)
+2026-09-21 21:10:06,979  gcp     INFO     GET https://cloud.google.com/products/compute/pricing/general-purpose -> HTTP 200 (35795632 bytes, final https://cloud.google.com/products/compute/pricing/general-purpose)
+2026-09-21 21:10:12,885  gcp     INFO     GET https://cloud.google.com/vpc/network-pricing -> HTTP 200 (3802835 bytes, final https://cloud.google.com/vpc/network-pricing)
+2026-09-21 21:10:17,743  gcp     INFO     GET https://cloud.google.com/storage/pricing -> HTTP 200 (2678557 bytes, final https://cloud.google.com/storage/pricing)
+2026-09-21 21:10:17,822  gcp     INFO     compute: N2 hourly tables for 41 regions
+2026-09-21 21:10:18,011  gcp     INFO     recorded offline test sample tests\data\gcp_sample.json (219042 bytes)
+2026-09-21 21:10:18,019  gcp     INFO     WROTE snapshots\2026-09-21\gcp_compute.json  rows=16  size=0.01 MB
+2026-09-21 21:10:18,027  gcp     INFO     WROTE snapshots\2026-09-21\gcp_egress.json  rows=217  size=0.08 MB
+2026-09-21 21:10:18,030  gcp     INFO     WROTE snapshots\2026-09-21\gcp_storage.json  rows=8  size=0.00 MB
+2026-09-21 21:10:18,034  gcp     INFO     WROTE snapshots\2026-09-21\gcp_manual.csv
+2026-09-21 21:10:18,034  gcp     INFO     A1 us-east4             core=0.035605 ram=0.004771  counts={'core': 1, 'ram': 1}
+2026-09-21 21:10:18,034  gcp     INFO     A1 europe-west1         core=0.034773 ram=0.004661  counts={'core': 1, 'ram': 1}
+2026-09-21 21:10:18,034  gcp     INFO     A1 asia-south1          core=0.03797 ram=0.005088  counts={'core': 1, 'ram': 1}
+2026-09-21 21:10:18,035  gcp     INFO     A1 asia-southeast1      core=0.038999 ram=0.005226  counts={'core': 1, 'ram': 1}
+2026-09-21 21:10:18,035  gcp     INFO     A1 us-west1             core=0.031611 ram=0.004237  counts={'core': 1, 'ram': 1}
+2026-09-21 21:10:18,035  gcp     INFO     A1 europe-west3         core=0.04073 ram=0.005458  counts={'core': 1, 'ram': 1}
+2026-09-21 21:10:18,035  gcp     INFO     A1 asia-northeast1      core=0.040618 ram=0.005419  counts={'core': 1, 'ram': 1}
+2026-09-21 21:10:18,035  gcp     INFO     A1 southamerica-east1   core=0.05018 ram=0.006725  counts={'core': 1, 'ram': 1}
+2026-09-21 21:10:18,035  gcp     INFO     A2 internet Americas regions with rates 3/3
+2026-09-21 21:10:18,035  gcp     INFO     A2 internet EMEA     regions with rates 2/2
+2026-09-21 21:10:18,035  gcp     INFO     A2 internet APAC     regions with rates 3/3
+2026-09-21 21:10:18,037  gcp     INFO     A2 inter-region group pairs for ext regions: 16/16 present, missing=[]
+2026-09-21 21:10:18,037  gcp     INFO     A3 storage regions 8/8, missing=[]
+2026-09-21 21:10:18,037  gcp     INFO     gcp pull complete: acceptance facts A1-A3 OK
